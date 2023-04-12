@@ -24,4 +24,31 @@
   .secondary-btn {
     @apply py-2.5 px-5 rounded-xl bg-[#F5F5FF] text-[#403AEE];
   }
+  .owl-theme .owl-nav {
+    width: 108%;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    transform: translate(-50%);
+    align-items: center;
+    justify-content: space-between;
+    left: 50%;
+    z-index: -1;
+  }
+
+  .owl-theme .owl-nav button span {
+    font-size: 33px;
+    padding: 10px !important;
+    transition: 0.4s ease-in-out;
+    display: block;
+    border-radius: 8px;
+  }
+  .owl-theme .owl-nav button span:hover {
+    background: #B6B4FD;
+  }
+  .owl-theme .owl-nav [class*="owl-"]:hover {
+    background: none;
+    color: #000;
+    text-decoration: none;
+  }
 }

@@ -560,6 +560,40 @@ video {
   color: rgb(64 58 238 / var(--tw-text-opacity));
 }
 
+.owl-theme .owl-nav {
+  width: 108%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  transform: translate(-50%);
+  align-items: center;
+  justify-content: space-between;
+  left: 50%;
+  z-index: -1;
+}
+
+.owl-theme .owl-nav button span {
+  font-size: 33px;
+  padding: 10px !important;
+  transition: 0.4s ease-in-out;
+  display: block;
+  border-radius: 8px;
+}
+
+.owl-theme .owl-nav button span:hover {
+  background: #B6B4FD;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.relative {
+  position: relative;
+}
+
 .left-5 {
   left: 1.25rem;
 }
@@ -600,20 +634,16 @@ video {
   height: 280px;
 }
 
+.h-\[286px\] {
+  height: 286px;
+}
+
 .h-\[440px\] {
   height: 440px;
 }
 
 .h-full {
   height: 100%;
-}
-
-.h-\[28\] {
-  height: 28;
-}
-
-.h-\[286px\] {
-  height: 286px;
 }
 
 .min-h-\[612px\] {
@@ -1023,10 +1053,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
 }
 
 .underline {
