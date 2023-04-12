@@ -17,7 +17,7 @@
     <title>Warraq</title>
 </head>
 
-<body class="font-IBM">
+<body class="font-IBM overflow-x-hidden">
     <!-- Start Warraq Header  -->
     <header class="">
         <div class="container flex justify-between items-center py-[18px]">
@@ -109,7 +109,7 @@
     <main>
         <!-- hero section -->
         <section class="min-h-[612px] bg-[#3DA2B8]">
-            <div class="container min-h-[612px] flex items-center">
+            <div class="container min-h-[612px] flex items-center gap-40 ">
                 <div class="w-[520px] flex flex-col gap-8 items-start">
                     <h1 class="text-[40px] leading-[50px] text-[#FFFFFFE5] font-bold">أول منصة شاملة للكتب في الوطن
                         العربي.</h1>
@@ -117,11 +117,34 @@
                         الخاصة بها، معاً ننشر العلم.</p>
                     <a href="#" class="text-black text-base leading-5 py-3 px-6 rounded-[14px] bg-white">تصفح الكتب</a>
                 </div>
+                <div class="bg-red-300 w-full flex-1 h-full relative lg:block hidden">
+                    <div class=" transition-all duration-400 absolute right-[386px] top-[184px] w-[410px] book">
+                        <img src="assets/images/Book-7.svg" width="410" alt="">
+                    </div>
+                    <div class=" transition-all duration-400 absolute right-[320px] top-[120px] w-[410px]">
+                        <img src="assets/images/Book-6.svg" width="410" alt="">
+                    </div>
+                    <div class=" transition-all duration-400 absolute right-[265px] top-[56px] w-[410px]">
+                        <img src="assets/images/Book-5.svg" width="410" alt="">
+                    </div>
+                    <div class=" transition-all duration-400 absolute right-[192px] top-[-8px] w-[410px]">
+                        <img src="assets/images/Book-4.svg" width="410" alt="">
+                    </div>
+                    <div class=" transition-all duration-400 absolute right-[128px] top-[-72px] w-[410px]">
+                        <img src="assets/images/Book-3.svg" width="410" alt="">
+                    </div>
+                    <div class=" transition-all duration-400 absolute right-[64px] top-[-136px] w-[410px]">
+                        <img src="assets/images/Book-2.svg" width="410" alt="">
+                    </div>
+                    <div class=" transition-all duration-400 absolute right-0 top-[-200px] w-[410px]">
+                        <img src="assets/images/Book-1.svg" width="410" alt="">
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- categories  -->
-        <section class="py-16">
+        <section class="py-16 bg-white  relative">
             <div class="container flex flex-col gap-12">
 
                 <header class="flex items-baseline justify-between">
@@ -312,7 +335,7 @@
         </section>
 
         <!--  Best Seller Section  -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">الأكثر مبيعاً</h2>
@@ -449,7 +472,7 @@
         </section>
 
         <!-- Adds Section  -->
-        <div class="py-16">
+        <div class="py-16 relative">
             <div class="container flex gap-[30px]">
                 <!-- add item  -->
                 <div class="basis-1/2 h-[280px] bg-[#BC5840] rounded-[32px] bg-no-repeat p-8"
@@ -494,7 +517,7 @@
         </div>
 
         <!--  Best Selling Authors  -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">المؤلفين الأكثر مبيعا</h2>
@@ -789,7 +812,7 @@
         </section>
 
         <!--   Newly  -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">أصدر حديثاً</h2>
@@ -892,7 +915,7 @@
         </section>
 
         <!--  Discounts and packages  -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">الخصومات والحزم</h2>
@@ -1023,7 +1046,7 @@
         </section>
 
         <!--   Readers community   -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">مجتمع القراء</h2>
@@ -1091,7 +1114,7 @@
         </section>
 
         <!--  Used Books  Section  -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">الكتب المستعملة</h2>
@@ -1228,7 +1251,7 @@
         </section>
 
         <!--   Blog community   -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">المقالات</h2>
@@ -1315,7 +1338,7 @@
         </section>
 
         <!-- Recommended Section  -->
-        <section class="py-16">
+        <section class="py-16 relative">
             <div class="container flex flex-col gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">نرشحه لك</h2>
@@ -1457,8 +1480,8 @@
 
     <!-- Start Warraq Footer  -->
     <footer>
-        <div class="container flex items-center gap-[30px] py-16 border-t border-[#E2E2E9]">
-            <div class="basis-1/4 flex flex-col gap-8">
+        <div class="container flex flex-col lg:flex-row lg:items-center lg:gap-[30px] px-[30px] lg:px-0 py-8 lg:py-16 border-t border-[#E2E2E9]">
+            <div class="basis-full lg:basis-1/4 flex flex-col gap-4 lg:gap-8 py-6 lg:py-0">
                 <div class="fotter-logo">
                     <img src="assets/images/Logo.svg" width="163" height="70" alt="logo">
                 </div>
@@ -1471,8 +1494,9 @@
                     </p>
                 </div>
             </div>
-            <div class="basis-1/2 border-l border-r border-[#E2E2E9] p-8 flex gap-4">
-                <div class="basis-1/3 flex flex-col gap-4">
+            <div
+                class="basis-full lg:basis-1/2 lg:border-l lg:border-r border-[#E2E2E9] py-6 lg:p-8 grid grid-cols-2 lg:grid-cols-3 gap-[30px] lg:gap-4 flex-wrap">
+                <div class="flex flex-col gap-4 ">
                     <h2 class="text-sm text-[#000000E5] leading-[18px] font-medium">صفحات رئيسية</h2>
                     <ul class="flex flex-col gap-2">
                         <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">الخصومات و الحزم</a></li>
@@ -1481,7 +1505,7 @@
                         <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">الأكثر مبيعاً</a></li>
                     </ul>
                 </div>
-                <div class="basis-1/3 flex flex-col gap-4">
+                <div class="flex flex-col gap-4 ">
                     <h2 class="text-sm text-[#000000E5] leading-[18px] font-medium">تشاركي</h2>
                     <ul class="flex flex-col gap-2">
                         <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">مجتمع القراء </a></li>
@@ -1490,7 +1514,7 @@
                         <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">المقالات</a></li>
                     </ul>
                 </div>
-                <div class="basis-1/3 flex flex-col gap-4">
+                <div class="flex flex-col gap-4 ">
                     <h2 class="text-sm text-[#000000E5] leading-[18px] font-medium">أخري</h2>
                     <ul class="flex flex-col gap-2">
                         <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">تأكيد الدفع</a></li>
@@ -1499,10 +1523,19 @@
                         <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">تواصل معنا</a></li>
                     </ul>
                 </div>
+                <div class="flex flex-col gap-4 lg:hidden">
+                    <h2 class="text-sm text-[#000000E5] leading-[18px] font-medium">تابعنا علي</h2>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">لينكدان</a></li>
+                        <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">تويتر</a></li>
+                        <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">سناب شات</a></li>
+                        <li><a href="#" class="text-sm text-[#0000008C] leading-[18px] ">فيس بوك</a></li>
+                    </ul>
+                </div>
 
             </div>
-            <div class="basis-1/4 flex flex-col items-center gap-8">
-                <div class="flex flex-col gap-4">
+            <div class="basis-full lg:basis-1/4 flex flex-col items-center gap-8">
+                <div class="hidden lg:flex flex-col gap-4 ">
                     <h2 class="text-sm text-[#000000E5] leading-[18px]">تابعنا علي</h2>
                     <ul class="flex gap-4 items-center">
                         <li class="">
@@ -1575,7 +1608,8 @@
                         </li>
                     </ul>
                 </div>
-                <p class="text-xs text-[#000000E5] leading-4 px-16 text-center">
+                <p
+                    class="text-xs text-[#000000E5] leading-4 lg:px-16 text-center pt-6 lg:pt-0 border-t lg:border-none border-[#E2E2E9] w-full">
                     2023 © جميع الحقوق محفوظة لمتجر وراق للنشر والتوزيع
                 </p>
             </div>
