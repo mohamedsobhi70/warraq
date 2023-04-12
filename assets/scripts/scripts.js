@@ -2,7 +2,7 @@ $('.owl-categories').owlCarousel({
     rtl:true,
     loop:true,
     margin:30,
-    nav:false,
+    nav:true,
     dots:false,
     responsive:{
         0:{
