@@ -19,39 +19,38 @@
     scrollbar-width: none;
   }
   .section-title {
-    @apply text-[32px] text-[#000000E5] leading-10 font-semibold;
+    @apply text-2xl lg:text-[32px] text-[#000000E5] leading-[30px] lg:leading-10 font-semibold;
   }
   .secondary-btn {
-    @apply py-2.5 px-5 rounded-xl bg-[#F5F5FF] text-[#403AEE];
+    @apply py-2 lg:py-2.5 px-4 lg:px-5 rounded-[10px] lg:rounded-xl bg-[#F5F5FF] text-xs lg:text-sm  leading-4 lg:leading-[18px] text-[#403AEE];
   }
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
+    .owl-theme .owl-nav {
+      width: 108%;
+      position: absolute;
+      top: 50%;
+      display: flex;
+      transform: translate(-50%);
+      align-items: center;
+      justify-content: space-between;
+      left: 50%;
+      z-index: -1;
+    }
 
-  .owl-theme .owl-nav {
-    width: 108%;
-    position: absolute;
-    top: 50%;
-    display: flex;
-    transform: translate(-50%);
-    align-items: center;
-    justify-content: space-between;
-    left: 50%;
-    z-index: -1;
-  }
-
-  .owl-theme .owl-nav button span {
-    font-size: 33px;
-    padding: 10px !important;
-    transition: 0.4s ease-in-out;
-    display: block;
-    border-radius: 8px;
-  }
-  .owl-theme .owl-nav button span:hover {
-    background: #B6B4FD;
-  }
-  .owl-theme .owl-nav [class*="owl-"]:hover {
-    background: none;
-    color: #000;
-    text-decoration: none;
-  }
+    .owl-theme .owl-nav button span {
+      font-size: 33px;
+      padding: 10px !important;
+      transition: 0.4s ease-in-out;
+      display: block;
+      border-radius: 8px;
+    }
+    .owl-theme .owl-nav button span:hover {
+      background: #b6b4fd;
+    }
+    .owl-theme .owl-nav [class*="owl-"]:hover {
+      background: none;
+      color: #000;
+      text-decoration: none;
+    }
   }
 }
