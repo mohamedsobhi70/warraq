@@ -24,6 +24,8 @@
   .secondary-btn {
     @apply py-2.5 px-5 rounded-xl bg-[#F5F5FF] text-[#403AEE];
   }
+  @media (min-width: 1024px){
+
   .owl-theme .owl-nav {
     width: 108%;
     position: absolute;
@@ -50,5 +52,6 @@
     background: none;
     color: #000;
     text-decoration: none;
+  }
   }
 }
