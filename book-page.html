@@ -1423,7 +1423,7 @@
 
     <footer>
         <div
-            class="container flex flex-col lg:flex-row lg:items-center lg:gap-[30px] px-[30px] lg:px-0 py-8 lg:py-16 border-t border-[#E2E2E9]">
+            class="container flex flex-col lg:flex-row lg:items-center lg:gap-[30px] px-[30px] lg:px-0 py-8 lg:pt-16 lg:pb-40 border-t border-[#E2E2E9]">
             <div class="basis-full lg:basis-1/4 flex flex-col gap-4 lg:gap-8 py-6 lg:py-0">
                 <div class="fotter-logo">
                     <img src="assets/images/Logo.svg" width="163" height="70" alt="logo">
@@ -1569,12 +1569,14 @@
         let pos = $(".hero-sec").position().top + $(".hero-sec").innerHeight();
         console.log(pos);
         $(window).on("scroll", function () {
-            if (window.scrollY > pos) {
-                $("#book-buy-sec").addClass("flex");
-                $("#book-buy-sec").css({ "position": "fixed", "bottom": "0", "display": "block" });
-            }
-            else {
-                $("#book-buy-sec").css({ "position": "static", "display": "none" });
+            if (screen.width > 1024) {
+                if (window.scrollY > pos) {
+                    $("#book-buy-sec").addClass("flex");
+                    $("#book-buy-sec").css({ "position": "fixed", "bottom": "0", "display": "block" });
+                }
+                else {
+                    $("#book-buy-sec").css({ "position": "static", "display": "none" });
+                }
             }
         })
     </script>

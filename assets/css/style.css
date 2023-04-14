@@ -1710,6 +1710,14 @@ video {
     padding-top: 3rem;
   }
 
+  .lg\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .lg\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
   .lg\:text-\[32px\] {
     font-size: 32px;
   }
