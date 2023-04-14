@@ -116,11 +116,10 @@
     <!-- Start Warraq Main Page Content  -->
     <main class="relative">
         <!--  hero   Section  -->
-        <section class="h-[1200px] ">
-            <div class="bg-[#8BB174] pt-12 pb-8 ">
-                <div class="container flex justify-end gap-[30px]">
-                    <div class="basis-1/3 "></div>
-                    <ul class="basis-2/3 px-8 flex items-center gap-3">
+        <section class="hero-sec">
+            <div class="bg-[#8BB174] py-8 px-[30px] lg:px-0 lg:pt-12 lg:pb-8 ">
+                <div class="container flex lg:justify-end gap-[30px]">
+                    <ul class="lg:basis-2/3 lg:px-8 flex items-center gap-3">
                         <li>
                             <a href="#" title="Home">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -135,7 +134,8 @@
                             </a>
                         </li>
                         <li>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7.49992 9.96004L4.23992 6.70004C3.85492 6.31504 3.85492 5.68504 4.23992 5.30004L7.49992 2.04004"
                                     stroke="white" stroke-opacity="0.2" stroke-width="1.25" stroke-miterlimit="10"
@@ -148,7 +148,8 @@
                             </a>
                         </li>
                         <li>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7.49992 9.96004L4.23992 6.70004C3.85492 6.31504 3.85492 5.68504 4.23992 5.30004L7.49992 2.04004"
                                     stroke="white" stroke-opacity="0.2" stroke-width="1.25" stroke-miterlimit="10"
@@ -164,17 +165,425 @@
                 </div>
             </div>
             <div class="container">
-                <div class="flex gap-[30px]">
-                    <div class="basis-1/3 p-8 bg-white rounded-2xl h-[570px] border border-[#E2E2E9] mt-[-52px]">
+                <div class="flex flex-col lg:flex-row gap-[30px]">
+                    <div
+                        class="basis-full lg:basis-1/3 p-6 lg:p-8 bg-white rounded-2xl h-[518px] lg:h-[570px] border border-[#E2E2E9] lg:mt-[-52px] my-6 lg:my-0 mx-[30px] lg:mx-0">
                         <img src="assets/images/nag-3.jpg" class="w-full h-full object-cover rounded-2xl" alt="boock">
                     </div>
-                    <div class="basis-2/3"></div>
+                    <div class="basis-2/3 py-6 lg:py-12 px-[30px] lg:px-8 flex gap-6 lg:gap-8 flex-col ">
+                        <span
+                            class="py-1 px-3 rounded-2xl bg-[#FEFBE8] text-sm text-[#EAAA08] leading-[18px] font-medium ml-auto">متوفر</span>
+                        <div class="flex flex-col gap-5">
+                            <div class="flex items-center justify-between  gap-3 ">
+                                <h1 class="text-[32px] text-black leading-10 font-semibold ">اللص والكلاب</h1>
+                                <div class="flex items-center gap-3">
+                                    <button class="lg:hidden" title="add to fav">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.69001C2 5.60001 4.49 3.10001 7.56 3.10001C9.38 3.10001 10.99 3.98001 12 5.34001C13.01 3.98001 14.63 3.10001 16.44 3.10001C19.51 3.10001 22 5.60001 22 8.69001C22 15.69 15.52 19.82 12.62 20.81Z"
+                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                    <button class="" title="download">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.44 8.90002C20.04 9.21002 21.51 11.06 21.51 15.11V15.24C21.51 19.71 19.72 21.5 15.25 21.5H8.73998C4.26998 21.5 2.47998 19.71 2.47998 15.24V15.11C2.47998 11.09 3.92998 9.24002 7.46998 8.91002"
+                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M12 15V3.62" stroke="black" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.3499 5.85L11.9999 2.5L8.6499 5.85" stroke="black"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex  items-center">
+                                <div class="flex gap-1 items-center pl-4 border-l border-[#E2E2E9]">
+                                    <span class="text-sm text-[#00000066] leading-[18px]">المؤلف:</span>
+                                    <span class="text-sm text-black leading-[18px]">نجيب محفوظ</span>
+                                </div>
+                                <div class="flex gap-1 items-center px-4 border-l border-[#E2E2E9]">
+                                    <span class="text-sm text-[#00000066] leading-[18px]">دار النشرة:</span>
+                                    <span class="text-sm text-black leading-[18px]">ديوان للنشر</span>
+                                </div>
+                                <div class="flex gap-1 items-center pr-4">
+                                    <span class="flex gap-0.5 items-center">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.86495 1.75501L7.74495 3.51501C7.86495 3.76001 8.18495 3.99501 8.45495 4.04001L10.05 4.30501C11.07 4.47501 11.31 5.21501 10.575 5.94501L9.33495 7.18501C9.12495 7.39501 9.00995 7.80001 9.07495 8.09001L9.42995 9.62501C9.70995 10.84 9.06495 11.31 7.98995 10.675L6.49495 9.79001C6.22495 9.63001 5.77995 9.63001 5.50495 9.79001L4.00995 10.675C2.93995 11.31 2.28995 10.835 2.56995 9.62501L2.92495 8.09001C2.98995 7.80001 2.87495 7.39501 2.66495 7.18501L1.42495 5.94501C0.694954 5.21501 0.929955 4.47501 1.94995 4.30501L3.54495 4.04001C3.80995 3.99501 4.12995 3.76001 4.24995 3.51501L5.12995 1.75501C5.60995 0.800007 6.38995 0.800007 6.86495 1.75501Z"
+                                                fill="#E7B308" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.86495 1.75501L7.74495 3.51501C7.86495 3.76001 8.18495 3.99501 8.45495 4.04001L10.05 4.30501C11.07 4.47501 11.31 5.21501 10.575 5.94501L9.33495 7.18501C9.12495 7.39501 9.00995 7.80001 9.07495 8.09001L9.42995 9.62501C9.70995 10.84 9.06495 11.31 7.98995 10.675L6.49495 9.79001C6.22495 9.63001 5.77995 9.63001 5.50495 9.79001L4.00995 10.675C2.93995 11.31 2.28995 10.835 2.56995 9.62501L2.92495 8.09001C2.98995 7.80001 2.87495 7.39501 2.66495 7.18501L1.42495 5.94501C0.694954 5.21501 0.929955 4.47501 1.94995 4.30501L3.54495 4.04001C3.80995 3.99501 4.12995 3.76001 4.24995 3.51501L5.12995 1.75501C5.60995 0.800007 6.38995 0.800007 6.86495 1.75501Z"
+                                                fill="#E7B308" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.86495 1.75501L7.74495 3.51501C7.86495 3.76001 8.18495 3.99501 8.45495 4.04001L10.05 4.30501C11.07 4.47501 11.31 5.21501 10.575 5.94501L9.33495 7.18501C9.12495 7.39501 9.00995 7.80001 9.07495 8.09001L9.42995 9.62501C9.70995 10.84 9.06495 11.31 7.98995 10.675L6.49495 9.79001C6.22495 9.63001 5.77995 9.63001 5.50495 9.79001L4.00995 10.675C2.93995 11.31 2.28995 10.835 2.56995 9.62501L2.92495 8.09001C2.98995 7.80001 2.87495 7.39501 2.66495 7.18501L1.42495 5.94501C0.694954 5.21501 0.929955 4.47501 1.94995 4.30501L3.54495 4.04001C3.80995 3.99501 4.12995 3.76001 4.24995 3.51501L5.12995 1.75501C5.60995 0.800007 6.38995 0.800007 6.86495 1.75501Z"
+                                                fill="#E7B308" />
+                                        </svg>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.86495 1.75501L7.74495 3.51501C7.86495 3.76001 8.18495 3.99501 8.45495 4.04001L10.05 4.30501C11.07 4.47501 11.31 5.21501 10.575 5.94501L9.33495 7.18501C9.12495 7.39501 9.00995 7.80001 9.07495 8.09001L9.42995 9.62501C9.70995 10.84 9.06495 11.31 7.98995 10.675L6.49495 9.79001C6.22495 9.63001 5.77995 9.63001 5.50495 9.79001L4.00995 10.675C2.93995 11.31 2.28995 10.835 2.56995 9.62501L2.92495 8.09001C2.98995 7.80001 2.87495 7.39501 2.66495 7.18501L1.42495 5.94501C0.694954 5.21501 0.929955 4.47501 1.94995 4.30501L3.54495 4.04001C3.80995 3.99501 4.12995 3.76001 4.24995 3.51501L5.12995 1.75501C5.60995 0.800007 6.38995 0.800007 6.86495 1.75501Z"
+                                                fill="#E7B308" />
+                                        </svg>
+                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.26486 1.75501L8.14486 3.51501C8.26486 3.76001 8.58486 3.99501 8.85486 4.04001L10.4499 4.30501C11.4699 4.47501 11.7099 5.21501 10.9749 5.94501L9.73486 7.18501C9.52486 7.39501 9.40986 7.80001 9.47486 8.09001L9.82986 9.62501C10.1099 10.84 9.46486 11.31 8.38986 10.675L6.89486 9.79001C6.62486 9.63001 6.17986 9.63001 5.90486 9.79001L4.40986 10.675C3.33986 11.31 2.68986 10.835 2.96986 9.62501L3.32486 8.09001C3.38986 7.80001 3.27486 7.39501 3.06486 7.18501L1.82486 5.94501C1.09486 5.21501 1.32986 4.47501 2.34986 4.30501L3.94486 4.04001C4.20986 3.99501 4.52986 3.76001 4.64986 3.51501L5.52986 1.75501C6.00986 0.800007 6.78986 0.800007 7.26486 1.75501Z"
+                                                fill="#E2E2E9" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-sm text-black leading-[18px]">451 مراجعة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-[#E2E2E9]"></div>
+                        <div class="flex items-baseline gap-4">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-sm text-[#00000066] leading-[18px] font-medium">السعر:</span>
+                                <span class="text-2xl text-[#5F59F7] leading-[30px] font-bold">250 ريال</span>
+                            </div>
+                            <span class="text-sm text-black opacity-20 line-through leading-[18px] font-semibold">450
+                                ريال</span>
+                        </div>
+                        <div class="border-t border-[#E2E2E9]"></div>
+                        <div class="flex flex-col gap-4">
+                            <h2 class="text-xl leading-[26px] text-black font-medium">نبذه عن الكتاب</h2>
+                            <div class="flex items-start flex-col gap-2">
+                                <p class="text-base leading-6 text-[#0000008C]">
+                                    <span>
+                                        بعد سجنه لأربع سنوات، يظهر “سعيد مهران” عازمًا على الانتقام. يجد عالمه وقد
+                                        تحوَّل كثيرًا، فقد تبدل الحال بقيام ثورة 1952، أما على مستوى حياته الشخصية، فقد
+                                        تزوجت زوجته السابقة “نبوية” من تابعه وذراعه الأيمن “عليش” وقررا أن يحرماه من
+                                        ابنته “سناء”. أما معلمه وأستاذه الثوري “رؤوف علوان” فقد انضم إلى الصفوة وانقلب
+                                        على أفكاره وشعاراته. يسعى سعيد لتحقيق العدالة على طريقته،
+                                    </span>
+                                    <span class="expanded">
+                                        فينتهي به الحال مطاردًا مدفوعًا بالكراهية لدرجة لا يستطيع
+                                        معها التعرف على فرصته الأخيرة في الحب والخلاص. نُشرت الرواية عام 1961 وانتقلت
+                                        سريعًا لشاشة السينما حيث أنتج فيلم “اللص والكلاب” عام 1962.
+                                    </span>
+                                </p>
+                                <button class="show-more-btn text-base leading-6 text-[#403AEE] font-medium">
+                                    قرأءة المزيد
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-t border-[#E2E2E9]"></div>
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-xl leading-[26px] text-black font-medium">تفاصيل الكتاب</h2>
+                            <!-- <div class="owl-carousel owl-theme book-details">
+                                <div class="item flex gap-4">
+                                    <div class="p-3 rounded-2xl border border-[]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M15 2V12C15 13.1 14.1 14 13 14H2V7.62C2.73 8.49 3.85003 9.03 5.09003 9C6.10003 8.98 7.01 8.59 7.69 7.94C8 7.68 8.26002 7.34999 8.46002 6.98999C8.82002 6.37999 9.02 5.65997 9 4.90997C8.97 3.73997 8.45001 2.71 7.64001 2H15Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M9 5C9 6.2 8.47001 7.27 7.64001 8C6.93001 8.62 6.01 9 5 9C2.79 9 1 7.21 1 5C1 3.74 1.58 2.61 2.5 1.88C3.19 1.33 4.06 1 5 1C7.21 1 9 2.79 9 5Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M5.25 3.75V5.25L4 6" stroke="#7E7E91"
+                                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-sm leading-[18px] text-[#00000066]">التوصيل</span>
+                                        <h4 class="text-base leading-5 text-[#000000E5]">4-7 أيام</h4>
+                                    </div>
+                                </div>
+                                <div class="item flex gap-4">
+                                    <div class="p-3 rounded-2xl border border-[]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M15 2V12C15 13.1 14.1 14 13 14H2V7.62C2.73 8.49 3.85003 9.03 5.09003 9C6.10003 8.98 7.01 8.59 7.69 7.94C8 7.68 8.26002 7.34999 8.46002 6.98999C8.82002 6.37999 9.02 5.65997 9 4.90997C8.97 3.73997 8.45001 2.71 7.64001 2H15Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M9 5C9 6.2 8.47001 7.27 7.64001 8C6.93001 8.62 6.01 9 5 9C2.79 9 1 7.21 1 5C1 3.74 1.58 2.61 2.5 1.88C3.19 1.33 4.06 1 5 1C7.21 1 9 2.79 9 5Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M5.25 3.75V5.25L4 6" stroke="#7E7E91"
+                                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-sm leading-[18px] text-[#00000066]">التوصيل</span>
+                                        <h4 class="text-base leading-5 text-[#000000E5]">4-7 أيام</h4>
+                                    </div>
+                                </div>
+                                <div class="item flex gap-4">
+                                    <div class="p-3 rounded-2xl border border-[]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M15 2V12C15 13.1 14.1 14 13 14H2V7.62C2.73 8.49 3.85003 9.03 5.09003 9C6.10003 8.98 7.01 8.59 7.69 7.94C8 7.68 8.26002 7.34999 8.46002 6.98999C8.82002 6.37999 9.02 5.65997 9 4.90997C8.97 3.73997 8.45001 2.71 7.64001 2H15Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M9 5C9 6.2 8.47001 7.27 7.64001 8C6.93001 8.62 6.01 9 5 9C2.79 9 1 7.21 1 5C1 3.74 1.58 2.61 2.5 1.88C3.19 1.33 4.06 1 5 1C7.21 1 9 2.79 9 5Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M5.25 3.75V5.25L4 6" stroke="#7E7E91"
+                                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-sm leading-[18px] text-[#00000066]">التوصيل</span>
+                                        <h4 class="text-base leading-5 text-[#000000E5]">4-7 أيام</h4>
+                                    </div>
+                                </div>
+                                <div class="item flex gap-4">
+                                    <div class="p-3 rounded-2xl border border-[]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M15 2V12C15 13.1 14.1 14 13 14H2V7.62C2.73 8.49 3.85003 9.03 5.09003 9C6.10003 8.98 7.01 8.59 7.69 7.94C8 7.68 8.26002 7.34999 8.46002 6.98999C8.82002 6.37999 9.02 5.65997 9 4.90997C8.97 3.73997 8.45001 2.71 7.64001 2H15Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M9 5C9 6.2 8.47001 7.27 7.64001 8C6.93001 8.62 6.01 9 5 9C2.79 9 1 7.21 1 5C1 3.74 1.58 2.61 2.5 1.88C3.19 1.33 4.06 1 5 1C7.21 1 9 2.79 9 5Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M5.25 3.75V5.25L4 6" stroke="#7E7E91"
+                                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-sm leading-[18px] text-[#00000066]">التوصيل</span>
+                                        <h4 class="text-base leading-5 text-[#000000E5]">4-7 أيام</h4>
+                                    </div>
+                                </div>
+                                <div class="item flex gap-4">
+                                    <div class="p-3 rounded-2xl border border-[]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M15 2V12C15 13.1 14.1 14 13 14H2V7.62C2.73 8.49 3.85003 9.03 5.09003 9C6.10003 8.98 7.01 8.59 7.69 7.94C8 7.68 8.26002 7.34999 8.46002 6.98999C8.82002 6.37999 9.02 5.65997 9 4.90997C8.97 3.73997 8.45001 2.71 7.64001 2H15Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M9 5C9 6.2 8.47001 7.27 7.64001 8C6.93001 8.62 6.01 9 5 9C2.79 9 1 7.21 1 5C1 3.74 1.58 2.61 2.5 1.88C3.19 1.33 4.06 1 5 1C7.21 1 9 2.79 9 5Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M5.25 3.75V5.25L4 6" stroke="#7E7E91"
+                                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-sm leading-[18px] text-[#00000066]">التوصيل</span>
+                                        <h4 class="text-base leading-5 text-[#000000E5]">4-7 أيام</h4>
+                                    </div>
+                                </div>
+                                <div class="item flex gap-4">
+                                    <div class="p-3 rounded-2xl border border-[]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M15 2V12C15 13.1 14.1 14 13 14H2V7.62C2.73 8.49 3.85003 9.03 5.09003 9C6.10003 8.98 7.01 8.59 7.69 7.94C8 7.68 8.26002 7.34999 8.46002 6.98999C8.82002 6.37999 9.02 5.65997 9 4.90997C8.97 3.73997 8.45001 2.71 7.64001 2H15Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M9 5C9 6.2 8.47001 7.27 7.64001 8C6.93001 8.62 6.01 9 5 9C2.79 9 1 7.21 1 5C1 3.74 1.58 2.61 2.5 1.88C3.19 1.33 4.06 1 5 1C7.21 1 9 2.79 9 5Z"
+                                                stroke="#7E7E91" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M5.25 3.75V5.25L4 6" stroke="#7E7E91"
+                                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-sm leading-[18px] text-[#00000066]">التوصيل</span>
+                                        <h4 class="text-base leading-5 text-[#000000E5]">4-7 أيام</h4>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="border-t border-[#E2E2E9]"></div>
+                        <div class="flex items-center gap-6">
+                            <div class="counter bg-[#F3F3F7] rounded-[18px] flex">
+                                <button type="button" title="add"
+                                    class="increase w-14 h-14 flex items-center justify-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12H18" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 18V6" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="counter-num w-14 h-14 flex items-center justify-center text-black text-lg leading-6 font-medium">
+                                    01</div>
+                                <button type="button" title="minus"
+                                    class="decrease w-14 h-14 flex items-center justify-center opacity-20">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12H18" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <button type="button" title="add to cart"
+                                class="grow flex gap-3 bg-[#5F59F7] text-white text-lg leading-6 rounded-[18px] justify-center py-4 px-8">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.021 17.9445L12.021 14.0555" stroke="white" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M13.9235 16L10.0345 16" stroke="white" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.80994 2L5.18994 5.63" stroke="white" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.1899 2L18.8099 5.63" stroke="white" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M2 7.85001C2 6.00001 2.99 5.85001 4.22 5.85001H19.78C21.01 5.85001 22 6.00001 22 7.85001C22 10 21.01 9.85001 19.78 9.85001H4.22C2.99 9.85001 2 10 2 7.85001Z"
+                                        stroke="white" stroke-width="1.5" />
+                                    <path
+                                        d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                أضف للسلة
+                            </button>
+                            <a href="#" class="flex items-center gap-2 text-sm leading-[18px] text-[#000000E5]">
+                                <svg class="opacity-[.55]" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.41325 13.8733C8.18659 13.9533 7.81325 13.9533 7.58659 13.8733C5.65325 13.2133 1.33325 10.46 1.33325 5.79335C1.33325 3.73335 2.99325 2.06668 5.03992 2.06668C6.25325 2.06668 7.32659 2.65335 7.99992 3.56001C8.67325 2.65335 9.75325 2.06668 10.9599 2.06668C13.0066 2.06668 14.6666 3.73335 14.6666 5.79335C14.6666 10.46 10.3466 13.2133 8.41325 13.8733Z"
+                                        stroke="black" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                أضف إلى المفضلة
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div id="book-buy-sec"
-            class=" border-t border-[#E2E2E9] hidden lg:block w-full z-10 sticky top-[90vh] bg-white">
+        <div id="book-buy-sec" class="border-t border-[#E2E2E9] hidden  w-full z-10  bg-white">
             <div class="container py-6 flex items-center justify-between">
                 <div class="flex items-center gap-4">
                     <div class="w-[56px] h-[82px] rounded-lg overflow-hidden">
@@ -247,7 +656,7 @@
         </div>
 
         <!--  nagib   Section  -->
-        <section class="py-8 lg:py-16 px-[30px] lg:px-0">
+        <section class=" py-8 lg:py-16 px-[30px] lg:px-0">
             <div class="container flex flex-col gap-8 lg:gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">اعمال نجيب محفوظ</h2>
@@ -1011,6 +1420,7 @@
     <!-- End Warraq Main Page Content  -->
 
     <!-- Start Warraq Footer  -->
+
     <footer>
         <div
             class="container flex flex-col lg:flex-row lg:items-center lg:gap-[30px] px-[30px] lg:px-0 py-8 lg:py-16 border-t border-[#E2E2E9]">
@@ -1155,7 +1565,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/scripts/owl.carousel.js"></script>
     <script src="assets/scripts/scripts.js"></script>
-
+    <script>
+        let pos = $(".hero-sec").position().top + $(".hero-sec").innerHeight();
+        console.log(pos);
+        $(window).on("scroll", function () {
+            if (window.scrollY > pos) {
+                $("#book-buy-sec").addClass("flex");
+                $("#book-buy-sec").css({ "position": "fixed", "bottom": "0", "display": "block" });
+            }
+            else {
+                $("#book-buy-sec").css({ "position": "static", "display": "none" });
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -43,3 +43,38 @@ $('.owl-bestseller').owlCarousel({
         }
     }
 })
+
+if ($(".show-more-btn")) {
+    $(".expanded").hide();
+    $(".show-more-btn").click(function (eve) {
+        eve.preventDefault();
+        let th = $(this);
+        console.log(th.siblings(".expanded"));
+        th.parent().find(".expanded").toggle();
+    });
+}
+
+if ($(".counter")) {
+    function minusCheck() {
+        if (+$(".counter .counter-num").html() > 1) {
+            $(".counter .decrease").removeClass("opacity-20");
+        } else {
+            $(".counter .decrease").addClass("opacity-20");
+        }
+    }
+    minusCheck()
+
+    $(".counter .decrease").on("click", function () {
+        if (+$(".counter .counter-num").html() > 1) {
+            $(".counter .counter-num").text(+$(".counter .counter-num").html() - 1);
+            minusCheck()
+        }
+    })
+    $(".counter .increase").on("click", function () {
+        $(".counter .counter-num").text(+$(".counter .counter-num").html() + 1);
+        minusCheck()
+
+    })
+
+}
+
