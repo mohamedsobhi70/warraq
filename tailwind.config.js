@@ -12,8 +12,11 @@ module.exports = {
       fontFamily: {
         'IBM': ['IBM Plex Sans Arabic', 'sans-serif'],
       },
-
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy: 'class',
+    }),
+  ],
 }
