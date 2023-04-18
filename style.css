@@ -24,9 +24,22 @@
   .secondary-btn {
     @apply py-2 lg:py-2.5 px-4 lg:px-5 rounded-[10px] lg:rounded-xl bg-[#F5F5FF] text-xs lg:text-sm  leading-4 lg:leading-[18px] text-[#403AEE];
   }
-  
+
   .form-checkbox {
     @apply rounded-md border border-[#E2E2E9] outline-none w-5 h-5 focus:ring-transparent;
+  }
+  .page-title-sec {
+    @apply pt-16 pb-[69px];
+  }
+  .page-title-heading {
+    @apply text-black text-5xl leading-[60px] font-bold text-center;
+  }
+  .page-title-text {
+    @apply text-[#0000008C] text-lg leading-[26px] text-center;
+  }
+  .pagination-item.active,
+  .pagination-item:hover {
+    @apply bg-[#5F59F7] text-white;
   }
 
   @media (min-width: 1024px) {
