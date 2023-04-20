@@ -41,8 +41,13 @@
   .pagination-item:hover {
     @apply bg-[#5F59F7] text-white;
   }
-  .drop-down-list.active {
+  .drop-down-list.active,
+  .filter-sec.active {
     @apply opacity-100 visible translate-y-0;
+  }
+
+  .filter-sec.active > aside {
+    @apply  translate-x-0;
   }
   .filter-item.active,
   .filter-item:hover {

@@ -83,3 +83,11 @@ if($(".drop-down")){
         $(this).siblings(".drop-down-list").toggleClass("active");
     })
 }
+if($(".filter-sec")){
+    $(".filter-open").on("click",function(){
+        $(".filter-sec").addClass("active");
+    })
+    $(".filter-close").on("click",function(){
+        $(".filter-sec").removeClass("active");
+    })
+}
