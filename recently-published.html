@@ -147,9 +147,106 @@
         <!--  Discounts and packages  -->
         <section class="py-8 lg:py-16 px-[30px] lg:px-0 ">
             <div class="container flex flex-col gap-8 lg:gap-12">
-                <header class="flex items-center justify-between">
-
+                <header class="flex items-center justify-between py-4 gap-1 border-b border-[#E2E2E9]">
+                    <button type="button"
+                        class="border border-[#E8E8ED] rounded-xl py-2.5 px-5 flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.6 1.40039H12.4C13.1333 1.40039 13.7333 2.00039 13.7333 2.73372V4.20039C13.7333 4.73372 13.4 5.40039 13.0667 5.73372L10.2 8.26706C9.8 8.60039 9.53333 9.26706 9.53333 9.80039V12.6671C9.53333 13.0671 9.26667 13.6004 8.93333 13.8004L8 14.4004C7.13333 14.9337 5.93333 14.3337 5.93333 13.2671V9.73372C5.93333 9.26706 5.66667 8.66706 5.4 8.33372L2.86667 5.66706C2.53333 5.33372 2.26667 4.73372 2.26667 4.33372V2.80039C2.26667 2.00039 2.86667 1.40039 3.6 1.40039Z"
+                                stroke="#0C0C13" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="text-sm text-[#0C0C13] leading-[18px]">فلتر</span>
+                    </button>
+                    <ul class="filters flex items-center gap-2">
+                        <li class="filter-item rounded-xl transition-all duration-400 active ">
+                            <button type="button"
+                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">أوروبي</button>
+                        </li>
+                        <li class="filter-item rounded-xl transition-all duration-400">
+                            <button type="button"
+                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">ثقافي</button>
+                        </li>
+                        <li class="filter-item rounded-xl transition-all duration-400">
+                            <button type="button"
+                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">ثقافي</button>
+                        </li>
+                        <li class="filter-item rounded-xl transition-all duration-400">
+                            <button type="button" class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">الأدب
+                                النوعي</button>
+                        </li>
+                        <li class="filter-item rounded-xl transition-all duration-400">
+                            <button type="button" class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">الفنون
+                                والأدب</button>
+                        </li>
+                        <li class="filter-item rounded-xl transition-all duration-400">
+                            <button type="button"
+                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">ثقافي</button>
+                        </li>
+                        <li class="filter-item rounded-xl transition-all duration-400">
+                            <button type="button"
+                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">تاريخي</button>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2 relative ">
+                        <span class="text-sm text-[#00000066] leading-[18px] ">ترتيب حسب:</span>
+                        <span
+                            class="drop-down flex gap-1 items-center text-sm leading-[18px] text-[#000000E5] cursor-pointer">
+                            الشائع
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
+                                    stroke="black" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <ul
+                            class="drop-down-list translate-y-2 transition-all duration-400 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white w-[190px] border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    الكتب الرائجة
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    الإسم من ( أ - ي )
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    الإسم من ( ي - أ )
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    من الاحدث الي الاقدم
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    من الاحدث الي الاقدم
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    السعر من الاعلى الى الادنى
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    السعر من الارخص الى الاعلى
+                                </a>
+                            </li>
+                            <li class="py-2 px-[18px]">
+                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                    التقييم من مرتفع إلى منخفض
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </header>
+
                 <div class="flex flex-col gap-8">
                     <div class="grid grid-cols-4 gap-y-8 gap-x-[30px]">
                         <!-- item  -->

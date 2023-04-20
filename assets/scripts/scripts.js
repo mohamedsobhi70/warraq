@@ -78,3 +78,8 @@ if ($(".counter")) {
 
 }
 
+if($(".drop-down")){
+    $(".drop-down").on("click",function(){
+        $(this).siblings(".drop-down-list").toggleClass("active");
+    })
+}

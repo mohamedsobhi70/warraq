@@ -41,6 +41,13 @@
   .pagination-item:hover {
     @apply bg-[#5F59F7] text-white;
   }
+  .drop-down-list.active {
+    @apply opacity-100 visible translate-y-0;
+  }
+  .filter-item.active,
+  .filter-item:hover {
+    @apply bg-[#F3F3F7];
+  }
 
   @media (min-width: 1024px) {
     .owl-theme .owl-nav {
