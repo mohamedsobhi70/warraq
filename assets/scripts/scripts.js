@@ -1,3 +1,25 @@
+$('.owl-header-categories').owlCarousel({
+    rtl: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    margin: 30,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false,
+        },
+        676: {
+            items: 2
+        },
+        1024: {
+            items: 4,
+            nav: true,
+        }
+    }
+})
 $('.owl-categories').owlCarousel({
     rtl: true,
     loop: true,
@@ -78,16 +100,84 @@ if ($(".counter")) {
 
 }
 
-if($(".drop-down")){
-    $(".drop-down").on("click",function(){
+if ($(".drop-down")) {
+    $(".drop-down").on("click", function () {
         $(this).siblings(".drop-down-list").toggleClass("active");
     })
 }
-if($(".filter-sec")){
-    $(".filter-open").on("click",function(){
+if ($(".filter-sec")) {
+    $(".filter-open").on("click", function () {
         $(".filter-sec").addClass("active");
     })
-    $(".filter-close").on("click",function(){
+    $(".filter-close").on("click", function () {
         $(".filter-sec").removeClass("active");
     })
 }
+if ($(".filters")) {
+    const filters = document.querySelectorAll('.filters li');
+
+    filters.forEach(filter => {
+
+        filter.addEventListener('click', function () {
+            console.log(filter);
+            let selectedFilter = filter.getAttribute('data-filter');
+            let itemsToHide = document.querySelectorAll(`.items-filt .item:not([data-filter='${selectedFilter}'])`);
+            let itemsToShow = document.querySelectorAll(`.items-filt [data-filter='${selectedFilter}']`);
+
+            if (selectedFilter == 'all') {
+                itemsToHide = [];
+                itemsToShow = document.querySelectorAll('.items-filt [data-filter]');
+            }
+
+            itemsToHide.forEach(el => {
+                el.classList.add('hide');
+                el.classList.remove('show');
+            });
+
+            itemsToShow.forEach(el => {
+                el.classList.remove('hide');
+                el.classList.add('show');
+            });
+
+        });
+    });
+
+}
+
+if ($(".focused-input")) {
+    $(".focused-input").on("focus", function () {
+        $(this).parent().addClass("shadow-inpt")
+    }).on("blur", function () {
+        $(this).parent().removeClass("shadow-inpt")
+    })
+}
+
+
+// dropdown lists 
+if ($(".drop-down")) {
+    $(".drop-down").on("click", function () {
+        $(this).parent().find(".drop-down-items").slideToggle(300);
+        if ($(this).parent().find(".drop-down-icon")) {
+            $(this).parent().find(".drop-down-icon").toggleClass("open");
+        }
+    })
+}
+
+// header categories
+$(".header-cat-toggle").on("click", function () {
+    $(".header-cat").slideToggle(300);
+})
+
+if ($("#price-range")) {
+    $("#price-range").slider({
+        step: 10,
+        range: true,
+        min: 0,
+        max: 2500,
+        values: [20, 600],
+        isRTL: false,
+        slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
+    });
+    $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
+}
+

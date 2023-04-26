@@ -34,7 +34,7 @@
                 </a>
                 <nav class="hidden lg:block">
                     <ul class="flex items-center gap-6">
-                        <li>
+                        <li class="header-cat-toggle">
                             <a href="#" class="flex items-center gap-2 text-base leading-5">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -81,11 +81,11 @@
                             </g>
                         </svg>
                     </a>
-                    <input type="search" class="placeholder:text-[#00000066] focus:outline-none"
+                    <input type="search" class="placeholder:text-[#00000066] focus:outline-none focused-input"
                         placeholder="أبحث عن كتاب, مؤلف, دار نشر" />
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="#" title="delete" class="">
+                    <a href="cart.html" title="delete" class="">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.5 14.25C8.5 16.17 10.08 17.75 12 17.75C13.92 17.75 15.5 16.17 15.5 14.25"
                                 stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -102,11 +102,76 @@
                                 stroke="black" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </a>
-                    <a href="#" title="account" class="w-8 h-8 rounded-xl overflow-hidden hidden lg:block">
+                    <a href="account.html" title="account" class="w-8 h-8 rounded-xl overflow-hidden hidden lg:block">
                         <img src="assets/images/account.png" class="w-full h-full object-cover" width="32" height="32"
                             alt="Account Mena" />
                     </a>
                 </div>
+            </div>
+        </div>
+        <div class="container py-8 header-cat hidden">
+            <div class="owl-carousel owl-theme owl-header-categories relative px-16">
+                <!-- Category Item -->
+                <div href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                    <div class="rounded-[4px]">
+                        <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                        <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                    </div>
+                </div>
+                <!-- Category Item -->
+                <div href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                    <div class="rounded-[4px]">
+                        <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                        <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                    </div>
+                </div>
+                <!-- Category Item -->
+                <div href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                    <div class="rounded-[4px]">
+                        <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                        <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                    </div>
+                </div>
+                <!-- Category Item -->
+                <div href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                    <div class="rounded-[4px]">
+                        <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                        <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                    </div>
+                </div>
+                <!-- Category Item -->
+                <div href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                    <div class="rounded-[4px]">
+                        <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                        <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                    </div>
+                </div>
+                <!-- Category Item -->
+                <div href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                    <div class="rounded-[4px]">
+                        <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                        <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </header>
@@ -1034,7 +1099,7 @@
             <div class="container flex flex-col gap-8 lg:gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">مجتمع القراء</h2>
-                    <a href="#" class="secondary-btn flex items-center gap-2">
+                    <a href="events.html" class="secondary-btn flex items-center gap-2">
                         <span class="text-sm leading-[18px]">مشاهدة الجميع</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1096,7 +1161,7 @@
             <div class="container flex flex-col gap-8 lg:gap-12">
                 <header class="flex items-baseline justify-between">
                     <h2 class="section-title">الكتب المستعملة</h2>
-                    <a href="#" class="secondary-btn flex items-center gap-2">
+                    <a href="used-books.html" class="secondary-btn flex items-center gap-2">
                         <span class="text-sm leading-[18px]">مشاهدة الجميع</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

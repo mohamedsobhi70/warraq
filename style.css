@@ -1,7 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.shadow-inpt {
+  @apply shadow-lg shadow-[#B6B4FD];
+}
+.ui-slider-handle {
+  background: #5f59f7 !important;
+  border-radius: 50%;
+  height: 16px !important;
+  width: 16px !important;
+  border: none !important;
+}
+.ui-widget.ui-widget-content {
+  border: none;
+  background: #e2e2e9;
+  height: 4px;
+}
+.ui-slider-horizontal .ui-slider-range {
+  background: #5f59f7;
+}
 @layer components {
+  .drop-down-icon.open {
+    @apply rotate-180;
+  }
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -47,7 +68,7 @@
   }
 
   .filter-sec.active > aside {
-    @apply  translate-x-0;
+    @apply translate-x-0;
   }
   .filter-item.active,
   .filter-item:hover {
@@ -66,21 +87,38 @@
       left: 50%;
       z-index: -1;
     }
+    
+    .owl-theme.owl-header-categories .owl-nav {
+      top: 0%;
+      width: 100%;
+      margin-top: 0;
+      height: 100%;
+    }
 
     .owl-theme .owl-nav button span {
       font-size: 33px;
       padding: 10px !important;
       transition: 0.4s ease-in-out;
-      display: block;
+      display: flex;
       border-radius: 8px;
+      align-items: center;
+      height: 100%;
     }
+
     .owl-theme .owl-nav button span:hover {
       background: #b6b4fd;
     }
+
     .owl-theme .owl-nav [class*="owl-"]:hover {
       background: none;
       color: #000;
       text-decoration: none;
+    }
+
+    .owl-header-categories .owl-nav button {
+      border: 1px solid #e8e8ed !important;
+      border-radius: 10px !important;
+      height: 100%;
     }
   }
 }

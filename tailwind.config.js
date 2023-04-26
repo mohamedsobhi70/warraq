@@ -3,6 +3,9 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     extend: {
+      boxShadow: {
+        'lg': '0 0 0 6px #B6B4FD',
+      },
       container: {
         center: true,
         screens: {
