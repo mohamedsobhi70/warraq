@@ -40,7 +40,7 @@
     scrollbar-width: none;
   }
   .section-title {
-    @apply text-2xl lg:text-[32px] text-[#000000E5] leading-[30px] lg:leading-10 font-semibold;
+    @apply text-[20px] lg:text-[32px] text-[#000000E5] leading-6 lg:leading-10 font-semibold;
   }
   .secondary-btn {
     @apply py-2 lg:py-2.5 px-4 lg:px-5 rounded-[10px] lg:rounded-xl bg-[#F5F5FF] text-xs lg:text-sm  leading-4 lg:leading-[18px] text-[#403AEE];

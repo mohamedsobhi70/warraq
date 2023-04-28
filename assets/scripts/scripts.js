@@ -1,4 +1,15 @@
-$('.owl-header-categories').owlCarousel({
+// page loader 
+$(document).ready(function () {
+    setTimeout(() => {
+        $(".page-loader").fadeOut(400)
+    }, 900);
+    $(".page-loader svg").hide(900)
+})
+
+
+
+//
+$('.owl-heaeder-categories').owlCarousel({
     rtl: true,
     loop: true,
     autoplay: true,
