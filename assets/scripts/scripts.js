@@ -7,7 +7,6 @@ $(document).ready(function () {
 })
 
 
-
 //
 $('.owl-heaeder-categories').owlCarousel({
     rtl: true,
@@ -179,16 +178,16 @@ $(".header-cat-toggle").on("click", function () {
     $(".header-cat").slideToggle(300);
 })
 
-if ($("#price-range")) {
-    $("#price-range").slider({
-        step: 10,
-        range: true,
-        min: 0,
-        max: 2500,
-        values: [20, 600],
-        isRTL: false,
-        slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
-    });
-    $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
-}
+// if ($("#price-range")) {
+//     $("#price-range").slider({
+//         step: 10,
+//         range: true,
+//         min: 0,
+//         max: 2500,
+//         values: [20, 600],
+//         isRTL: false,
+//         slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
+//     });
+//     $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
+// }
 
