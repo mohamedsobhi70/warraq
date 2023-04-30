@@ -171,7 +171,13 @@ if ($(".drop-down")) {
             $(this).parent().find(".drop-down-icon").toggleClass("open");
         }
     })
+    $(".drop-down-list li").on("click", function () {
+        $(".drop-down span").text($(this).text().trim());
+        $(this).parent().removeClass("active");
+    })
+
 }
+
 
 // header categories
 $(".header-cat-toggle").on("click", function () {
