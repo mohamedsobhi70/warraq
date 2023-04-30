@@ -31,7 +31,6 @@
                     <path d="M9 12L21 12" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
                     <path d="M3 17L21 17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
-
             </button>
             <div class="flex items-center gap-8">
                 <a href="index.html" class="" title="Warraq Logo">
@@ -138,7 +137,7 @@
                     <div class="flex flex-col gap-12 p-8 rounded-3xl border border-[#E8E8ED]">
                         <ul class=" profile-navigation flex flex-col gap-1">
 
-                            <li class="active">
+                            <li class="">
                                 <a href="profile-edit.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -177,7 +176,7 @@
                                 </a>
                             </li>
 
-                            <li class="">
+                            <li class="active">
                                 <a href="wishlist.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -355,11 +354,11 @@
                         </li>
                         <li>
                             <a href="#" class="text-sm leading-[18px] text-black font-semibold">
-                                الملف الشخصي
+                                قائمة المفضلة
                             </a>
                         </li>
                     </ul>
-                    
+
                     <div class="flex flex-col gap-3">
                         <h2 class="text-[40px] leading-[50px] text-black font-bold">
                             مينــا لوكــاس
@@ -369,171 +368,288 @@
                         </p>
                     </div>
 
-                    <form action="" class="w-full flex flex-col gap-6 lg:gap-8">
-
-                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">المعلومات شخصية</h3>
-
-                            <span class="border-t border-[#E2E2E9]"></span>
-
-                            <div class="flex flex-col gap-4">
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="flex flex-col gap-2">
-                                        <label for="name" class="text-sm leading-[18px] text-[#000000B2] font-medium">الاسم بالكامل</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="text" id="name" value="مينا لوكاس">
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label for="job-title" class="text-sm leading-[18px] text-[#000000B2] font-medium">المسمي الوظيفي</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="text" id="job-title" value="مصمم منتجات رقمية">
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="biography" class="text-sm leading-[18px] text-[#000000B2] font-medium">نبذة تعريفية</label>
-                                    <textarea
-                                        class="min-h-[84px] border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        id="biography">مرحباً، أنا مينا مصمم تجربة مستخدم أهتم بالتكنولوجياً عموماً و التصميم بشكل خاص وأفضل قراءة الكتب وحضور الأحداث المتعلقة بهم.</textarea>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="email" class="text-sm leading-[18px] text-[#000000B2] font-medium">الإيميل</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="email" value="Luca.uix@gmail.com">
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="flex flex-col gap-2">
-                                        <label for="phone" class="text-sm leading-[18px] text-[#000000B2] font-medium">رقم الجوال</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="tel" id="phone" value="+201098190871">
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label for="birth-date" class="text-sm leading-[18px] text-[#000000B2] font-medium">تاريخ الميلاد</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="text" id="birth-date" value="25/9/1998">
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="interests" class="text-sm leading-[18px] text-[#000000B2] font-medium">الاهتمامات</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="interests" value="Luca.uix@gmail.com">
-                                </div>
+                    <div class="grid grid-cols-3 gap-[30px] py-8">
+                    
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-1.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> حديث الصباح والمساء </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
                             </div>
-
+                        </div>
+                      
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-2.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> أصداء السيرة الذاتية </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                      
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-5.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> زقاق المدق </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                    
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-1.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> حديث الصباح والمساء </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                      
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-2.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> أصداء السيرة الذاتية </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                      
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-5.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> زقاق المدق </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                    
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-1.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> حديث الصباح والمساء </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                      
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-2.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> أصداء السيرة الذاتية </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                      
+                        <!-- item  -->
+                        <div class="item group">
+                            <a href="#" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-5.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-1 lg:gap-2 py-4">
+                                <h3 class="rtext-base lg:text-xl leading-5 lg:leading-6 text-[#000000E5] font-semibold">
+                                    <a href="#" class=""> زقاق المدق </a>
+                                </h3>
+                                <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                    <a href="#" class="">  نجيب محفوظ</a>
+                                </p>
+                                <button class="flex gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.07324 11.6691C2.59991 10.2891 1.33325 8.32248 1.33325 5.78914C1.33325 3.72914 2.99325 2.0625 5.03992 2.0625C6.25325 2.0625 7.32659 2.64916 7.99992 3.55583C8.67325 2.64916 9.75325 2.0625 10.9599 2.0625C11.7266 2.0625 12.4399 2.29581 13.0332 2.70247"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.4932 4.67188C14.6065 5.02521 14.6665 5.40521 14.6665 5.79854C14.6665 10.4652 10.3465 13.2185 8.41317 13.8852C8.1865 13.9652 7.81317 13.9652 7.58651 13.8852C7.15317 13.7385 6.60652 13.4852 6.01318 13.1319"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.6666 1.33594L1.33325 14.6693" stroke="black" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm leading-[18px] text-[#000000E5]">إزالة من المفضلة</span>
+                                </button>
+                            </div>
                         </div>
 
-                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">عنوان الشحن</h3>
-
-                            <span class="border-t border-[#E2E2E9]"></span>
-
-                            <div class="flex flex-col gap-5">
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="address" class="text-sm leading-[18px] text-[#000000B2] font-medium">العنوان</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="address" value="2 شارع الهرم - الجيزة">
-                                </div>
-                                <div class="flex flex-col gap-2">
-
-                                    <label for="country" class="text-sm leading-[18px] text-[#000000B2] font-medium">مدينة</label>
-                                    <div class="grid grid-cols-2 gap-4">
-                                        <div class="flex flex-col gap-2">
-                                            <input
-                                                class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                                type="text" id="country" value="الجيزة">
-                                        </div>
-                                        <div class="relative">
-                                            <span
-                                                class="drop-down flex gap-1 h-full items-center justify-between border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD] cursor-pointer">
-                                                <span class="">الهرم</span>
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
-                                                        stroke="black" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </svg>
-                                            </span>
-                                            <ul
-                                                class="w-full drop-down-list selct translate-y-2 transition-all duration-[400] invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        الهرم
-                                                </li>
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        دكرنس
-                                                </li>
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        طلخا
-                                                </li>
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        المنصورة
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="postal-code" class="text-sm leading-[18px] text-[#000000B2] font-medium">رمز بريدي</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="postal-code" value="25500">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">تغيير كلمة السر</h3>
-
-                            <span class="border-t border-[#E2E2E9]"></span>
-
-                            <div class="flex flex-col gap-5">
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="current-password" class="text-sm leading-[18px] text-[#000000B2] font-medium">كلمة السر الحالية</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="password" id="current-password" value="123456">
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="new-password" class="text-sm leading-[18px] text-[#000000B2] font-medium">كلمة السر الجديدة</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="password" id="new-password" value="123456">
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="re-new-password" class="text-sm leading-[18px] text-[#000000B2] font-medium">تاكيد كلمة السر الجديدة</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="password" id="re-new-password" value="123456">
-                                </div>
-
-                            </div>
-                            <div class="flex gap-2 items-center">
-                                <input class="py-2.5 px-5 rounded-[14px] text-sm text-white bg-[#5F59F7] cursor-pointer"
-                                    type="submit" value="تاكيد">
-                                <a href="#"
-                                    class="py-2.5 px-5 rounded-[14px] text-sm text-[#0C0C13] bg-[#F3F3F7] cursor-pointer">الغاء</a>
-                            </div>
-
-                        </div>
-
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>

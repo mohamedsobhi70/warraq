@@ -1096,6 +1096,10 @@ video {
   min-height: 84px;
 }
 
+.min-h-\[108px\] {
+  min-height: 108px;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -1846,6 +1850,10 @@ video {
   line-height: 50px;
 }
 
+.leading-\[\] {
+  line-height: ;
+}
+
 .text-\[\#00000066\] {
   color: #00000066;
 }
@@ -2352,5 +2360,13 @@ video {
 
   .lg\:leading-\[50px\] {
     line-height: 50px;
+  }
+
+  .lg\:leading-\[2px\] {
+    line-height: 2px;
+  }
+
+  .lg\:leading-\[28px\] {
+    line-height: 28px;
   }
 }
