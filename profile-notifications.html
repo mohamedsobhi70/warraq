@@ -138,7 +138,7 @@
                     <div class="flex flex-col gap-12 p-8 rounded-3xl border border-[#E8E8ED]">
                         <ul class=" profile-navigation flex flex-col gap-1">
 
-                            <li class="active">
+                            <li class="">
                                 <a href="profile-edit.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -156,7 +156,7 @@
                                 </a>
                             </li>
 
-                            <li class="">
+                            <li class="active">
                                 <a href="profile-notifications.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -359,7 +359,7 @@
                             </a>
                         </li>
                     </ul>
-                    
+
                     <div class="flex flex-col gap-3">
                         <h2 class="text-[40px] leading-[50px] text-black font-bold">
                             مينــا لوكــاس
@@ -369,171 +369,187 @@
                         </p>
                     </div>
 
-                    <form action="" class="w-full flex flex-col gap-6 lg:gap-8">
+                    <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
+                        <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">الأشعارات</h3>
 
-                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">المعلومات شخصية</h3>
+                        <span class="border-t border-[#E2E2E9]"></span>
 
-                            <span class="border-t border-[#E2E2E9]"></span>
-
-                            <div class="flex flex-col gap-4">
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="flex flex-col gap-2">
-                                        <label for="name">الاسم بالكامل</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="text" id="name" value="مينا لوكاس">
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label for="job-title">المسمي الوظيفي</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="text" id="job-title" value="مصمم منتجات رقمية">
-                                    </div>
+                        <div class="notifications-sec flex flex-col gap-6">
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 border border-[#E2E2E9] rounded-[36px] overflow-hidden">
+                                    <img src="assets/images/notif-1.jpg" class="w-full h-full object-cover" width="80"
+                                        height="80" alt="notification">
                                 </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="biography">نبذة تعريفية</label>
-                                    <textarea
-                                        class="min-h-[84px] border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        id="biography">مرحباً، أنا مينا مصمم تجربة مستخدم أهتم بالتكنولوجياً عموماً و التصميم بشكل خاص وأفضل قراءة الكتب وحضور الأحداث المتعلقة بهم.</textarea>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="email">الإيميل</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="email" value="Luca.uix@gmail.com">
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="flex flex-col gap-2">
-                                        <label for="phone">رقم الجوال</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="tel" id="phone" value="+201098190871">
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">مبروك، <span
+                                                class="text-[#5F59F7]">عادل</span> قام بشراء كتاب لك 🥳</h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كتاب موسم صيد الغزلان</span>
                                     </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label for="birth-date">تاريخ الميلاد</label>
-                                        <input
-                                            class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="text" id="birth-date" value="25/9/1998">
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="interests">الاهتمامات</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="interests" value="Luca.uix@gmail.com">
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        قام صديقك أحمد بشراء كتاب لك من “قائمتك المفضلة” من أفضل الهداياً هي هدايا ذات
+                                        قيمة عالية في الأفادة الكتب هي الأفضل نرشح لك أن تشاهد ملف أحمد يمكن أن يكون
+                                        هناك كتب تريد شرائها له،نتمني لك يوماً سعيداً ❤️.
+                                    </p>
                                 </div>
                             </div>
+
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
+                                            fill="#D8D7FE" />
+                                        <path
+                                            d="M50 40.6693C50 38.8293 51.4933 37.3359 53.3333 37.3359V36.0026C53.3333 30.6693 52 29.3359 46.6666 29.3359H33.3333C28 29.3359 26.6666 30.6693 26.6666 36.0026V36.6693C28.5066 36.6693 30 38.1626 30 40.0026C30 41.8426 28.5066 43.3359 26.6666 43.3359V44.0026C26.6666 49.3359 28 50.6693 33.3333 50.6693H46.6666C52 50.6693 53.3333 49.3359 53.3333 44.0026C51.4933 44.0026 50 42.5093 50 40.6693Z"
+                                            stroke="#403AEE" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M36 43.6641L44 35.6641" stroke="#403AEE" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M43.9927 43.6667H44.0047" stroke="#403AEE" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M35.9927 36.3307H36.0047" stroke="#403AEE" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">
+                                            كوبون بمناسبة اليوم الوطني السعودي
+                                        </h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كوبون بقيمة 200 ريال سعودي
+                                        </span>
+                                    </div>
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
+                                        الوطني 2023 )
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
+                                            fill="#A6F4C5" />
+                                        <path
+                                            d="M44.5201 30.9441L46.4 34.7041C46.6534 35.2241 47.3334 35.7174 47.9067 35.824L51.3067 36.384C53.4801 36.744 53.9867 38.3174 52.4267 39.8907L49.7734 42.5441C49.3334 42.9841 49.0801 43.8507 49.2267 44.4774L49.9867 47.7574C50.5867 50.3441 49.2001 51.3574 46.9201 49.9974L43.7334 48.1041C43.16 47.7574 42.2001 47.7574 41.6267 48.1041L38.44 49.9974C36.16 51.3441 34.7734 50.3441 35.3734 47.7574L36.1334 44.4774C36.2801 43.8641 36.0267 42.9974 35.5867 42.5441L32.9334 39.8907C31.3734 38.3307 31.8801 36.7574 34.0534 36.384L37.4534 35.824C38.0267 35.7307 38.7067 35.2241 38.9601 34.7041L40.8401 30.9441C41.8401 28.9041 43.4934 28.9041 44.5201 30.9441Z"
+                                            stroke="#039855" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M34.6666 30.6641H26.6666" stroke="#039855" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M30.6666 49.3359H26.6666" stroke="#039855" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M28 40H26.6666" stroke="#039855" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">
+                                            خبر رائع!! لقد حصلت علي +200 نقاط مكافأة
+                                        </h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كوبون بقيمة 200 ريال سعودي
+                                        </span>
+                                    </div>
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
+                                        الوطني 2023 )
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 border border-[#E2E2E9] rounded-[36px] overflow-hidden">
+                                    <img src="assets/images/notif-1.jpg" class="w-full h-full object-cover" width="80"
+                                        height="80" alt="notification">
+                                </div>
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">مبروك، <span
+                                                class="text-[#5F59F7]">عادل</span> قام بشراء كتاب لك 🥳</h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كتاب موسم صيد الغزلان</span>
+                                    </div>
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        قام صديقك أحمد بشراء كتاب لك من “قائمتك المفضلة” من أفضل الهداياً هي هدايا ذات
+                                        قيمة عالية في الأفادة الكتب هي الأفضل نرشح لك أن تشاهد ملف أحمد يمكن أن يكون
+                                        هناك كتب تريد شرائها له،نتمني لك يوماً سعيداً ❤️.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 border border-[#E2E2E9] rounded-[36px] overflow-hidden">
+                                    <img src="assets/images/notif-1.jpg" class="w-full h-full object-cover" width="80"
+                                        height="80" alt="notification">
+                                </div>
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">مبروك، <span
+                                                class="text-[#5F59F7]">عادل</span> قام بشراء كتاب لك 🥳</h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كتاب موسم صيد الغزلان</span>
+                                    </div>
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        قام صديقك أحمد بشراء كتاب لك من “قائمتك المفضلة” من أفضل الهداياً هي هدايا ذات
+                                        قيمة عالية في الأفادة الكتب هي الأفضل نرشح لك أن تشاهد ملف أحمد يمكن أن يكون
+                                        هناك كتب تريد شرائها له،نتمني لك يوماً سعيداً ❤️.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 border border-[#E2E2E9] rounded-[36px] overflow-hidden">
+                                    <img src="assets/images/notif-1.jpg" class="w-full h-full object-cover" width="80"
+                                        height="80" alt="notification">
+                                </div>
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">مبروك، <span
+                                                class="text-[#5F59F7]">عادل</span> قام بشراء كتاب لك 🥳</h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كتاب موسم صيد الغزلان</span>
+                                    </div>
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        قام صديقك أحمد بشراء كتاب لك من “قائمتك المفضلة” من أفضل الهداياً هي هدايا ذات
+                                        قيمة عالية في الأفادة الكتب هي الأفضل نرشح لك أن تشاهد ملف أحمد يمكن أن يكون
+                                        هناك كتب تريد شرائها له،نتمني لك يوماً سعيداً ❤️.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- item  -->
+                            <div class="notification-item flex gap-6 items-start">
+                                <div class="w-20 h-20 border border-[#E2E2E9] rounded-[36px] overflow-hidden">
+                                    <img src="assets/images/notif-1.jpg" class="w-full h-full object-cover" width="80"
+                                        height="80" alt="notification">
+                                </div>
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-col gap-2 py-[11px]">
+                                        <h3 class="text-2xl leading-[30px] text-[#000000E5] font-semibold">مبروك، <span
+                                                class="text-[#5F59F7]">عادل</span> قام بشراء كتاب لك 🥳</h3>
+                                        <span class="text-base text-[#0000008C] leading-5">كتاب موسم صيد الغزلان</span>
+                                    </div>
+                                    <p class="text-base text-[#0000008C] leading-6">
+                                        قام صديقك أحمد بشراء كتاب لك من “قائمتك المفضلة” من أفضل الهداياً هي هدايا ذات
+                                        قيمة عالية في الأفادة الكتب هي الأفضل نرشح لك أن تشاهد ملف أحمد يمكن أن يكون
+                                        هناك كتب تريد شرائها له،نتمني لك يوماً سعيداً ❤️.
+                                    </p>
+                                </div>
+                            </div>
+
 
                         </div>
 
-                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">عنوان الشحن</h3>
-
-                            <span class="border-t border-[#E2E2E9]"></span>
-
-                            <div class="flex flex-col gap-5">
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="address">العنوان</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="address" value="2 شارع الهرم - الجيزة">
-                                </div>
-                                <div class="flex flex-col gap-2">
-
-                                    <label for="country">مدينة</label>
-                                    <div class="grid grid-cols-2 gap-4">
-                                        <div class="flex flex-col gap-2">
-                                            <input
-                                                class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                                type="text" id="country" value="الجيزة">
-                                        </div>
-                                        <div class="relative">
-                                            <span
-                                                class="drop-down flex gap-1 h-full items-center justify-between border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD] cursor-pointer">
-                                                <span class="">الهرم</span>
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
-                                                        stroke="black" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </svg>
-                                            </span>
-                                            <ul
-                                                class="w-full drop-down-list selct translate-y-2 transition-all duration-[400] invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        الهرم
-                                                </li>
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        دكرنس
-                                                </li>
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        طلخا
-                                                </li>
-                                                <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                        المنصورة
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="postal-code">رمز بريدي</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="postal-code" value="25500">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">تغيير كلمة السر</h3>
-
-                            <span class="border-t border-[#E2E2E9]"></span>
-
-                            <div class="flex flex-col gap-5">
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="current-password">كلمة السر الحالية</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="password" id="current-password" value="123456">
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="new-password">كلمة السر الجديدة</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="password" id="new-password" value="123456">
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="re-new-password">تاكيد كلمة السر الجديدة</label>
-                                    <input
-                                        class="border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="password" id="re-new-password" value="123456">
-                                </div>
-
-                            </div>
-                            <div class="flex gap-2 items-center">
-                                <input class="py-2.5 px-5 rounded-[14px] text-sm text-white bg-[#5F59F7] cursor-pointer"
-                                    type="submit" value="تاكيد">
-                                <a href="#"
-                                    class="py-2.5 px-5 rounded-[14px] text-sm text-[#0C0C13] bg-[#F3F3F7] cursor-pointer">الغاء</a>
-                            </div>
-
-                        </div>
-
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
