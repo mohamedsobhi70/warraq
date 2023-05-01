@@ -164,17 +164,259 @@
                 <div class="flex gap-[30px]">
 
                     <div class="basis-8/12">
-                        <div class="grid grid-cols-12 gap-[30px] border-b border-[#E2E2E9] py-6 px-7">
+                        <div class="grid grid-cols-12 items-center gap-[30px] border-b border-[#E2E2E9] py-6 px-7">
                             <span class="col-span-1">
-                                <input title="all" checked type="checkbox" name="" id="">
+                                <input title="all" checked class="form-checkbox" type="checkbox" name="" id="">
                             </span>
-                            <span class="col-span-5">الكتاب</span>
-                            <span class="col-span-2">الكمية</span>
-                            <span class="col-span-3 text-left">السعر</span>
-                            <span class="col-span-1"></span>
+                            <span class="col-span-5 text-sm leading-[18px] text-[#0000008C] font-semibold">الكتاب</span>
+                            <span class="col-span-2 text-sm leading-[18px] text-[#0000008C] font-semibold">الكمية</span>
+                            <span
+                                class="col-span-3 text-sm leading-[18px] text-[#0000008C] font-semibold text-left">السعر</span>
+                            <span class="col-span-1 text-sm leading-[18px] text-[#0000008C] font-semibold"></span>
                         </div>
-                    </div>
 
+                        <!-- cart item -->
+                        <div class="grid grid-cols-12 items-center gap-[30px] border-b border-[#E2E2E9] py-6 px-7">
+                            <span class="col-span-1">
+                                <input title="all" checked class="form-checkbox" type="checkbox" name="" id="">
+                            </span>
+                            <span class="col-span-5 flex items-center gap-3">
+                                <div class="w-16  rounded-[4px] overflow-hidden">
+                                    <img src="assets/images/nag-1.jpg" class="w-full h-full object-cover" width="64"
+                                        height="92" alt="nagib">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex gap-1 flex-col">
+                                        <h3 class="text-xl leading-[26px] font-medium text-black">
+                                            حديث الصباح و المساء
+                                        </h3>
+                                        <p class="text-base leading-6 text-[#0000008C]">نجيب محفوظ</p>
+                                    </div>
+                                    <span class="text-sm leading-[18px] font-medium text-[#00000066]">250 ريال</span>
+                                </div>
+                            </span>
+                            <span class="col-span-2">
+                                <div class="counter bg-[#F3F3F7] rounded-[14px] flex">
+                                    <button type="button" title="add"
+                                        class="increase w-10 h-10 flex items-center justify-center">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8 12V4" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                    <div
+                                        class="counter-num w-10 h-10 flex items-center justify-center text-black text-sm leading-4 font-medium">
+                                        02
+                                    </div>
+                                    <button type="button" title="minus"
+                                        class="decrease w-10 h-10 flex items-center justify-center opacity-20">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </span>
+                            <span class="col-span-3 text-left text-base leading-5 text-[#5F59F7] font-semibold">500
+                                ريال</span>
+                            <button title="delete" class="col-span-1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 16L16 8" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- cart item -->
+                        <div class="grid grid-cols-12 items-center gap-[30px] border-b border-[#E2E2E9] py-6 px-7">
+                            <span class="col-span-1">
+                                <input title="all" checked class="form-checkbox" type="checkbox" name="" id="">
+                            </span>
+                            <span class="col-span-5 flex items-center gap-3">
+                                <div class="w-16  rounded-[4px] overflow-hidden">
+                                    <img src="assets/images/nag-5.jpg" class="w-full h-full object-cover" width="64"
+                                        height="92" alt="nagib">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex gap-1 flex-col">
+                                        <h3 class="text-xl leading-[26px] font-medium text-black">
+                                            زقاق المدق
+                                        </h3>
+                                        <p class="text-base leading-6 text-[#0000008C]">نجيب محفوظ</p>
+                                    </div>
+                                    <span class="text-sm leading-[18px] font-medium text-[#00000066]">250 ريال</span>
+                                </div>
+                            </span>
+                            <span class="col-span-2">
+                                <div class="counter bg-[#F3F3F7] rounded-[14px] flex">
+                                    <button type="button" title="add"
+                                        class="increase w-10 h-10 flex items-center justify-center">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8 12V4" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                    <div
+                                        class="counter-num w-10 h-10 flex items-center justify-center text-black text-sm leading-4 font-medium">
+                                        02
+                                    </div>
+                                    <button type="button" title="minus"
+                                        class="decrease w-10 h-10 flex items-center justify-center opacity-20">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </span>
+                            <span class="col-span-3 text-left text-base leading-5 text-[#5F59F7] font-semibold">500
+                                ريال</span>
+                            <button title="delete" class="col-span-1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 16L16 8" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- cart item -->
+                        <div class="grid grid-cols-12 items-center gap-[30px] border-b border-[#E2E2E9] py-6 px-7">
+                            <span class="col-span-1">
+                                <input title="all" checked class="form-checkbox" type="checkbox" name="" id="">
+                            </span>
+                            <span class="col-span-5 flex items-center gap-3">
+                                <div class="w-16  rounded-[4px] overflow-hidden">
+                                    <img src="assets/images/nag-2.jpg" class="w-full h-full object-cover" width="64"
+                                        height="92" alt="nagib">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex gap-1 flex-col">
+                                        <h3 class="text-xl leading-[26px] font-medium text-black">
+                                            أصداء السيرة الذاتية
+                                        </h3>
+                                        <p class="text-base leading-6 text-[#0000008C]">نجيب محفوظ</p>
+                                    </div>
+                                    <span class="text-sm leading-[18px] font-medium text-[#00000066]">250 ريال</span>
+                                </div>
+                            </span>
+                            <span class="col-span-2">
+                                <div class="counter bg-[#F3F3F7] rounded-[14px] flex">
+                                    <button type="button" title="add"
+                                        class="increase w-10 h-10 flex items-center justify-center">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8 12V4" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                    <div
+                                        class="counter-num w-10 h-10 flex items-center justify-center text-black text-sm leading-4 font-medium">
+                                        02
+                                    </div>
+                                    <button type="button" title="minus"
+                                        class="decrease w-10 h-10 flex items-center justify-center opacity-20">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </span>
+                            <span class="col-span-3 text-left text-base leading-5 text-[#5F59F7] font-semibold">500
+                                ريال</span>
+                            <button title="delete" class="col-span-1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 16L16 8" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- cart item -->
+                        <div class="grid grid-cols-12 items-center gap-[30px] border-b border-[#E2E2E9] py-6 px-7">
+                            <span class="col-span-1">
+                                <input title="all" checked class="form-checkbox" type="checkbox" name="" id="">
+                            </span>
+                            <span class="col-span-5 flex items-center gap-3">
+                                <div class="w-16  rounded-[4px] overflow-hidden">
+                                    <img src="assets/images/nag-3.jpg" class="w-full h-full object-cover" width="64"
+                                        height="92" alt="nagib">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex gap-1 flex-col">
+                                        <h3 class="text-xl leading-[26px] font-medium text-black">
+                                            الص و الكلاب
+                                        </h3>
+                                        <p class="text-base leading-6 text-[#0000008C]">نجيب محفوظ</p>
+                                    </div>
+                                    <span class="text-sm leading-[18px] font-medium text-[#00000066]">250 ريال</span>
+                                </div>
+                            </span>
+                            <span class="col-span-2">
+                                <div class="counter bg-[#F3F3F7] rounded-[14px] flex">
+                                    <button type="button" title="add"
+                                        class="increase w-10 h-10 flex items-center justify-center">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8 12V4" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </button>
+                                    <div
+                                        class="counter-num w-10 h-10 flex items-center justify-center text-black text-sm leading-4 font-medium">
+                                        02
+                                    </div>
+                                    <button type="button" title="minus"
+                                        class="decrease w-10 h-10 flex items-center justify-center opacity-20">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 8H12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </span>
+                            <span class="col-span-3 text-left text-base leading-5 text-[#5F59F7] font-semibold">500
+                                ريال</span>
+                            <button title="delete" class="col-span-1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 16L16 8" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+
+                    </div>
 
                     <div class="basis-4/12 flex flex-col gap-8 p-8 rounded-3xl border border-[#E8E8ED]">
                         <div class="flex flex-col gap-4">

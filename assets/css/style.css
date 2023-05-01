@@ -1103,6 +1103,10 @@ video {
   height: 100%;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .min-h-\[108px\] {
   min-height: 108px;
 }
@@ -1185,6 +1189,10 @@ video {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .max-w-full {
@@ -1950,6 +1958,14 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#\#0000008C\] {
+  color: ##0000008C;
 }
 
 .underline {
