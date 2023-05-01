@@ -66,8 +66,12 @@
   .filter-sec.active {
     @apply opacity-100 visible translate-y-0;
   }
-  .drop-down-list.selct.active,
+
   .filter-sec.active {
+    @apply top-0;
+  }
+
+  .drop-down-list.selct.active {
     @apply top-[120%];
   }
 
