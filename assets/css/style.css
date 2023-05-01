@@ -1088,16 +1088,16 @@ video {
   height: 100%;
 }
 
+.min-h-\[108px\] {
+  min-height: 108px;
+}
+
 .min-h-\[612px\] {
   min-height: 612px;
 }
 
 .min-h-\[84px\] {
   min-height: 84px;
-}
-
-.min-h-\[108px\] {
-  min-height: 108px;
 }
 
 .w-12 {
@@ -1402,8 +1402,8 @@ video {
   border-radius: 32px;
 }
 
-.rounded-\[46px\] {
-  border-radius: 46px;
+.rounded-\[36px\] {
+  border-radius: 36px;
 }
 
 .rounded-\[60px\] {
@@ -1416,30 +1416,6 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-\[26px\] {
-  border-radius: 26px;
-}
-
-.rounded-\[36px\] {
-  border-radius: 36px;
-}
-
-.rounded-\[30px\] {
-  border-radius: 30px;
-}
-
-.rounded-\[25px\] {
-  border-radius: 25px;
-}
-
-.rounded-\[35px\] {
-  border-radius: 35px;
-}
-
-.rounded-\[28px\] {
-  border-radius: 28px;
 }
 
 .border {
@@ -1708,6 +1684,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-\[11px\] {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
 .py-\[7px\] {
   padding-top: 7px;
   padding-bottom: 7px;
@@ -1716,11 +1697,6 @@ video {
 .py-\[9px\] {
   padding-top: 9px;
   padding-bottom: 9px;
-}
-
-.py-\[11px\] {
-  padding-top: 11px;
-  padding-bottom: 11px;
 }
 
 .pl-4 {
@@ -1850,10 +1826,6 @@ video {
   line-height: 50px;
 }
 
-.leading-\[\] {
-  line-height: ;
-}
-
 .text-\[\#00000066\] {
   color: #00000066;
 }
@@ -1921,10 +1893,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
 }
 
 .underline {
@@ -2360,13 +2328,5 @@ video {
 
   .lg\:leading-\[50px\] {
     line-height: 50px;
-  }
-
-  .lg\:leading-\[2px\] {
-    line-height: 2px;
-  }
-
-  .lg\:leading-\[28px\] {
-    line-height: 28px;
   }
 }
