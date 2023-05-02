@@ -47,8 +47,13 @@
   }
 
   .form-checkbox {
-    @apply rounded-md border border-[#E2E2E9] outline-none w-5 h-5 focus:ring-transparent;
+    @apply text-[#F5F5FF] rounded-[7px] border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7]  checked:bg-[url(../images/check.svg)] checked:bg-input outline-none w-5 h-5 focus:ring-transparent;
   }
+
+  .form-radio {
+    @apply text-[#F5F5FF] border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] checked:bg-radio checked:bg-[url(../images/radio.svg)] outline-none focus:ring-transparent;
+  }
+
   .page-title-sec {
     @apply pt-16 pb-[69px];
   }
