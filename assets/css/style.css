@@ -829,6 +829,13 @@ video {
     z-index: -1;
   }
 
+  .owl-theme.book-details .owl-nav {
+    width: 100%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-top: 0;
+  }
+
   .owl-theme.owl-header-categories .owl-nav {
     top: 0%;
     width: 100%;
@@ -1062,14 +1069,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -1226,6 +1225,10 @@ video {
   width: 2rem;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
 .w-\[122px\] {
   width: 122px;
 }
@@ -1274,26 +1277,13 @@ video {
   width: 850px;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-auto {
-  width: auto;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.w-max {
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.w-\[100px\] {
-  width: 100px;
+.w-full {
+  width: 100%;
 }
 
 .max-w-full {
@@ -1306,10 +1296,6 @@ video {
 
 .shrink {
   flex-shrink: 1;
-}
-
-.shrink-0 {
-  flex-shrink: 0;
 }
 
 .grow {
@@ -1419,10 +1405,6 @@ video {
 
 .items-baseline {
   align-items: baseline;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1614,10 +1596,6 @@ video {
   border-color: rgb(237 237 242 / var(--tw-border-opacity));
 }
 
-.border-\[\] {
-  border-color: ;
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -1712,10 +1690,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
@@ -1751,6 +1725,11 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .px-2 {
@@ -2282,6 +2261,14 @@ video {
     width: 630px;
   }
 
+  .lg\:w-\[850px\] {
+    width: 850px;
+  }
+
+  .lg\:w-\[786px\] {
+    width: 786px;
+  }
+
   .lg\:basis-1\/2 {
     flex-basis: 50%;
   }
@@ -2296,6 +2283,10 @@ video {
 
   .lg\:basis-2\/3 {
     flex-basis: 66.666667%;
+  }
+
+  .lg\:basis-4\/12 {
+    flex-basis: 33.333333%;
   }
 
   .lg\:grid-cols-3 {
@@ -2431,6 +2422,11 @@ video {
   .lg\:py-\[18px\] {
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .lg\:pb-12 {

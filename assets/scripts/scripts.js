@@ -8,6 +8,26 @@ $(document).ready(function () {
 
 
 //
+$('.book-details').owlCarousel({
+    rtl: true,
+    margin: 16,
+    autoplay: true,
+    loop:true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 2,
+            nav: false,
+        },
+        768: {
+            items: 3,
+            nav: true,
+        }
+    }
+})
+
 $('.owl-heaeder-categories').owlCarousel({
     rtl: true,
     loop: true,
@@ -30,6 +50,7 @@ $('.owl-heaeder-categories').owlCarousel({
         }
     }
 })
+
 $('.owl-categories').owlCarousel({
     rtl: true,
     loop: true,
