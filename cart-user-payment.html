@@ -202,16 +202,40 @@
 
                                         </div>
                                     </div>
+
                                     <div class="accordion-content">
                                         <div class="p-4 flex flex-col gap-4">
                                             <h4 class="text-[#000000E5] text-sm leading-[18px]">
                                                 الرجوع الي الكروت المحفوظة
                                             </h4>
-                                            <div class="p-4 flex flex-col gap-3">
-                                                <label class="peer-checked:border peer-checked:border-red-600">
-                                                    <input class="peer form-radio w-5 h-5" type="radio" name="" id="">
-                                                    <span class="text-sm leading-[18px] text-[الكارت اللي ينتهي بـ 9521]">الكارت اللي ينتهي بـ 9521</span>
-                                                </label>
+                                            <div class="flex flex-col gap-3">
+                                                <div
+                                                    class="select-card-item duration-300 transition-all flex items-center gap-2.5 py-2.5 px-4 border border-[#E2E2E9] rounded-[14px]">
+                                                    <input class="form-radio w-5 h-5" type="radio" name="card"
+                                                        id="card-1">
+                                                    <img src="assets/images/visa.svg" width="34" height="24" alt="visa">
+                                                    <label for="card-1"
+                                                        class="text-sm leading-[18px] text-[#00000066] transition-all duration-300">الكارت اللي
+                                                        ينتهي بـ 9521</label>
+                                                </div>
+                                                <div
+                                                    class="select-card-item duration-300 transition-all flex items-center gap-2.5 py-2.5 px-4 border border-[#E2E2E9] rounded-[14px]">
+                                                    <input class="form-radio w-5 h-5" type="radio" name="card"
+                                                        id="card-2">
+                                                    <img src="assets/images/visa.svg" width="34" height="24" alt="visa">
+                                                    <label for="card-2"
+                                                        class="text-sm leading-[18px] text-[#00000066] transition-all duration-300">الكارت اللي
+                                                        ينتهي بـ 9521</label>
+                                                </div>
+                                                <div
+                                                    class="select-card-item duration-300 transition-all flex items-center gap-2.5 py-2.5 px-4 border border-[#E2E2E9] rounded-[14px]">
+                                                    <input class="form-radio w-5 h-5" type="radio" name="card"
+                                                        id="card-3">
+                                                    <img src="assets/images/visa.svg" width="34" height="24" alt="visa">
+                                                    <label for="card-3"
+                                                        class="text-sm leading-[18px] text-[#00000066] transition-all duration-300">الكارت اللي
+                                                        ينتهي بـ 9521</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -538,6 +562,10 @@
         $('.accordion-item input[type="radio"].item').change(function () {
             $('.accordion-item .accordion-content').slideUp(400);
             $(this).closest(".accordion-item").find(".accordion-content").slideDown(400);
+        });
+        $('.select-card-item input[type="radio"]').change(function () {
+            $(".select-card-item").removeClass("active");
+            $(this).closest(".select-card-item").addClass("active");
         });
     </script>
 </body>

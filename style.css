@@ -51,7 +51,7 @@
   }
 
   .form-radio {
-    @apply text-[#F5F5FF] border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] checked:bg-radio checked:bg-[url(../images/radio.svg)] outline-none focus:ring-transparent;
+    @apply text-[#F5F5FF] cursor-pointer border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] checked:bg-radio checked:bg-[url(../images/radio.svg)] outline-none focus:ring-transparent;
   }
 
   .page-title-sec {
@@ -100,6 +100,12 @@
   .profile-navigation > li.active svg path,
   .profile-navigation > li:hover svg path {
     @apply stroke-[#403AEE] transition-all duration-300;
+  }
+  .select-card-item.active {
+    @apply border-[#5F59F7];
+  }
+  .select-card-item.active > label {
+    @apply text-[#000000E5];
   }
 
   @media (min-width: 1024px) {
