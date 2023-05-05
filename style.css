@@ -58,13 +58,13 @@
   }
 
   .page-title-sec {
-    @apply pt-16 pb-[69px];
+    @apply p-12 lg:pt-16 lg:pb-[69px];
   }
   .page-title-heading {
-    @apply text-black text-5xl leading-[60px] font-bold text-center;
+    @apply text-black text-2xl lg:text-5xl leading-[30px] lg:leading-[60px] font-bold text-center;
   }
   .page-title-text {
-    @apply text-[#0000008C] text-lg leading-[26px] text-center;
+    @apply text-[#0000008C] text-sm lg:text-lg leading-5 lg:leading-[26px] text-center;
   }
   .pagination-item.active,
   .pagination-item:hover {
