@@ -4,6 +4,9 @@
 .shadow-inpt {
   @apply shadow-lg shadow-[#B6B4FD];
 }
+.swiper-slide {
+  height: 100% !important;
+}
 .ui-slider-handle {
   background: #5f59f7 !important;
   border-radius: 50%;

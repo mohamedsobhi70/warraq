@@ -1181,6 +1181,10 @@ video {
   height: 100%;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .min-h-\[108px\] {
   min-height: 108px;
 }
@@ -1292,10 +1296,6 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.shrink {
-  flex-shrink: 1;
 }
 
 .grow {
@@ -1727,11 +1727,6 @@ video {
   padding: 2rem;
 }
 
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2088,6 +2083,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2102,6 +2103,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #B6B4FD;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.swiper-slide {
+  height: 100% !important;
 }
 
 .ui-slider-handle {
@@ -2261,10 +2266,6 @@ video {
     width: 630px;
   }
 
-  .lg\:w-\[850px\] {
-    width: 850px;
-  }
-
   .lg\:w-\[786px\] {
     width: 786px;
   }
@@ -2374,6 +2375,11 @@ video {
     padding-right: 0px;
   }
 
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -2422,11 +2428,6 @@ video {
   .lg\:py-\[18px\] {
     padding-top: 18px;
     padding-bottom: 18px;
-  }
-
-  .lg\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
   }
 
   .lg\:pb-12 {
