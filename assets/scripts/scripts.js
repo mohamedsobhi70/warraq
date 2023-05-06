@@ -102,7 +102,6 @@ if ($(".show-more-btn")) {
     $(".show-more-btn").click(function (eve) {
         eve.preventDefault();
         let th = $(this);
-        console.log(th.siblings(".expanded"));
         th.parent().find(".expanded").toggle();
     });
 }
@@ -219,19 +218,6 @@ if ($("#price-range").length > 0) {
 
 
 
-// filter items 
-if ($(".filters").length > 0) {
-    $(".filter-item").on("click", function () {
-        $(".filter-item").removeClass("active")
-        $(this).addClass("active");
-        let cat = $(this).attr("data-type");
-        $(".paginated-list li").addClass("hidden")
-        $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
-        pagenat();
-    })
-}
-// pagenation 
-
 if ($("#paginated-list").length > 0) {
 
     function pagenat() {
@@ -240,18 +226,16 @@ if ($("#paginated-list").length > 0) {
         const listItems = paginatedList.querySelectorAll(".paginated-list > li:not(.hidden)");
         const nextButton = document.querySelector(".next-button");
         const prevButton = document.querySelector(".prev-button");
-
         const paginationLimit = 8;
         const pageCount = Math.ceil(listItems.length / paginationLimit);
         let currentPage = 1;
 
+
         const disableButton = (button) => {
-            button.classList.add("disabled");
             button.setAttribute("disabled", true);
         };
 
         const enableButton = (button) => {
-            button.classList.remove("disabled");
             button.removeAttribute("disabled");
         };
 
@@ -270,7 +254,7 @@ if ($("#paginated-list").length > 0) {
         };
 
         const handleActivePageNumber = () => {
-            document.querySelectorAll(".pagination-item:not(.hidden)").forEach((button) => {
+            document.querySelectorAll(".pagination-item").forEach((button) => {
                 button.classList.remove("active");
                 const pageIndex = Number(button.getAttribute("page-index"));
                 if (pageIndex == currentPage) {
@@ -310,7 +294,7 @@ if ($("#paginated-list").length > 0) {
             });
         };
 
-        window.addEventListener("load", () => {
+        function pag() {
             getPaginationNumbers();
             setCurrentPage(1);
 
@@ -322,7 +306,7 @@ if ($("#paginated-list").length > 0) {
                 setCurrentPage(currentPage + 1);
             });
 
-            document.querySelectorAll(".pagination-item:not(.hidden)").forEach((button) => {
+            document.querySelectorAll(".pagination-item").forEach((button) => {
                 const pageIndex = Number(button.getAttribute("page-index"));
 
                 if (pageIndex) {
@@ -331,7 +315,23 @@ if ($("#paginated-list").length > 0) {
                     });
                 }
             });
+        }
+        window.addEventListener("load", () => {
+            pag()
         });
+
+
     }
     pagenat();
+
+    $(".filter-item").on("click", function () {
+        $(".filter-item").removeClass("active")
+        $(this).addClass("active");
+        let cat = $(this).attr("data-type");
+        $(".paginated-list li").addClass("hidden")
+        $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
+        $(".pagination-numbers").html("");
+        pagenat();
+
+    })
 }
