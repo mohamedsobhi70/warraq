@@ -1,3 +1,11 @@
+
+// mobile menu 
+$(".mobile-menu-btn").on("click", function () {
+    $(".mobile-menu").addClass("active");
+})
+$(".mobile-menu-close").on("click", function () {
+    $(".mobile-menu").removeClass("active");
+})
 // page loader 
 $(document).ready(function () {
     setTimeout(() => {
@@ -184,6 +192,7 @@ if ($(".focused-input")) {
 
 // dropdown lists 
 if ($(".drop-down")) {
+   
     $(".drop-down").on("click", function () {
         $(this).parent().find(".drop-down-items").slideToggle(300);
         if ($(this).parent().find(".drop-down-icon")) {
@@ -194,10 +203,14 @@ if ($(".drop-down")) {
         $(".drop-down span").text($(this).text().trim());
         $(this).parent().removeClass("active");
     })
-
 }
 
-
+ $(".mobile-dropdown").on("click", function () {
+        $(this).siblings(".mobile-dropdown-list").slideToggle(300);
+        if ($(this).parent().find(".drop-down-icon")) {
+            $(this).parent().find(".drop-down-icon").toggleClass("open");
+        }
+    })
 // header categories
 $(".header-cat-toggle").on("click", function () {
     $(".header-cat").slideToggle(300);
@@ -205,20 +218,22 @@ $(".header-cat-toggle").on("click", function () {
 
 if ($("#price-range").length > 0) {
     $("#price-range").slider({
+        isRTL: true,
         step: 10,
         range: true,
         min: 0,
         max: 2500,
         values: [20, 600],
-        isRTL: false,
         slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
     });
     $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
+
 }
 
 
-
 if ($("#paginated-list").length > 0) {
+
+
 
     function pagenat() {
         const paginationNumbers = document.querySelector(".pagination-numbers");
@@ -229,7 +244,6 @@ if ($("#paginated-list").length > 0) {
         const paginationLimit = 8;
         const pageCount = Math.ceil(listItems.length / paginationLimit);
         let currentPage = 1;
-
 
         const disableButton = (button) => {
             button.setAttribute("disabled", true);
@@ -315,6 +329,7 @@ if ($("#paginated-list").length > 0) {
                     });
                 }
             });
+
         }
         window.addEventListener("load", () => {
             pag()
@@ -332,6 +347,13 @@ if ($("#paginated-list").length > 0) {
         $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
         $(".pagination-numbers").html("");
         pagenat();
+        if ($(".pagination-numbers").html() == "") {
 
+            $(".pagination").addClass("hidden")
+        }
+        else {
+            $(".pagination").removeClass("hidden")
+
+        }
     })
 }
