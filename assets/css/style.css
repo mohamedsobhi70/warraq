@@ -2246,6 +2246,11 @@ video {
   background-color: rgb(182 180 253 / var(--tw-bg-opacity));
 }
 
+.peer:checked ~ .peer-checked\:to-red-900 {
+  --tw-gradient-to: #7f1d1d var(--tw-gradient-to-position);
+  --tw-gradient-to-position:  ;
+}
+
 :is([dir="ltr"] .ltr\:border-r) {
   border-right-width: 1px;
 }
