@@ -3,9 +3,11 @@
 $(".mobile-menu-btn").on("click", function () {
     $(".mobile-menu").addClass("active");
 })
+
 $(".mobile-menu-close").on("click", function () {
     $(".mobile-menu").removeClass("active");
 })
+
 // page loader 
 $(document).ready(function () {
     setTimeout(() => {
@@ -13,7 +15,6 @@ $(document).ready(function () {
     }, 900);
     $(".page-loader svg").hide(900)
 })
-
 
 //
 $('.book-details').owlCarousel({
@@ -105,6 +106,8 @@ $('.owl-bestseller').owlCarousel({
     }
 })
 
+
+// show more texr 
 if ($(".show-more-btn")) {
     $(".expanded").hide();
     $(".show-more-btn").click(function (eve) {
@@ -114,27 +117,35 @@ if ($(".show-more-btn")) {
     });
 }
 
-if ($(".counter")) {
-    function minusCheck() {
-        if (+$(".counter .counter-num").html() > 1) {
-            $(".counter .decrease").removeClass("opacity-20");
-        } else {
-            $(".counter .decrease").addClass("opacity-20");
-        }
-    }
-    minusCheck()
+// counter 
 
-    $(".counter .decrease").on("click", function () {
-        if (+$(".counter .counter-num").html() > 1) {
-            $(".counter .counter-num").text(+$(".counter .counter-num").html() - 1);
-            minusCheck()
+if ($(".counter")) {
+    $(".counter").each(function () {
+        let th = $(this);
+        function minusCheck() {
+            if (+(th.find(".counter-num").html()) > 1) {
+                th.find(".decrease").removeClass("opacity-20");
+            } else {
+                th.find(".decrease").addClass("opacity-20");
+            }
         }
-    })
-    $(".counter .increase").on("click", function () {
-        $(".counter .counter-num").text(+$(".counter .counter-num").html() + 1);
         minusCheck()
 
-    })
+        th.find(".decrease").on("click", function () {
+            if (+(th.find(".counter-num").html()) > 1) {
+                th.find(".counter-num").text(+(th.find(".counter-num").html()) - 1);
+                minusCheck()
+            }
+        })
+
+        th.find(".increase").on("click", function () {
+            th.find(".counter-num").text(+(th.find(".counter-num").html()) + 1);
+            minusCheck()
+
+        })
+
+    }
+    )
 
 }
 
@@ -143,6 +154,7 @@ if ($(".drop-down")) {
         $(this).siblings(".drop-down-list").toggleClass("active");
     })
 }
+
 if ($(".filter-sec")) {
     $(".filter-open").on("click", function () {
         $(".filter-sec").addClass("active");
@@ -151,6 +163,7 @@ if ($(".filter-sec")) {
         $(".filter-sec").removeClass("active");
     })
 }
+
 if ($(".filters")) {
     const filters = document.querySelectorAll('.filters li');
 
@@ -181,6 +194,7 @@ if ($(".filters")) {
 
 }
 
+// shadow on input parent 
 if ($(".focused-input")) {
     $(".focused-input").on("focus", function () {
         $(this).parent().addClass("shadow-inpt")
@@ -192,7 +206,7 @@ if ($(".focused-input")) {
 
 // dropdown lists 
 if ($(".drop-down")) {
-   
+
     $(".drop-down").on("click", function () {
         $(this).parent().find(".drop-down-items").slideToggle(300);
         if ($(this).parent().find(".drop-down-icon")) {
@@ -205,12 +219,13 @@ if ($(".drop-down")) {
     })
 }
 
- $(".mobile-dropdown").on("click", function () {
-        $(this).siblings(".mobile-dropdown-list").slideToggle(300);
-        if ($(this).parent().find(".drop-down-icon")) {
-            $(this).parent().find(".drop-down-icon").toggleClass("open");
-        }
-    })
+$(".mobile-dropdown").on("click", function () {
+    $(this).siblings(".mobile-dropdown-list").slideToggle(300);
+    if ($(this).parent().find(".drop-down-icon")) {
+        $(this).parent().find(".drop-down-icon").toggleClass("open");
+    }
+})
+
 // header categories
 $(".header-cat-toggle").on("click", function () {
     $(".header-cat").slideToggle(300);
@@ -230,10 +245,9 @@ if ($("#price-range").length > 0) {
 
 }
 
+// pagination 
 
 if ($("#paginated-list").length > 0) {
-
-
 
     function pagenat() {
         const paginationNumbers = document.querySelector(".pagination-numbers");
@@ -353,7 +367,6 @@ if ($("#paginated-list").length > 0) {
         }
         else {
             $(".pagination").removeClass("hidden")
-
         }
     })
 }
