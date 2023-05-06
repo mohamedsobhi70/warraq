@@ -17,6 +17,7 @@ $(document).ready(function () {
 })
 
 //
+
 $('.book-details').owlCarousel({
     rtl: true,
     margin: 16,
@@ -37,25 +38,29 @@ $('.book-details').owlCarousel({
     }
 })
 
-$('.owl-heaeder-categories').owlCarousel({
+$('.owl-header-categories').owlCarousel({
     rtl: true,
     loop: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
     margin: 30,
+    dots: false, items: 4,
+    nav: true,
+
+})
+$('.owl-filters').owlCarousel({
+    rtl: true,
+    margin: 12,
     dots: false,
+    nav: false,
+    autoWidth: true,
     responsive: {
         0: {
-            items: 1,
-            nav: false,
+            items: 4.5,
         },
         676: {
-            items: 2
+            items: 6
         },
         1024: {
-            items: 4,
-            nav: true,
+            items: 7,
         }
     }
 })
@@ -228,7 +233,7 @@ $(".mobile-dropdown").on("click", function () {
 
 // header categories
 $(".header-cat-toggle").on("click", function () {
-    $(".header-cat").slideToggle(300);
+    $(".header-cat").slideToggle(400);
 })
 
 if ($("#price-range").length > 0) {
