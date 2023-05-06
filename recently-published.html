@@ -128,7 +128,7 @@
                     </p>
                 </div>
                 <div
-                    class="container lg:w-[850px] flex items-center gap-3 border border-[#E2E2E9] bg-white rounded-[18px] p-3.5 lg:px-4 lg:py-6 mb-[-74px] lg:mb-[-104px]">
+                    class="container lg:w-[850px] flex items-center gap-3 border border-[#E2E2E9] bg-white rounded-[18px] p-3.5 lg:px-4 lg:py-6 mb-[-74px] lg:mb-[-104px] transition-shadow duration-300">
                     <a href="#" class="" title="hide">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.4">
@@ -141,7 +141,7 @@
                         </svg>
                     </a>
                     <input type="text" name="book-search" id="book-search"
-                        class="focus:outline-none placeholder:text-[#00000066] text-sm lg:text-lg w-full leading-6 grow"
+                        class="focus:outline-none placeholder:text-[#00000066] text-sm lg:text-lg w-full leading-6 grow focused-input"
                         placeholder="أبحث عن كتاب, مؤلف, دار نشر">
 
                 </div>
@@ -161,45 +161,45 @@
                                 stroke="#0C0C13" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <span class="text-sm text-[#0C0C13] leading-[18px]">فلتر</span>
+                        <span class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px]">فلتر</span>
                     </button>
                     <ul
                         class="filters flex items-center gap-2 border-t lg:border-none border-[#E2E2E9] order-3 lg:order-none w-full lg:w-auto py-4 lg:py-0 overflow-hidden">
                         <li class="filter-item rounded-xl transition-all duration-[400] active ">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">أوروبي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">أوروبي</button>
                         </li>
                         <li class="filter-item rounded-xl transition-all duration-[400]">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
                         </li>
                         <li class="filter-item rounded-xl transition-all duration-[400]">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
                         </li>
                         <li class="filter-item rounded-xl transition-all duration-[400]">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5 grow">الأدب
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5 grow">الأدب
                                 النوعي</button>
                         </li>
                         <li class="filter-item rounded-xl transition-all duration-[400]">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الفنون
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الفنون
                                 والأدب</button>
                         </li>
                         <li class="filter-item rounded-xl transition-all duration-[400]">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
                         </li>
                         <li class="filter-item rounded-xl transition-all duration-[400]">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">تاريخي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">تاريخي</button>
                         </li>
                     </ul>
                     <div class="flex items-center gap-2 relative ">
-                        <span class="text-sm text-[#00000066] leading-[18px] ">ترتيب حسب:</span>
+                        <span class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#00000066]">ترتيب حسب:</span>
                         <span
-                            class="drop-down flex gap-1 items-center text-sm leading-[18px] text-[#000000E5] cursor-pointer">
+                            class="drop-down flex gap-1 items-center text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#000000E5] cursor-pointer">
                             الشائع
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
