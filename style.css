@@ -66,8 +66,16 @@
   .page-title-text {
     @apply text-[#0000008C] text-sm lg:text-lg leading-5 lg:leading-[26px] text-center;
   }
-  .pagination-item.active,
-  .pagination-item:hover {
+  .pagination-item,
+  .pagination-item span {
+    @apply hover:bg-[#5F59F7] hover:text-white;
+  }
+  .pagination-item:hover path {
+    opacity: 1;
+    transition: 0.4s ease;
+    stroke: white;
+  }
+  .pagination-item.active {
     @apply bg-[#5F59F7] text-white;
   }
   .drop-down-list.active,

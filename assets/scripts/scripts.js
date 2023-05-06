@@ -150,7 +150,6 @@ if ($(".filters")) {
     filters.forEach(filter => {
 
         filter.addEventListener('click', function () {
-            console.log(filter);
             let selectedFilter = filter.getAttribute('data-filter');
             let itemsToHide = document.querySelectorAll(`.items-filt .item:not([data-filter='${selectedFilter}'])`);
             let itemsToShow = document.querySelectorAll(`.items-filt [data-filter='${selectedFilter}']`);
@@ -205,126 +204,134 @@ $(".header-cat-toggle").on("click", function () {
     $(".header-cat").slideToggle(300);
 })
 
-// if ($("#price-range")) {
-//     $("#price-range").slider({
-//         step: 10,
-//         range: true,
-//         min: 0,
-//         max: 2500,
-//         values: [20, 600],
-//         isRTL: false,
-//         slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
-//     });
-//     $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
-// }
+if ($("#price-range").length > 0) {
+    $("#price-range").slider({
+        step: 10,
+        range: true,
+        min: 0,
+        max: 2500,
+        values: [20, 600],
+        isRTL: false,
+        slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
+    });
+    $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
+}
 
 
 
-
+// filter items 
+if ($(".filters").length > 0) {
+    $(".filter-item").on("click", function () {
+        $(".filter-item").removeClass("active")
+        $(this).addClass("active");
+        let cat = $(this).attr("data-type");
+        $(".paginated-list li").addClass("hidden")
+        $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
+        pagenat();
+    })
+}
 // pagenation 
 
 if ($("#paginated-list").length > 0) {
 
-    const paginationNumbers = document.querySelector(".pagination-numbers");
-    const paginatedList = document.querySelector(".paginated-list");
-    const listItems = paginatedList.querySelectorAll(".paginated-list >li");
-    const nextButton = document.querySelector(".next-button");
-    const prevButton = document.querySelector(".prev-button");
+    function pagenat() {
+        const paginationNumbers = document.querySelector(".pagination-numbers");
+        const paginatedList = document.querySelector(".paginated-list");
+        const listItems = paginatedList.querySelectorAll(".paginated-list > li:not(.hidden)");
+        const nextButton = document.querySelector(".next-button");
+        const prevButton = document.querySelector(".prev-button");
 
-    const paginationLimit = 8;
-    const pageCount = Math.ceil(listItems.length / paginationLimit);
-    let currentPage = 1;
+        const paginationLimit = 8;
+        const pageCount = Math.ceil(listItems.length / paginationLimit);
+        let currentPage = 1;
 
-    const disableButton = (button) => {
-        button.classList.add("disabled");
-        button.setAttribute("disabled", true);
-    };
+        const disableButton = (button) => {
+            button.classList.add("disabled");
+            button.setAttribute("disabled", true);
+        };
 
-    const enableButton = (button) => {
-        button.classList.remove("disabled");
-        button.removeAttribute("disabled");
-    };
+        const enableButton = (button) => {
+            button.classList.remove("disabled");
+            button.removeAttribute("disabled");
+        };
 
-    const handlePageButtonsStatus = () => {
-        if (currentPage === 1) {
-            disableButton(prevButton);
-        } else {
-            enableButton(prevButton);
-        }
-
-        if (pageCount === currentPage) {
-            disableButton(nextButton);
-        } else {
-            enableButton(nextButton);
-        }
-    };
-
-    const handleActivePageNumber = () => {
-        document.querySelectorAll(".pagination-number").forEach((button) => {
-            button.classList.remove("active");
-            const pageIndex = Number(button.getAttribute("page-index"));
-            if (pageIndex == currentPage) {
-                button.classList.add("active");
+        const handlePageButtonsStatus = () => {
+            if (currentPage === 1) {
+                disableButton(prevButton);
+            } else {
+                enableButton(prevButton);
             }
-        });
-    };
 
-    const appendPageNumber = (index) => {
-        const pageNumber = document.createElement("button");
-        pageNumber.className = "pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px]";
-        pageNumber.innerHTML = index;
-        pageNumber.setAttribute("page-index", index);
-        pageNumber.setAttribute("aria-label", "Page " + index);
-
-        paginationNumbers.appendChild(pageNumber);
-    };
-
-    const getPaginationNumbers = () => {
-        for (let i = 1; i <= pageCount; i++) {
-            appendPageNumber(i);
-        }
-    };
-
-    const setCurrentPage = (pageNum) => {
-        currentPage = pageNum;
-
-        handleActivePageNumber();
-        handlePageButtonsStatus();
-
-        const prevRange = (pageNum - 1) * paginationLimit;
-        const currRange = pageNum * paginationLimit;
-
-        listItems.forEach((item, index) => {
-            item.classList.add("hidden");
-            if (index >= prevRange && index < currRange) {
-                item.classList.remove("hidden");
+            if (pageCount === currentPage) {
+                disableButton(nextButton);
+            } else {
+                enableButton(nextButton);
             }
-        });
-    };
+        };
 
-    window.addEventListener("load", () => {
-        getPaginationNumbers();
-        setCurrentPage(1);
+        const handleActivePageNumber = () => {
+            document.querySelectorAll(".pagination-item:not(.hidden)").forEach((button) => {
+                button.classList.remove("active");
+                const pageIndex = Number(button.getAttribute("page-index"));
+                if (pageIndex == currentPage) {
+                    button.classList.add("active");
+                }
+            });
+        };
 
-        prevButton.addEventListener("click", () => {
-            setCurrentPage(currentPage - 1);
-        });
+        const appendPageNumber = (index) => {
+            const pageNumber = document.createElement("button");
+            pageNumber.className = "pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px]";
+            pageNumber.innerHTML = index;
+            pageNumber.setAttribute("page-index", index);
+            pageNumber.setAttribute("aria-label", "Page " + index);
+            paginationNumbers.appendChild(pageNumber);
+        };
 
-        nextButton.addEventListener("click", () => {
-            setCurrentPage(currentPage + 1);
-        });
-
-        document.querySelectorAll(".pagination-number").forEach((button) => {
-            const pageIndex = Number(button.getAttribute("page-index"));
-
-            if (pageIndex) {
-                button.addEventListener("click", () => {
-                    setCurrentPage(pageIndex);
-                });
+        const getPaginationNumbers = () => {
+            for (let i = 1; i <= pageCount; i++) {
+                appendPageNumber(i);
             }
+        };
+
+        const setCurrentPage = (pageNum) => {
+            currentPage = pageNum;
+            handleActivePageNumber();
+            handlePageButtonsStatus();
+
+            const prevRange = (pageNum - 1) * paginationLimit;
+            const currRange = pageNum * paginationLimit;
+
+            listItems.forEach((item, index) => {
+                item.classList.add("hidden");
+                if (index >= prevRange && index < currRange) {
+                    item.classList.remove("hidden");
+                }
+            });
+        };
+
+        window.addEventListener("load", () => {
+            getPaginationNumbers();
+            setCurrentPage(1);
+
+            prevButton.addEventListener("click", () => {
+                setCurrentPage(currentPage - 1);
+            });
+
+            nextButton.addEventListener("click", () => {
+                setCurrentPage(currentPage + 1);
+            });
+
+            document.querySelectorAll(".pagination-item:not(.hidden)").forEach((button) => {
+                const pageIndex = Number(button.getAttribute("page-index"));
+
+                if (pageIndex) {
+                    button.addEventListener("click", () => {
+                        setCurrentPage(pageIndex);
+                    });
+                }
+            });
         });
-    });
-
-
-
+    }
+    pagenat();
 }
