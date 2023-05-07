@@ -231,6 +231,7 @@ $(".mobile-dropdown").on("click", function () {
     }
 })
 
+
 // header categories
 $(".header-cat-toggle").on("click", function () {
     $(".header-cat").slideToggle(400);
@@ -249,3 +250,4 @@ if ($("#price-range").length > 0) {
     $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
 
 }
+

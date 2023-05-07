@@ -50,7 +50,7 @@
   }
 
   .form-checkbox {
-    @apply  text-[#F5F5FF] rounded-[7px] border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] indeterminate:border-[#5F59F7] indeterminate:bg-[url(../images/indeterminate.svg)] checked:bg-[url(../images/check.svg)] checked:bg-input indeterminate:bg-input outline-none w-5 h-5 focus:ring-transparent;
+    @apply text-[#F5F5FF] rounded-[7px] border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] indeterminate:border-[#5F59F7] indeterminate:bg-[url(../images/indeterminate.svg)] checked:bg-[url(../images/check.svg)] checked:bg-input indeterminate:bg-input outline-none w-5 h-5 focus:ring-transparent;
   }
 
   .form-radio {
@@ -79,11 +79,13 @@
     @apply bg-[#5F59F7] text-white;
   }
   .drop-down-list.active,
-  .filter-sec.active {
+  .filter-sec.active,
+  .mobile-menu.active,
+  .modal.active {
     @apply opacity-100 visible translate-y-0;
   }
-  .mobile-menu.active {
-    @apply opacity-100 visible translate-y-0;
+  .register-event.registered {
+    @apply border border-[#D34136] bg-white text-[#D34136];
   }
   .mobile-menu .drop-down-icon.open {
     @apply -rotate-90;
