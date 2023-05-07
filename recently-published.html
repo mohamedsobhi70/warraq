@@ -22,8 +22,8 @@
 </head>
 
 <body class="font-IBM overflow-x-hidden">
-     <!-- page loader -->
-     <div class="page-loader fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50">
+    <!-- page loader -->
+    <div class="page-loader fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50">
         <svg width="600" viewBox="0 0 93 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M84.3514 17.0838L77.8696 13.0723C77.6011 12.8995 77.2368 12.8995 76.9683 13.0723L70.4864 17.0838C69.3742 17.7748 67.9551 16.9686 67.9551 15.6635V7.73639C67.9551 6.81509 68.703 6.06653 69.6235 6.06653H85.2336C86.1541 6.06653 86.902 6.81509 86.902 7.73639V15.6635C86.8828 16.9686 85.4637 17.7748 84.3514 17.0838Z"
@@ -367,21 +367,17 @@
     </header>
     <!-- End Warraq Header  -->
 
-
     <!-- Start Warraq Main Page Content  -->
     <main>
         <!-- hero section  -->
         <section class="page-title-sec bg-[#E7E7FE] px-[30px] lg:px-0">
-            <div class="flex flex-col gap-6 lg:gap-8">
-                <div class="container w-[630px] max-w-full flex items-center flex-col gap-4 lg:gap-6">
-                    <h1 class="page-title-heading">أصدر حديثاً</h1>
-                    <p class="page-title-text">
-                        في هذا القسم ستجد كل الكتب التي تم أصدارها هذا العام، ليصلك أشعارات هذا القسم من فضلك تأكد من
-                        تسجيل
-                        الدخول.
-                    </p>
-                </div>
-
+            <div class="container w-[630px] max-w-full flex items-center flex-col gap-4 lg:gap-6">
+                <h1 class="page-title-heading">أصدر حديثاً</h1>
+                <p class="page-title-text">
+                    في هذا القسم ستجد كل الكتب التي تم أصدارها هذا العام، ليصلك أشعارات هذا القسم من فضلك تأكد من
+                    تسجيل
+                    الدخول.
+                </p>
             </div>
         </section>
 
@@ -2425,6 +2421,130 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/scripts/owl.carousel.js"></script>
     <script src="assets/scripts/scripts.js"></script>
+    <script>
+
+        function pagenat() {
+            const paginationNumbers = document.querySelector(".pagination-numbers");
+            const paginatedList = document.querySelector(".paginated-list");
+            const listItems = paginatedList.querySelectorAll(".paginated-list > li:not(.hidden)");
+            const nextButton = document.querySelector(".next-button");
+            const prevButton = document.querySelector(".prev-button");
+            const paginationLimit = 8;
+            const pageCount = Math.ceil(listItems.length / paginationLimit);
+            let currentPage = 1;
+
+            const disableButton = (button) => {
+                button.setAttribute("disabled", true);
+            };
+
+            const enableButton = (button) => {
+                button.removeAttribute("disabled");
+            };
+
+            const handlePageButtonsStatus = () => {
+                if (currentPage === 1) {
+                    disableButton(prevButton);
+                } else {
+                    enableButton(prevButton);
+                }
+
+                if (pageCount === currentPage) {
+                    disableButton(nextButton);
+                } else {
+                    enableButton(nextButton);
+                }
+            };
+
+            const handleActivePageNumber = () => {
+                document.querySelectorAll(".pagination-item").forEach((button) => {
+                    button.classList.remove("active");
+                    const pageIndex = Number(button.getAttribute("page-index"));
+                    if (pageIndex == currentPage) {
+                        button.classList.add("active");
+                    }
+                });
+            };
+
+            const appendPageNumber = (index) => {
+                const pageNumber = document.createElement("button");
+                pageNumber.className = "pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px]";
+                pageNumber.innerHTML = index;
+                pageNumber.setAttribute("page-index", index);
+                pageNumber.setAttribute("aria-label", "Page " + index);
+                paginationNumbers.appendChild(pageNumber);
+            };
+
+            const getPaginationNumbers = () => {
+                for (let i = 1; i <= pageCount; i++) {
+                    appendPageNumber(i);
+                }
+            };
+
+            const setCurrentPage = (pageNum) => {
+                currentPage = pageNum;
+                handleActivePageNumber();
+                handlePageButtonsStatus();
+
+                const prevRange = (pageNum - 1) * paginationLimit;
+                const currRange = pageNum * paginationLimit;
+
+                listItems.forEach((item, index) => {
+                    item.classList.add("hidden");
+                    if (index >= prevRange && index < currRange) {
+                        item.classList.remove("hidden");
+                    }
+                });
+            };
+
+            function pag() {
+                getPaginationNumbers();
+                setCurrentPage(1);
+
+                prevButton.addEventListener("click", () => {
+                    setCurrentPage(currentPage - 1);
+                });
+
+                nextButton.addEventListener("click", () => {
+                    setCurrentPage(currentPage + 1);
+                });
+
+                document.querySelectorAll(".pagination-item").forEach((button) => {
+                    const pageIndex = Number(button.getAttribute("page-index"));
+
+                    if (pageIndex) {
+                        button.addEventListener("click", () => {
+                            setCurrentPage(pageIndex);
+                        });
+                    }
+                });
+
+            }
+            window.addEventListener("load", () => {
+                pag()
+            });
+
+
+        }
+        pagenat();
+
+        $(".filter-item").on("click", function () {
+            $(".filter-item").removeClass("active")
+            $(this).addClass("active");
+            let cat = $(this).attr("data-type");
+            $(".paginated-list li").addClass("hidden")
+            $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
+            $(".pagination-numbers").html("");
+            pagenat();
+            if ($(".pagination-numbers").html() == "") {
+
+                $(".pagination").addClass("hidden")
+            }
+            else {
+                $(".pagination").removeClass("hidden")
+            }
+        })
+
+    </script>
 </body>
 
 </html>
