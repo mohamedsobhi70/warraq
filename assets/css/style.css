@@ -1439,6 +1439,12 @@ video {
   cursor: pointer;
 }
 
+.select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
+}
+
 .list-decimal {
   list-style-type: decimal;
 }
