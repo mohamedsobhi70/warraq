@@ -11,19 +11,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.min.css"
         integrity="sha512-Mvnc3gzZhD8rZtNMHJkotZpdfvAHunpqankLPnj3hXpphETXpxbfr4+oNMOzF179JYu8B8/EqruGdpsH5fNYww=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Warraq</title>
 </head>
 
 <body class="font-IBM overflow-x-hidden">
-    <!-- page loader -->
-    <div class="page-loader fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50">
+     <!-- page loader -->
+     <div class="page-loader fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50">
         <svg width="600" viewBox="0 0 93 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M84.3514 17.0838L77.8696 13.0723C77.6011 12.8995 77.2368 12.8995 76.9683 13.0723L70.4864 17.0838C69.3742 17.7748 67.9551 16.9686 67.9551 15.6635V7.73639C67.9551 6.81509 68.703 6.06653 69.6235 6.06653H85.2336C86.1541 6.06653 86.902 6.81509 86.902 7.73639V15.6635C86.8828 16.9686 85.4637 17.7748 84.3514 17.0838Z"
@@ -371,16 +371,24 @@
     <!-- Start Warraq Main Page Content  -->
     <main>
         <!-- hero section  -->
-        <section class="page-title-sec bg-[#FEF0C7] relative">
-            <div class="container w-[630px] max-w-full flex items-center flex-col gap-6">
-                <h1 class="page-title-heading">الكتب المستعملة</h1>
-                <p class="page-title-text">
-                    يمكنك من خلال هذا القسم أنت تجد الكتب التي تهتم بها مستعملة بسعر أقل من الجديد
-                    أو أعرض كتبك القديمة وبدلهم بكتب جديدة.
-                </p>
+        <section class="page-title-sec bg-[#E7E7FE] px-[30px] lg:px-0">
+            <div class="flex flex-col gap-6 lg:gap-8">
+                <div class="container w-[630px] max-w-full flex items-center flex-col gap-4 lg:gap-6">
+                    <h1 class="page-title-heading">الأكثر مبيعاً</h1>
+                    <p class="page-title-text">
+                        في هذا القسم ستجد كل الكتب التي تم أصدارها هذا العام، ليصلك أشعارات هذا القسم من فضلك تأكد من
+                        تسجيل الدخول.
+                    </p>
+                </div>
+
             </div>
+        </section>
+
+        <!--  recently Added  -->
+        <section class="lg:pb-16 px-[30px] lg:px-0 relative z-10 -mt-7 lg:-mt-9 flex flex-col gap-4 lg:gap-[30px]">
+
             <div
-                class="container w-[850px] max-w-full flex items-center gap-3 border border-[#E2E2E9] bg-white rounded-[18px] px-4 py-6 absolute bottom-0 translate-y-1/2 translate-x-1/2 right-1/2">
+                class="container lg:w-[850px] flex items-center gap-3 border border-[#E2E2E9] bg-white rounded-[18px] p-3.5 lg:px-4 lg:py-6 transition-shadow duration-300">
                 <a href="#" class="" title="hide">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.4">
@@ -393,16 +401,14 @@
                     </svg>
                 </a>
                 <input type="text" name="book-search" id="book-search"
-                    class="focus:outline-none placeholder:text-[#00000066] focused-input text-lg leading-6 grow "
-                    placeholder="أبحث عن الكتب المستعملة">
+                    class="focus:outline-none placeholder:text-[#00000066] text-sm lg:text-lg w-full leading-6 grow focused-input"
+                    placeholder="أبحث عن كتاب, مؤلف, دار نشر">
 
             </div>
-        </section>
-
-        <!--  Discounts and packages  -->
-        <section class="py-8 lg:py-16 px-[30px] lg:px-0 ">
             <div class="container flex flex-col gap-8 lg:gap-12">
-                <header class="flex items-center justify-between py-4 gap-1 border-b border-[#E2E2E9]">
+
+                <header
+                    class="flex items-center flex-wrap justify-between pt-4 lg:py-4 gap-4 lg:border-b border-[#E2E2E9]">
                     <button type="button"
                         class="filter-open border border-[#E8E8ED] rounded-xl py-2.5 px-5 flex items-center gap-2">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -411,42 +417,92 @@
                                 stroke="#0C0C13" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <span class="text-sm text-[#0C0C13] leading-[18px]">فلتر</span>
+                        <span class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px]">فلتر</span>
                     </button>
-                    <ul class="filters flex items-center gap-2">
-                        <li class="filter-item rounded-xl transition-all duration-300 active ">
+
+                    <div
+                        class="owl-carousel owl-theme owl-filters relative lg:w-[580px] filters order-3 lg:order-none ">
+                        <!-- Recommended Item  -->
+                        <div class="item">
+                            <div data-type="europe" class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                                <button type="button"
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">أوروبي</button>
+                            </div>
+                        </div>
+                        <!-- Recommended Item  -->
+                        <div class="item">
+                            <div data-type="cultural"
+                                class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                                <button type="button"
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                            </div>
+                        </div>
+                        <!-- Recommended Item  -->
+                        <div class="item">
+                            <div data-type="cultural"
+                                class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                                <button type="button"
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                            </div>
+                        </div>
+                        <!-- Recommended Item  -->
+                        <div class="item">
+                            <div data-type="literature"
+                                class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                                <button type="button"
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الأدب
+                                    النوعي</button>
+                            </div>
+                        </div>
+                        <!-- Recommended Item  -->
+                        <div class="item">
+                            <div data-type="arts" class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                                <button type="button"
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الفنون
+                                    والأدب</button>
+                            </div>
+                        </div>
+                        <!-- Recommended Item  -->
+                        <div class="item">
+                            <div data-type="historical"
+                                class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                                <button type="button"
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">تاريخي</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <ul
+                        class="filters flex items-center gap-3 lg:gap-2 border-t lg:border-none border-[#E2E2E9] order-3 lg:order-none w-full lg:w-auto py-4 lg:py-0">
+                        <li data-type="europe" class="filter-item rounded-xl transition-all duration-300 shrink-0">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">أوروبي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">أوروبي</button>
                         </li>
-                        <li class="filter-item rounded-xl transition-all duration-300">
+                        <li data-type="cultural" class="filter-item rounded-xl transition-all duration-300 shrink-0">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">ثقافي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
                         </li>
-                        <li class="filter-item rounded-xl transition-all duration-300">
+
+                        <li data-type="literature" class="filter-item rounded-xl transition-all duration-300 shrink-0">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">ثقافي</button>
-                        </li>
-                        <li class="filter-item rounded-xl transition-all duration-300">
-                            <button type="button" class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">الأدب
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5 grow">الأدب
                                 النوعي</button>
                         </li>
-                        <li class="filter-item rounded-xl transition-all duration-300">
-                            <button type="button" class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">الفنون
+                         <li data-type="arts" class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                            <button type="button"
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الفنون
                                 والأدب</button>
-                        </li>
-                        <li class="filter-item rounded-xl transition-all duration-300">
+                        </li> 
+                        <li data-type="historical" class="filter-item rounded-xl transition-all duration-300 shrink-0">
                             <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">ثقافي</button>
+                                class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">تاريخي</button>
                         </li>
-                        <li class="filter-item rounded-xl transition-all duration-300">
-                            <button type="button"
-                                class="text-sm text-[#0C0C13] leading-[18px] py-2.5 px-5">تاريخي</button>
-                        </li>
-                    </ul>
+                    </ul> -->
+
                     <div class="flex items-center gap-2 relative ">
-                        <span class="text-sm text-[#00000066] leading-[18px] ">ترتيب حسب:</span>
+                        <span class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#00000066]">ترتيب حسب:</span>
                         <span
-                            class="drop-down flex gap-1 items-center text-sm leading-[18px] text-[#000000E5] cursor-pointer">
+                            class="drop-down flex gap-1 items-center text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#000000E5] cursor-pointer">
                             الشائع
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -503,9 +559,44 @@
                 </header>
 
                 <div class="flex flex-col gap-8">
-                    <div class="grid grid-cols-4 gap-y-8 gap-x-[30px]">
+                    <ul class="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-[30px] paginated-list" id="paginated-list"
+                        aria-live="polite">
+
                         <!-- item  -->
-                        <div class="item group">
+                        <li class="item group transition-all duration-300" data-cat="historical">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/best-2.png"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> أن تكون عباس العبد </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمدالعايدي </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="cultural">
                             <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
                                 <img src="assets/images/best-3.png"
                                     class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
@@ -535,9 +626,43 @@
                                     1,200 ريال
                                 </p>
                             </div>
-                        </div>
+                        </li>
+
                         <!-- item  -->
-                        <div class="item group">
+                        <li class="item group transition-all duration-300" data-cat="literature">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/best-4.png"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> موسم صيد الغزلان </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمد مراد </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="europe">
                             <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
                                 <img src="assets/images/best-3.png"
                                     class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
@@ -567,9 +692,43 @@
                                     1,200 ريال
                                 </p>
                             </div>
-                        </div>
+                        </li>
+
                         <!-- item  -->
-                        <div class="item group">
+                        <li class="item group transition-all duration-300" data-cat="cultural">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/best-2.png"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> أن تكون عباس العبد </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمدالعايدي </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="literature">
                             <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
                                 <img src="assets/images/best-3.png"
                                     class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
@@ -599,9 +758,43 @@
                                     1,200 ريال
                                 </p>
                             </div>
-                        </div>
+                        </li>
+
                         <!-- item  -->
-                        <div class="item group">
+                        <li class="item group transition-all duration-300" data-cat="cultural">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/best-4.png"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> موسم صيد الغزلان </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمد مراد </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="europe">
                             <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
                                 <img src="assets/images/best-3.png"
                                     class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
@@ -631,9 +824,175 @@
                                     1,200 ريال
                                 </p>
                             </div>
-                        </div>
+                        </li>
+
                         <!-- item  -->
-                        <div class="item group">
+                        <li class="item group transition-all duration-300" data-cat="literature">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-1.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> أن تكون عباس العبد </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمدالعايدي </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="arts">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-2.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> أمواج في ليلة مظلمة </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمد أشرف </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="europe">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-3.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> موسم صيد الغزلان </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمد مراد </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="europe">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-4.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> أمواج في ليلة مظلمة </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمد أشرف </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="cultural">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/nag-3.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> أن تكون عباس العبد </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمدالعايدي </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="arts">
                             <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
                                 <img src="assets/images/best-3.png"
                                     class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
@@ -663,9 +1022,43 @@
                                     1,200 ريال
                                 </p>
                             </div>
-                        </div>
+                        </li>
+
                         <!-- item  -->
-                        <div class="item group">
+                        <li class="item group transition-all duration-300" data-cat="arts">
+                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
+                                <img src="assets/images/best-4.png"
+                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+                                    width="300" height="440" alt="Best Seller">
+                            </a>
+                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
+                                            fill="#E7B308"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
+                                </span>
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h3
+                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                        <a href="book-page.html" class=""> موسم صيد الغزلان </a>
+                                    </h3>
+                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
+                                        <a href="auther-page.html" class=""> أحمد مراد </a>
+                                    </p>
+                                </div>
+                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
+                                    1,200 ريال
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- item  -->
+                        <li class="item group transition-all duration-300" data-cat="arts">
                             <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
                                 <img src="assets/images/best-3.png"
                                     class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
@@ -695,74 +1088,12 @@
                                     1,200 ريال
                                 </p>
                             </div>
-                        </div>
-                        <!-- item  -->
-                        <div class="item group">
-                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
-                                <img src="assets/images/best-3.png"
-                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
-                                    width="300" height="440" alt="Best Seller">
-                            </a>
-                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
-                                <span class="flex items-center gap-1">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
-                                            fill="#E7B308"></path>
-                                    </svg>
-                                    <span
-                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
-                                </span>
-                                <div class="flex flex-col gap-1 lg:gap-2">
-                                    <h3
-                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
-                                        <a href="book-page.html" class=""> أمواج في ليلة مظلمة </a>
-                                    </h3>
-                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
-                                        <a href="auther-page.html" class=""> أحمد أشرف </a>
-                                    </p>
-                                </div>
-                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
-                                    1,200 ريال
-                                </p>
-                            </div>
-                        </div>
-                        <!-- item  -->
-                        <div class="item group">
-                            <a href="book-page.html" class="h-[250px] lg:h-[440px] rounded-2xl overflow-hidden block">
-                                <img src="assets/images/best-3.png"
-                                    class="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
-                                    width="300" height="440" alt="Best Seller">
-                            </a>
-                            <div class="flex flex-col gap-2 lg:gap-4 py-4">
-                                <span class="flex items-center gap-1">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.15332 2.34001L10.3267 4.68668C10.4867 5.01334 10.9133 5.32668 11.2733 5.38668L13.4 5.74001C14.76 5.96668 15.08 6.95334 14.1 7.92668L12.4467 9.58001C12.1667 9.86001 12.0133 10.4 12.1 10.7867L12.5733 12.8333C12.9467 14.4533 12.0867 15.08 10.6533 14.2333L8.65999 13.0533C8.29999 12.84 7.70666 12.84 7.33999 13.0533L5.34666 14.2333C3.91999 15.08 3.05332 14.4467 3.42666 12.8333L3.89999 10.7867C3.98666 10.4 3.83332 9.86001 3.55332 9.58001L1.89999 7.92668C0.926656 6.95334 1.23999 5.96668 2.59999 5.74001L4.72666 5.38668C5.07999 5.32668 5.50666 5.01334 5.66666 4.68668L6.83999 2.34001C7.47999 1.06668 8.51999 1.06668 9.15332 2.34001Z"
-                                            fill="#E7B308"></path>
-                                    </svg>
-                                    <span
-                                        class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">9,8</span>
-                                </span>
-                                <div class="flex flex-col gap-1 lg:gap-2">
-                                    <h3
-                                        class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
-                                        <a href="book-page.html" class=""> أمواج في ليلة مظلمة </a>
-                                    </h3>
-                                    <p class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">
-                                        <a href="auther-page.html" class=""> أحمد أشرف </a>
-                                    </p>
-                                </div>
-                                <p class="text-sm lg:text-base leading-[18px] lg:leading-5 text-[#5F59F7] font-bold">
-                                    1,200 ريال
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center items-center gap-3 py-4">
-                        <a href="#" class="py-2 px-4 rounded-[20px] bg-[#F3F3F7] flex items-center">
+                        </li>
+
+                    </ul>
+                    <div class="flex justify-center items-center gap-3 py-4 pagination">
+                        <button type="button"
+                            class="pagination-item  transition-all duration-300 py-2 px-4 rounded-[20px] bg-[#F3F3F7] flex items-center prev-button">
                             <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -770,22 +1101,13 @@
                                     stroke="black" stroke-opacity="0.7" stroke-miterlimit="10" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span class="text-sm text-[#000000B2] leading-[18px]">التالي</span>
-                        </a>
-                        <a href="#"
-                            class="pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px]">
-                            1
-                        </a>
-                        <a href="#"
-                            class="pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px] active">
-                            2
-                        </a>
-                        <a href="#"
-                            class="pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px]">
-                            3
-                        </a>
-                        <a href="#" class="py-2 px-4 rounded-[20px] bg-[#F3F3F7] flex items-center">
-                            <span class="text-sm text-[#000000B2] leading-[18px]"> السابق</span>
+                            <span class="text-sm text-[#000000B2] leading-[18px]">السابق</span>
+                        </button>
+                        <div class="flex justify-center items-center gap-3 pagination-numbers">
+                        </div>
+                        <button type="button"
+                            class="pagination-item transition-all duration-300 py-2 px-4 rounded-[20px] bg-[#F3F3F7] flex items-center next-button">
+                            <span class="text-sm text-[#000000B2] leading-[18px]">التالي </span>
                             <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -793,17 +1115,17 @@
                                     stroke="black" stroke-opacity="0.7" stroke-miterlimit="10" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--   Blog community   -->
+        <!--   Readers community   -->
         <section class="py-8 lg:py-16 px-[30px] lg:px-0 relative">
             <div class="container flex flex-col gap-8 lg:gap-12">
                 <header class="flex items-baseline justify-between">
-                    <h2 class="section-title">مقالات نرشحها لك</h2>
+                    <h2 class="section-title">مجتمع القراء</h2>
                     <a href="#" class="secondary-btn flex items-center gap-2">
                         <span class="text-sm leading-[18px]">مشاهدة الجميع</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -819,72 +1141,42 @@
                     <!--  community item  -->
                     <div class="basis-1/3 flex flex-col">
                         <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden block">
-                            <img src="assets/images/Blog-1.png" class="w-full h-full object-cover" width="410"
+                            <img src="assets/images/com-1.png" class="w-full h-full object-cover" width="410"
                                 height="286" alt="Book Img" />
                         </a>
-                        <div class="py-4 flex flex-col items-start gap-3 lg:gap-4">
-                            <div class="flex-col items-start gap-2">
-                                <a href="#"
-                                    class="text-xs lg:text-sm text-[#002963] leading-4 lg:leading-[18px] font-medium">عبدالله
-                                    المزهر</a>
-                                <h3
-                                    class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
-                                    <a href="#"> حرّية السفه! </a>
-                                </h3>
-                            </div>
-                            <p class="text-sm leading-5 text-[#000000B2]">
-                                مما يمتاز به سفهاء هذا العصر أن لديهم هوسًا غريبًا بإذلال من
-                                يعطونه، فالمنّ والأذى يتبع عطاءهم، ليس إلى مَن أعطوه فقط.
-                            </p>
+                        <div class="py-4 flex flex-col items-start gap-3">
+                            <span class="text-sm text-[#000000B2] leading-[18px]">الجمعة ، 14 أبريل عند 9 مساءً</span>
+                            <h3 class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
+                                <a href="#"> مراجعة تراب الماث. </a>
+                            </h3>
                         </div>
                     </div>
 
                     <!--  community item  -->
                     <div class="basis-1/3 flex flex-col">
                         <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden block">
-                            <img src="assets/images/Blog-2.png" class="w-full h-full object-cover" width="410"
+                            <img src="assets/images/com-2.png" class="w-full h-full object-cover" width="410"
                                 height="286" alt="Book Img" />
                         </a>
-                        <div class="py-4 flex flex-col items-start gap-3 lg:gap-4">
-                            <div class="flex-col items-start gap-2">
-                                <a href="#"
-                                    class="text-xs lg:text-sm text-[#002963] leading-4 lg:leading-[18px] font-medium">حسين
-                                    الإسماعيل</a>
-                                <h3
-                                    class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
-                                    <a href="#" class=""> ذعر الحياة دون اتصال إنترنت </a>
-                                </h3>
-                            </div>
-                            <p class="text-sm leading-5 text-[#000000B2]">
-                                بات السؤال الأهم متى وجدت نفسي على أعتاب ممارسة جديدة أو
-                                اقتناء الأشياء: هل تلك الممارسة أو ذلك الشيء
-                            </p>
+                        <div class="py-4 flex flex-col items-start gap-3">
+                            <span class="text-sm text-[#000000B2] leading-[18px]">الجمعة ، 14 أبريل عند 9 مساءً</span>
+                            <h3 class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
+                                <a href="#"> مراجعة أن تكون عباس العبد. </a>
+                            </h3>
                         </div>
                     </div>
 
                     <!--  community item  -->
                     <div class="basis-1/3 flex flex-col">
-                        <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden block">
-                            <img src="assets/images/Blog-3.png" class="w-full h-full object-cover" width="410"
+                        <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden">
+                            <img src="assets/images/com-3.png" class="w-full h-full object-cover" width="410"
                                 height="286" alt="Book Img" />
                         </a>
-                        <div class="py-4 flex flex-col items-start gap-3 lg:gap-4">
-                            <div class="flex-col items-start gap-2">
-                                <a href="#"
-                                    class="text-xs lg:text-sm text-[#002963] leading-4 lg:leading-[18px] font-medium">
-                                    أحمد مشرف
-                                </a>
-                                <h3
-                                    class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
-                                    <a href="#" class="">
-                                        لن تنجز إذا فقدت إحساسك بعدم الأمان
-                                    </a>
-                                </h3>
-                            </div>
-                            <p class="text-sm leading-5 text-[#000000B2]">
-                                مما يمتاز به سفهاء هذا العصر أن لديهم هوسًا غريبًا بإذلال من
-                                يعطونه، فالمنّ والأذى يتبع عطاءهم، ليس إلى مَن أعطوه فقط.
-                            </p>
+                        <div class="py-4 flex flex-col items-start gap-3">
+                            <span class="text-sm text-[#000000B2] leading-[18px]">الجمعة ، 14 أبريل عند 9 مساءً</span>
+                            <h3 class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
+                                <a href="#"> مراجعة أمواج في ليلة مظلمة. </a>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -1328,24 +1620,118 @@
             </div>
         </section>
 
+        <!--   Blog community   -->
+        <section class="py-8 lg:py-16 px-[30px] lg:px-0 relative">
+            <div class="container flex flex-col gap-8 lg:gap-12">
+                <header class="flex items-baseline justify-between">
+                    <h2 class="section-title">المقالات</h2>
+                    <a href="#" class="secondary-btn flex items-center gap-2">
+                        <span class="text-sm leading-[18px]">مشاهدة الجميع</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.99998 13.28L5.65331 8.93333C5.13998 8.42 5.13998 7.58 5.65331 7.06667L9.99998 2.72"
+                                stroke="#403AEE" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </header>
+
+                <div class="flex flex-col lg:flex-row gap-4 lg:gap-[30px]">
+                    <!--  community item  -->
+                    <div class="basis-1/3 flex flex-col">
+                        <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden block">
+                            <img src="assets/images/Blog-1.png" class="w-full h-full object-cover" width="410"
+                                height="286" alt="Book Img" />
+                        </a>
+                        <div class="py-4 flex flex-col items-start gap-3 lg:gap-4">
+                            <div class="flex-col items-start gap-2">
+                                <a href="#"
+                                    class="text-xs lg:text-sm text-[#002963] leading-4 lg:leading-[18px] font-medium">عبدالله
+                                    المزهر</a>
+                                <h3
+                                    class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
+                                    <a href="#"> حرّية السفه! </a>
+                                </h3>
+                            </div>
+                            <p class="text-sm leading-5 text-[#000000B2]">
+                                مما يمتاز به سفهاء هذا العصر أن لديهم هوسًا غريبًا بإذلال من
+                                يعطونه، فالمنّ والأذى يتبع عطاءهم، ليس إلى مَن أعطوه فقط.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--  community item  -->
+                    <div class="basis-1/3 flex flex-col">
+                        <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden block">
+                            <img src="assets/images/Blog-2.png" class="w-full h-full object-cover" width="410"
+                                height="286" alt="Book Img" />
+                        </a>
+                        <div class="py-4 flex flex-col items-start gap-3 lg:gap-4">
+                            <div class="flex-col items-start gap-2">
+                                <a href="#"
+                                    class="text-xs lg:text-sm text-[#002963] leading-4 lg:leading-[18px] font-medium">حسين
+                                    الإسماعيل</a>
+                                <h3
+                                    class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
+                                    <a href="#" class=""> ذعر الحياة دون اتصال إنترنت </a>
+                                </h3>
+                            </div>
+                            <p class="text-sm leading-5 text-[#000000B2]">
+                                بات السؤال الأهم متى وجدت نفسي على أعتاب ممارسة جديدة أو
+                                اقتناء الأشياء: هل تلك الممارسة أو ذلك الشيء
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--  community item  -->
+                    <div class="basis-1/3 flex flex-col">
+                        <a href="#" class="h-[286px] rounded-2xl w-full overflow-hidden block">
+                            <img src="assets/images/Blog-3.png" class="w-full h-full object-cover" width="410"
+                                height="286" alt="Book Img" />
+                        </a>
+                        <div class="py-4 flex flex-col items-start gap-3 lg:gap-4">
+                            <div class="flex-col items-start gap-2">
+                                <a href="#"
+                                    class="text-xs lg:text-sm text-[#002963] leading-4 lg:leading-[18px] font-medium">
+                                    أحمد مشرف
+                                </a>
+                                <h3
+                                    class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
+                                    <a href="#" class="">
+                                        لن تنجز إذا فقدت إحساسك بعدم الأمان
+                                    </a>
+                                </h3>
+                            </div>
+                            <p class="text-sm leading-5 text-[#000000B2]">
+                                مما يمتاز به سفهاء هذا العصر أن لديهم هوسًا غريبًا بإذلال من
+                                يعطونه، فالمنّ والأذى يتبع عطاءهم، ليس إلى مَن أعطوه فقط.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- filters section  -->
         <section
             class="z-50 filter-sec fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300">
             <aside
-                class="overflow-y-scroll w-[375px] h-full bg-white rtl:border-l  ltr:border-r border-[#E2E2E9] translate-x-full transition-all duration-300">
-                <div class="p-8 flex flex-col gap-8 border-b border-[#E2E2E9]">
+                class="overflow-y-scroll w-full lg:w-[375px] h-full bg-white rtl:border-l  ltr:border-r border-[#E2E2E9] translate-x-full transition-all duration-300">
+                <div class="pb-4 pt-[30px] px-[30px] lg:p-8 flex flex-col gap-8 lg:border-b border-[#E2E2E9] relative">
                     <button type="button"
                         class="filter-close text-sm text-[#000000E5] leading-[18px] font-medium flex items-center gap-1">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.33325 5.33301L10.6666 10.6663" stroke="black" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M5.33325 10.6663L10.6666 5.33301" stroke="black" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8 16L16 8" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
-                        إغلاق
+
+                        <span class="hidden lg:inline-block">إغلاق</span>
                     </button>
-                    <h2 class="text-2xl leading-[30px] text-[#000000E5] font-bold">فلتر</h2>
+                    <h2
+                        class="absolute lg:static top-[30px] left-1/2 -translate-x-1/2 lg:translate-x-0 text-xl lg:text-2xl leading-[26px] lg:leading-[30px] text-[#000000E5] font-bold">
+                        التصفية</h2>
                 </div>
 
                 <div class="p-8 flex flex-col gap-8 border-b border-[#E2E2E9]">

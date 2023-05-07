@@ -12,8 +12,7 @@ $(".mobile-menu-close").on("click", function () {
 $(document).ready(function () {
     setTimeout(() => {
         $(".page-loader").fadeOut(400)
-    }, 900);
-    $(".page-loader svg").hide(900)
+    }, 700);
 })
 
 //
@@ -46,6 +45,7 @@ $('.owl-header-categories').owlCarousel({
     nav: true,
 
 })
+
 $('.owl-filters').owlCarousel({
     rtl: true,
     margin: 12,

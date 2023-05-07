@@ -18,250 +18,350 @@
 </head>
 
 <body class="font-IBM overflow-x-hidden">
+  <!-- page loader -->
+  <div class="page-loader fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50">
+    <svg width="600" viewBox="0 0 93 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M84.3514 17.0838L77.8696 13.0723C77.6011 12.8995 77.2368 12.8995 76.9683 13.0723L70.4864 17.0838C69.3742 17.7748 67.9551 16.9686 67.9551 15.6635V7.73639C67.9551 6.81509 68.703 6.06653 69.6235 6.06653H85.2336C86.1541 6.06653 86.902 6.81509 86.902 7.73639V15.6635C86.8828 16.9686 85.4637 17.7748 84.3514 17.0838Z"
+            fill="#FFC306" />
+        <path
+            d="M78.4261 21.0378C77.8699 21.5752 76.9878 21.5752 76.4317 21.0378C74.8016 19.5022 71.6758 18.3314 67.9746 18.3314V18.5809V23.3794V24.0704C71.6182 24.0704 74.6866 25.2028 76.3358 26.6999C76.9686 27.2758 77.8891 27.2758 78.522 26.6999C80.1712 25.2028 83.2587 24.0704 86.8831 24.0704V23.3794V18.5809V18.3314C83.182 18.3314 80.0561 19.5022 78.4261 21.0378Z"
+            fill="#4A45E2" />
+        <path
+            d="M78.522 28.5617C77.8891 29.1375 76.9686 29.1375 76.3358 28.5617C74.6866 27.0646 71.5991 25.9321 67.9746 25.9321V26.1816V27.6596V29.1951C67.9746 30.0396 68.6266 30.7306 69.4704 30.7882C72.4429 31.0377 74.9167 32.055 76.355 33.341C76.9878 33.9168 77.9083 33.9168 78.5411 33.341C79.9602 32.055 82.4341 31.0377 85.4257 30.7882C86.2695 30.7114 86.9215 30.0204 86.9215 29.1951V27.6596V26.1816V25.9321C83.2395 25.9321 80.1712 27.0646 78.522 28.5617Z"
+            fill="#5BBFD6" />
+        <path
+            d="M33.6084 14.819C34.3754 14.819 34.9699 14.224 34.9699 13.4754C34.9699 12.7077 34.3563 12.1318 33.6084 12.1318C32.8413 12.1318 32.2852 12.7268 32.2852 13.4754C32.2852 14.2432 32.8413 14.819 33.6084 14.819Z"
+            fill="#002863" />
+        <path
+            d="M29.8115 14.819C30.5786 14.819 31.1539 14.224 31.1539 13.4754C31.1539 12.7077 30.5594 12.1318 29.8115 12.1318C29.0444 12.1318 28.4883 12.7268 28.4883 13.4754C28.4883 14.2432 29.0444 14.819 29.8115 14.819Z"
+            fill="#002863" />
+        <path
+            d="M31.6335 16.0665C28.7953 16.0665 26.4366 18.0626 26.4366 20.9225C26.4366 21.9014 26.8584 23.1682 27.5296 23.7248H24.4038H23.7518H15.0454H11.4785C9.90597 23.7248 8.64029 22.5732 8.64029 21.1528V18.8112V16.0281H6.24316V19.7517H6.3007V21.172C6.3007 23.7632 8.62111 25.8553 11.4977 25.8553H15.0646V25.8745H23.7518H24.4038H36.7921V21.172C36.7921 18.1202 34.7402 16.0665 31.6335 16.0665ZM34.3375 23.7248H31.576C30.0994 23.7248 28.9296 22.5156 28.9296 20.9417C28.9296 19.3678 30.0035 18.197 31.6527 18.197C33.6279 18.197 34.3375 19.6749 34.3375 21.4983V23.7248Z"
+            fill="#002863" />
+        <path
+            d="M39.1895 9.96288V25.8746H41.6441V9.02238C41.4907 8.96479 41.0113 8.75366 40.4743 8.75366C39.6689 8.75366 39.1895 9.15673 39.1895 9.96288Z"
+            fill="#002863" />
+        <path
+            d="M47.1666 17.3525V27.007C47.1666 28.5809 46.2077 28.9264 45.268 28.9264C44.5968 28.9264 43.9448 28.7728 43.5996 28.6001L42.9668 30.4619C43.312 30.6346 44.3667 30.9993 45.5365 30.9993C47.6268 30.9993 49.6212 30.0588 49.6212 26.7575V16.412C49.4678 16.3544 49.1034 16.1816 48.509 16.1816C47.6652 16.1816 47.1666 16.5463 47.1666 17.3525Z"
+            fill="#002863" />
+        <path
+            d="M56.9467 16.0665C54.0126 16.0665 51.7881 18.2162 51.7881 21.0185C51.7881 24.2431 54.0318 25.8746 57.3111 25.8746H59.689V26.2009C59.6315 28.3698 58.3658 29.0416 56.9275 29.0416C55.9878 29.0416 55.2016 28.8112 54.7797 28.5617C54.5496 29.1951 54.3195 29.8093 54.1277 30.4811C54.7222 30.8074 55.8344 31.0953 57.0618 31.0953C60.2643 31.0953 62.1437 29.4446 62.1437 25.0109V22.1702C62.1437 18.3698 60.7054 16.0665 56.9467 16.0665ZM59.689 23.7249H57.2727C55.4317 23.7249 54.3003 22.8036 54.3003 21.0569C54.3003 19.4255 55.3358 18.2162 56.9275 18.2162C58.8452 18.2162 59.689 19.4063 59.689 22.1318V23.7249Z"
+            fill="#002863" />
+        <path
+            d="M50.9068 12.4389H49.411C49.085 12.4389 48.8165 12.3238 48.6056 12.0934C48.3563 12.343 48.0686 12.4965 47.6084 12.4965C47.1098 12.4965 46.2852 12.3238 46.2852 11.1721V9.98211C46.2852 9.67501 46.5153 9.55984 46.7838 9.55984C46.9755 9.55984 47.1098 9.61742 47.1865 9.63662V11.1913C47.1865 11.4984 47.3974 11.6904 47.6659 11.6904C47.9344 11.6904 48.1453 11.4984 48.1453 11.2297V9.98211C48.1453 9.6942 48.3179 9.55984 48.6247 9.55984C48.8165 9.55984 48.9316 9.61742 49.0466 9.63662V11.1721C49.0466 11.4408 49.1425 11.6136 49.4685 11.6136H50.0055V9.96291C50.0055 9.67501 50.1589 9.54065 50.4657 9.54065C50.6575 9.54065 50.7917 9.59823 50.9068 9.61742V12.4389Z"
+            fill="#002863" />
+    </svg>
+</div>
 
-    <!-- Start Warraq Header  -->
-    <header class="">
-        <div class="container flex justify-between items-center py-4 px-[30px] lg:px-0 lg:py-[18px]">
-            <button class="lg:hidden mobile-menu-btn" title="menu button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7L21 7" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M9 12L21 12" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M3 17L21 17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
-                </svg>
-            </button>
-            <!-- mobile menu -->
-            <div
-                class="mobile-menu lg:hidden z-50  fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300">
-                <aside
-                    class="py-8 px-[30px] translate-x-[300px] bg-white w-[300px] h-full flex flex-col gap-6 transition-all duration-300">
-                    <button type="button"
-                        class="mobile-menu-close flex items-center gap-1 text-base leading-5 text-[#000000E5]">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="black"
-                                stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M2.91602 10H16.941" stroke="black" stroke-width="1.25" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        رجوع
-                    </button>
+<!-- Start Warraq Header  -->
+<header class="">
+    <div class="container flex justify-between items-center py-4 px-[30px] lg:px-0 lg:py-[18px]">
+        <button class="lg:hidden mobile-menu-btn" title="menu button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7L21 7" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M9 12L21 12" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3 17L21 17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+        </button>
+        <!-- mobile menu -->
+        <div
+            class="mobile-menu lg:hidden z-50  fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300">
+            <aside
+                class="py-8 px-[30px] translate-x-[300px] bg-white w-[300px] h-full flex flex-col gap-6 transition-all duration-300">
+                <button type="button"
+                    class="mobile-menu-close flex items-center gap-1 text-base leading-5 text-[#000000E5]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0254 4.94165L17.0837 9.99998L12.0254 15.0583" stroke="black"
+                            stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2.91602 10H16.941" stroke="black" stroke-width="1.25" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    رجوع
+                </button>
 
-                    <div class="py-4 flex items-center gap-3">
-                        <div class=" w-12 h-12 rounded-[48px] overflow-hidden">
-                            <img src="assets/images/rev-1.png" class="w-full h-full object-cover" width="48" height="48"
-                                alt="mena">
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <h2 class="text-base leading-5 text-[#000000E5] font-medium">مينا لوكاس</h2>
-                            <p class="text-sm leading-[18px] text-[#0000008C] ">مصمم منتجات رقمية</p>
-                        </div>
+                <div class="py-4 flex items-center gap-3">
+                    <div class=" w-12 h-12 rounded-[48px] overflow-hidden">
+                        <img src="assets/images/rev-1.png" class="w-full h-full object-cover" width="48" height="48"
+                            alt="mena">
                     </div>
-
-                    <nav class="grow">
-                        <ul class="flex flex-col gap-1">
-                            <li class="">
-                                <div class="flex items-center justify-between gap-3 py-3 mobile-dropdown">
-                                    <span class="text-base leading-5 text-[#0000008C]">التصنيفات</span>
-                                    <svg class="drop-down-icon transition-transform duration-300" width="20" height="20"
-                                        viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
-                                            stroke="black" stroke-opacity="0.55" stroke-width="1.5"
-                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="hidden mobile-dropdown-list">
-                                    <ul class="flex flex-col gap-1">
-                                        <li class="p-2">
-                                            <a href="#" class="text-sm leading-[18px] text-[#00000066]">الفنون</a>
-                                        </li>
-                                        <li class="p-2">
-                                            <a href="#" class="text-sm leading-[18px] text-[#00000066]">نصوص نثرية</a>
-                                        </li>
-                                        <li class="p-2">
-                                            <a href="#" class="text-sm leading-[18px] text-[#00000066]">اللغة والنحو</a>
-                                        </li>
-                                        <li class="p-2">
-                                            <a href="#" class="text-sm leading-[18px] text-[#00000066]">الأدب
-                                                اليوناني</a>
-                                        </li>
-                                        <li class="p-2">
-                                            <a href="#" class="text-sm leading-[18px] text-[#00000066]">الأدب
-                                                الأنجليزي</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </li>
-
-                            <li class="flex items-center justify-between gap-3 py-3">
-                                <span class="text-base leading-5 text-[#0000008C]">الأكثر مبيعاً</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
-                                        stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </li>
-
-                            <li class="flex items-center justify-between gap-3 py-3">
-                                <a href="publishing-house.html" class="text-base leading-5 text-[#0000008C]">دور
-                                    النشر</a>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
-                                        stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </li>
-
-                            <li class="flex items-center justify-between gap-3 py-3">
-                                <a href="blog.html" class="text-base leading-5 text-[#0000008C]">المقالات</a>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
-                                        stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </li>
-
-                            <li class="flex items-center justify-between gap-3 py-3">
-                                <a href="events.html" class="text-base leading-5 text-[#0000008C]">الفعاليات</a>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
-                                        stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </li>
-
-                        </ul>
-                    </nav>
-
                     <div class="flex flex-col gap-1">
-                        <div class="py-3 flex items-center gap-3">
-                            <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
-                                    stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M1.66602 10.7333V9.26666C1.66602 8.4 2.37435 7.68333 3.24935 7.68333C4.75768 7.68333 5.37435 6.61666 4.61602 5.30833C4.18268 4.55833 4.44102 3.58333 5.19935 3.15L6.64102 2.325C7.29935 1.93333 8.14935 2.16666 8.54102 2.825L8.63268 2.98333C9.38268 4.29166 10.616 4.29166 11.3743 2.98333L11.466 2.825C11.8577 2.16666 12.7077 1.93333 13.366 2.325L14.8077 3.15C15.566 3.58333 15.8243 4.55833 15.391 5.30833C14.6327 6.61666 15.2494 7.68333 16.7577 7.68333C17.6244 7.68333 18.341 8.39166 18.341 9.26666V10.7333C18.341 11.6 17.6327 12.3167 16.7577 12.3167C15.2494 12.3167 14.6327 13.3833 15.391 14.6917C15.8243 15.45 15.566 16.4167 14.8077 16.85L13.366 17.675C12.7077 18.0667 11.8577 17.8333 11.466 17.175L11.3743 17.0167C10.6243 15.7083 9.39102 15.7083 8.63268 17.0167L8.54102 17.175C8.14935 17.8333 7.29935 18.0667 6.64102 17.675L5.19935 16.85C4.44102 16.4167 4.18268 15.4417 4.61602 14.6917C5.37435 13.3833 4.75768 12.3167 3.24935 12.3167C2.37435 12.3167 1.66602 11.6 1.66602 10.7333Z"
-                                    stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <a href="profile-edit.html" class="text-sm leading-[18px] text-[#0000008C]">الأعدادات </a>
-                        </div>
-                        <div class="py-3 flex items-center gap-3">
+                        <h2 class="text-base leading-5 text-[#000000E5] font-medium">مينا لوكاس</h2>
+                        <p class="text-sm leading-[18px] text-[#0000008C] ">مصمم منتجات رقمية</p>
+                    </div>
+                </div>
+
+                <nav class="grow">
+                    <ul class="flex flex-col gap-1">
+                        <li class="">
+                            <div class="flex items-center justify-between gap-3 py-3 mobile-dropdown">
+                                <span class="text-base leading-5 text-[#0000008C]">التصنيفات</span>
+                                <svg class="drop-down-icon transition-transform duration-300" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
+                                        stroke="black" stroke-opacity="0.55" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="hidden mobile-dropdown-list">
+                                <ul class="flex flex-col gap-1">
+                                    <li class="p-2">
+                                        <a href="#" class="text-sm leading-[18px] text-[#00000066]">الفنون</a>
+                                    </li>
+                                    <li class="p-2">
+                                        <a href="#" class="text-sm leading-[18px] text-[#00000066]">نصوص نثرية</a>
+                                    </li>
+                                    <li class="p-2">
+                                        <a href="#" class="text-sm leading-[18px] text-[#00000066]">اللغة والنحو</a>
+                                    </li>
+                                    <li class="p-2">
+                                        <a href="#" class="text-sm leading-[18px] text-[#00000066]">الأدب
+                                            اليوناني</a>
+                                    </li>
+                                    <li class="p-2">
+                                        <a href="#" class="text-sm leading-[18px] text-[#00000066]">الأدب
+                                            الأنجليزي</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+
+                        <li class="flex items-center justify-between gap-3 py-3">
+                            <a href="bestsell.html" class="text-base leading-5 text-[#0000008C]">الأكثر مبيعاً</a>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.5332 12.1833L16.6665 10.05L14.5332 7.91666" stroke="#F04438"
-                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M8.13281 10.05H16.6078" stroke="#F04438" stroke-width="1.5"
-                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 <path
-                                    d="M9.79948 16.6667C6.11615 16.6667 3.13281 14.1667 3.13281 10C3.13281 5.83334 6.11615 3.33334 9.79948 3.33334"
-                                    stroke="#F04438" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                    d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
+                                    stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
+                        </li>
 
-                            <span class="text-sm leading-[18px] text-[#F04438]">تسجيل خروج </span>
-                        </div>
-                    </div>
-                </aside>
-            </div>
+                        <li class="flex items-center justify-between gap-3 py-3">
+                            <a href="publishing-house.html" class="text-base leading-5 text-[#0000008C]">دور
+                                النشر</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
+                                    stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </li>
 
-            <div class="flex items-center gap-8">
-                <a href="index.html" class="" title="Warraq Logo">
-                    <img src="assets/images/Logo.svg" width="93" height="40" alt="Warraq Logo" />
-                </a>
-                <nav class="hidden lg:block">
-                    <ul class="flex items-center gap-6">
-                        <li class="">
-                            <a href="#" class="flex items-center gap-2 text-base leading-5">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 7H21" stroke="#002963" stroke-width="1.5" stroke-linecap="round" />
-                                    <path d="M3 12H21" stroke="#002963" stroke-width="1.5" stroke-linecap="round" />
-                                    <path d="M3 17H21" stroke="#002963" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                                <span class="text-[#002963]">التصنيفات</span>
-                            </a>
+                        <li class="flex items-center justify-between gap-3 py-3">
+                            <a href="blog.html" class="text-base leading-5 text-[#0000008C]">المقالات</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
+                                    stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </li>
-                        <li>
-                            <a href="#" class="">
-                                <span class="text-[#0000008C] text-base leading-5">الأكثر مبيعاً</span>
-                            </a>
+
+                        <li class="flex items-center justify-between gap-3 py-3">
+                            <a href="events.html" class="text-base leading-5 text-[#0000008C]">الفعاليات</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.5005 16.6L7.06719 11.1667C6.42552 10.525 6.42552 9.47503 7.06719 8.83336L12.5005 3.40002"
+                                    stroke="black" stroke-opacity="0.55" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </li>
-                        <li>
-                            <a href="publishing-house.html" class="">
-                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="blog.html" class="">
-                                <span class="text-[#0000008C] text-base leading-5">المقالات</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="events.html" class="">
-                                <span class="text-[#0000008C] text-base leading-5">الفعاليات</span>
-                            </a>
-                        </li>
+
                     </ul>
                 </nav>
-            </div>
-            <div class="flex gap-8 items-center">
-                <div
-                    class="hidden lg:flex items-center gap-2.5 border border-[#BFBECA] rounded-2xl p-3.5 w-[350px] transition-all duration-300">
-                    <a title="search" href="#" class="">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.4">
-                                <path
-                                    d="M9.58335 17.5C13.9556 17.5 17.5 13.9555 17.5 9.58329C17.5 5.21104 13.9556 1.66663 9.58335 1.66663C5.2111 1.66663 1.66669 5.21104 1.66669 9.58329C1.66669 13.9555 5.2111 17.5 9.58335 17.5Z"
-                                    stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M18.3334 18.3333L16.6667 16.6666" stroke="black" stroke-width="1.25"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                        </svg>
-                    </a>
-                    <input type="search" class="placeholder:text-[#00000066] focus:outline-none focused-input"
-                        placeholder="أبحث عن كتاب, مؤلف, دار نشر" />
-                </div>
-                <div class="flex items-center gap-6">
-                    <a href="cart.html" title="delete" class="">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.5 14.25C8.5 16.17 10.08 17.75 12 17.75C13.92 17.75 15.5 16.17 15.5 14.25"
+
+                <div class="flex flex-col gap-1">
+                    <div class="py-3 flex items-center gap-3">
+                        <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
                                 stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                            <path d="M8.80994 2L5.18994 5.63" stroke="black" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.1899 2L18.8099 5.63" stroke="black" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
                             <path
-                                d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z"
-                                stroke="black" stroke-width="1.5" />
-                            <path
-                                d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" />
+                                d="M1.66602 10.7333V9.26666C1.66602 8.4 2.37435 7.68333 3.24935 7.68333C4.75768 7.68333 5.37435 6.61666 4.61602 5.30833C4.18268 4.55833 4.44102 3.58333 5.19935 3.15L6.64102 2.325C7.29935 1.93333 8.14935 2.16666 8.54102 2.825L8.63268 2.98333C9.38268 4.29166 10.616 4.29166 11.3743 2.98333L11.466 2.825C11.8577 2.16666 12.7077 1.93333 13.366 2.325L14.8077 3.15C15.566 3.58333 15.8243 4.55833 15.391 5.30833C14.6327 6.61666 15.2494 7.68333 16.7577 7.68333C17.6244 7.68333 18.341 8.39166 18.341 9.26666V10.7333C18.341 11.6 17.6327 12.3167 16.7577 12.3167C15.2494 12.3167 14.6327 13.3833 15.391 14.6917C15.8243 15.45 15.566 16.4167 14.8077 16.85L13.366 17.675C12.7077 18.0667 11.8577 17.8333 11.466 17.175L11.3743 17.0167C10.6243 15.7083 9.39102 15.7083 8.63268 17.0167L8.54102 17.175C8.14935 17.8333 7.29935 18.0667 6.64102 17.675L5.19935 16.85C4.44102 16.4167 4.18268 15.4417 4.61602 14.6917C5.37435 13.3833 4.75768 12.3167 3.24935 12.3167C2.37435 12.3167 1.66602 11.6 1.66602 10.7333Z"
+                                stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
-                    </a>
-                    <a href="profile-edit.html" title="account"
-                        class="w-8 h-8 rounded-xl overflow-hidden hidden lg:block">
-                        <img src="assets/images/account.png" class="w-full h-full object-cover" width="32" height="32"
-                            alt="Account Mena" />
-                    </a>
+                        <a href="profile-edit.html" class="text-sm leading-[18px] text-[#0000008C]">الأعدادات </a>
+                    </div>
+                    <div class="py-3 flex items-center gap-3">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5332 12.1833L16.6665 10.05L14.5332 7.91666" stroke="#F04438"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.13281 10.05H16.6078" stroke="#F04438" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9.79948 16.6667C6.11615 16.6667 3.13281 14.1667 3.13281 10C3.13281 5.83334 6.11615 3.33334 9.79948 3.33334"
+                                stroke="#F04438" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <span class="text-sm leading-[18px] text-[#F04438]">تسجيل خروج </span>
+                    </div>
                 </div>
+            </aside>
+        </div>
+
+        <div class="flex items-center gap-8">
+            <a href="index.html" class="" title="Warraq Logo">
+                <img src="assets/images/Logo.svg" width="93" height="40" alt="Warraq Logo" />
+            </a>
+            <nav class="hidden lg:block">
+                <ul class="flex items-center gap-6">
+                    <li class="header-cat-toggle cursor-pointer">
+                        <span class="flex items-center gap-2 text-base leading-5">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 7H21" stroke="#002963" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M3 12H21" stroke="#002963" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M3 17H21" stroke="#002963" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <span class="text-[#002963]">التصنيفات</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="bestsell.html" class="">
+                            <span class="text-[#0000008C] text-base leading-5">الأكثر مبيعاً</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="publishing-house.html" class="">
+                            <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="">
+                            <span class="text-[#0000008C] text-base leading-5">المقالات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html" class="">
+                            <span class="text-[#0000008C] text-base leading-5">الفعاليات</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex gap-8 items-center">
+            <div
+                class="hidden lg:flex items-center gap-2.5 border border-[#BFBECA] rounded-2xl p-3.5 w-[350px] transition-all duration-300">
+                <a title="search" href="#" class="">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.4">
+                            <path
+                                d="M9.58335 17.5C13.9556 17.5 17.5 13.9555 17.5 9.58329C17.5 5.21104 13.9556 1.66663 9.58335 1.66663C5.2111 1.66663 1.66669 5.21104 1.66669 9.58329C1.66669 13.9555 5.2111 17.5 9.58335 17.5Z"
+                                stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.3334 18.3333L16.6667 16.6666" stroke="black" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </a>
+                <input type="search" class="placeholder:text-[#00000066] focus:outline-none focused-input"
+                    placeholder="أبحث عن كتاب, مؤلف, دار نشر" />
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="cart.html" title="delete" class="">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 14.25C8.5 16.17 10.08 17.75 12 17.75C13.92 17.75 15.5 16.17 15.5 14.25"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M8.80994 2L5.18994 5.63" stroke="black" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M15.1899 2L18.8099 5.63" stroke="black" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z"
+                            stroke="black" stroke-width="1.5" />
+                        <path
+                            d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <a href="profile-edit.html" title="account"
+                    class="w-8 h-8 rounded-xl overflow-hidden hidden lg:block">
+                    <img src="assets/images/account.png" class="w-full h-full object-cover" width="32" height="32"
+                        alt="Account Mena" />
+                </a>
             </div>
         </div>
-    </header>
-    <!-- End Warraq Header  -->
+    </div>
+    <div class="container py-8 header-cat hidden">
+        <div class="owl-carousel owl-theme owl-header-categories relative px-16">
+            <!-- Category Item -->
+            <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                <div class="rounded-[4px]">
+                    <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                    <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                    <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                </div>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                <div class="rounded-[4px]">
+                    <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                    <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                    <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                </div>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                <div class="rounded-[4px]">
+                    <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                    <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                    <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                </div>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                <div class="rounded-[4px]">
+                    <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                    <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                    <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                </div>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                <div class="rounded-[4px]">
+                    <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                    <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                    <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                </div>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
+                <div class="rounded-[4px]">
+                    <img src="assets/images/nagib.png" width="42" height="64" alt="">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                    <h2 class="text-base leading-5 text-[#000000E5] font-semibold">السير الذاتية</h2>
+                    <p class="text-sm text-[#0000008C] leading-[18px]">أكثر من 50 كتاب</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</header>
+<!-- End Warraq Header  -->
 
     <!-- Start Warraq Main Page Content  -->
     <main>
