@@ -1964,25 +1964,19 @@
     <script src="assets/scripts/scripts.js"></script>
     <script>
         setInterval(() => {
-
             $(".boks > div:last-child img").animate({
-                top: "+=384",
-                opacity:"0"
-            }, 1000, function () {
+                top: "+=410",
+            }, 2000, function () {
                 $(".boks > div img").animate
                     ({
                         top: "-=64",
                         right: "-=64",
                     }, 500);
-                $(".boks > div:last-child img").css({ "right": "386px","opacity":"1" })
+                $(".boks > div:last-child img").css({ "right": "386px" })
                 $(".boks").prepend($(".boks > div:last-child").clone());
                 $(".boks > div:last-child").remove();
             });
-        
-            console.log("change");
-        
-        }, 6000); 
-
+        }, 6000);
     </script>
 </body>
 

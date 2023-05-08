@@ -820,7 +820,7 @@
             </div>
         </section>
 
-        <div id="book-buy-sec" class="border-t border-[#E2E2E9] hidden w-full z-10 bg-white">
+        <div id="book-buy-sec" class="fixed bottom-0 border-t border-[#E2E2E9] hidden w-full z-10 bg-white">
             <div class="container py-6 hidden lg:flex items-center justify-between">
                 <div class="flex items-center gap-4">
                     <div class="w-[56px] h-[82px] rounded-lg overflow-hidden">
@@ -2287,13 +2287,9 @@
             if (screen.width > 1024) {
                 if (window.scrollY > pos) {
                     $("#book-buy-sec").addClass("flex");
-                    $("#book-buy-sec").css({
-                        position: "fixed",
-                        bottom: "0",
-                        display: "block",
-                    });
+                    $("#book-buy-sec").slideDown(300);
                 } else {
-                    $("#book-buy-sec").css({ position: "static", display: "none" });
+                    $("#book-buy-sec").slideUp(300);
                 }
             }
         });
