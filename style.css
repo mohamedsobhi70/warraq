@@ -129,8 +129,9 @@
   .select-card-item.active > label {
     @apply text-[#000000E5];
   }
-  .hero-books-info .itm.active {
-    @apply visible opacity-100 transition-all duration-500 block;
+ 
+  div.itm.active > div {
+    @apply visible opacity-100 transition-all duration-500  translate-y-0 -bottom-64;
   }
 
   @media (min-width: 1024px) {
