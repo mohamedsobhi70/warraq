@@ -263,3 +263,18 @@ if ($("#price-range").length > 0) {
 
 }
 
+
+if( $(".warraq-modal").length > 0){
+    
+        // modal popup 
+
+
+        $(".modal-close").on("click", function () {
+            $(this).closest(".warraq-modal").removeClass("active")
+        })
+    
+    $(".warraq-modal-btn").on("click", function () {
+            let th = $(this);
+            th.siblings(".warraq-modal").addClass("active");
+        })
+}

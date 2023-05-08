@@ -81,6 +81,7 @@
   .drop-down-list.active,
   .filter-sec.active,
   .mobile-menu.active,
+  .warraq-modal.active,
   .modal.active {
     @apply opacity-100 visible translate-y-0;
   }
