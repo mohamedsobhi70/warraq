@@ -55,7 +55,7 @@
     </div>
 
     <!-- Start Warraq Header  -->
-    <header class="">
+    <header>
         <div class="container flex justify-between items-center py-4 px-[30px] lg:px-0 lg:py-[18px]">
             <button class="lg:hidden mobile-menu-btn" title="menu button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -395,7 +395,8 @@
     <main>
         <!-- hero section -->
         <section class="min-h-[612px] bg-[#3DA2B8]">
-            <div class="container min-h-[612px] flex items-end lg:items-center gap-40">
+            <div class="container min-h-[612px] flex flex-col lg:flex-row items-center lg:gap-40">
+
                 <div class="lg:w-[520px] flex flex-col gap-8 items-start py-8 lg:py-0 px-[30px] lg:px-0">
                     <h1 class="text-[32px] lg:text-[40px] leading-10 lg:leading-[50px] text-[#FFFFFFE5] font-bold">
                         أول منصة شاملة للكتب في الوطن العربي.
@@ -405,15 +406,53 @@
                         العلم.
                     </p>
                     <a href="recently-published.html"
-                        class="text-black text-base leading-5 py-3 px-6 rounded-[14px] bg-white">تصفح الكتب</a>
+                        class="text-black text-base text-center w-full lg:w-auto leading-5 py-3 px-6 rounded-[14px] bg-white">تصفح
+                        الكتب</a>
                 </div>
-                <div class="w-full flex-1 h-full relative hidden lg:block">
+                <div class=" lg:hidden w-full pt-12 pb-20">
+                    <div class="owl-carousel owl-theme owl-hero-book relative">
+
+                        <div class="item">
+                            <img src="assets/images/mobile-book-1.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/mobile-book-2.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/mobile-book-3.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/mobile-book-4.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/mobile-book-5.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/mobile-book-6.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/mobile-book-6.svg" class="w-full h-full object-cover" width="160"
+                                height="235" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="w-full flex-1 h-full relative">
                     <div class="hero-books-info ">
-                        <div class="itm  absolute -right-40 -bottom-64 z-10 active">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10 active">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             أن تكون عباس العبد
                                         </a>
@@ -425,10 +464,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -444,11 +483,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="itm  absolute -right-40 -bottom-64 z-10">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             أمواج في ليلة مظلمة
                                         </a>
@@ -460,10 +500,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -479,11 +519,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="itm  absolute -right-40 -bottom-64 z-10">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             موسم صيد الغزلان
                                         </a>
@@ -495,10 +536,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -514,11 +555,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="itm  absolute -right-40 -bottom-64 z-10">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             أن تكون عباس العبد
                                         </a>
@@ -530,10 +572,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -549,11 +591,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="itm  absolute -right-40 -bottom-64 z-10">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             زقاق الدق </a>
                                     </h2>
@@ -564,10 +607,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -583,11 +626,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="itm  absolute -right-40 -bottom-64 z-10">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             اللص والكلاب </a>
                                     </h2>
@@ -598,10 +642,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -617,11 +661,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="itm  absolute -right-40 -bottom-64 z-10">
+                        <div
+                            class="itm  absolute right-1/2 bottom-8 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-64 z-10">
                             <div
-                                class="bg-white rounded-2xl w-[233px] p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-4">
-                                <div class="flex flex-col gap-2">
-                                    <h2 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                class="bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000 invisible opacity-0 flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-1 lg:gap-2">
+                                    <h2 class="text-sm leading-[18px] lg:text-xl lg:leading-[26px] text-[#000000E5] font-semibold">
                                         <a href="book-page.html" class="">
                                             حديث الصباح والمساء
                                         </a>
@@ -633,10 +678,10 @@
                                 <div class="flex justify-between items-center gap-2">
                                     <div class="flex items-baseline gap-2">
                                         <span class="text-base leading-5 font-bold text-[#5F59F7]">1,200 ريال</span>
-                                        <span class="text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
+                                        <span class="hidden lg:block text-[10px] text-[#9E9EAE] leading-4 line-through font-bold">1,200
                                             ريال</span>
                                     </div>
-                                    <a href="#" class="" title="book">
+                                    <a href="#" class="hidden lg:block" title="book">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.66675 7.3333L14.1334 1.86664" stroke="#292D32"
@@ -653,7 +698,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class=" boks">
+                    <div class="boks hidden lg:block">
                         <div class="">
                             <img src="assets/images/Book-7.svg" class=" absolute right-[386px] top-[184px] w-[410px]"
                                 width="410" height="617" alt="" />
@@ -2203,6 +2248,7 @@
             </div>
         </div>
     </footer>
+
     <!-- End Warraq Footer  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="

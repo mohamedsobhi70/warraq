@@ -22,7 +22,7 @@ $('.book-details').owlCarousel({
     margin: 16,
     autoplay: true,
     loop: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
     dots: false,
     responsive: {
@@ -35,6 +35,18 @@ $('.book-details').owlCarousel({
             nav: true,
         }
     }
+})
+
+$('.owl-hero-book').owlCarousel({
+    items: 2.4,
+    rtl: true,
+    loop: true,
+    margin: 30,
+    dots: false, center: true,
+    autoplay: true,
+    autoplayTimeout: 6000,
+    autoplayHoverPause: true,
+    touchDrag: false,
 })
 
 $('.owl-header-categories').owlCarousel({
@@ -69,7 +81,7 @@ $('.owl-categories').owlCarousel({
     rtl: true,
     loop: true,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
     margin: 30,
     dots: false,
@@ -92,7 +104,7 @@ $('.owl-bestseller').owlCarousel({
     rtl: true,
     autoplay: true,
     loop: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
     margin: 30,
     nav: false,
