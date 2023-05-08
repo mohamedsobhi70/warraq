@@ -3,9 +3,9 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     extend: {
-      backgroundSize:{
-        input:"16px",
-        radio:"9px"
+      backgroundSize: {
+        input: "16px",
+        radio: "9px"
       },
       boxShadow: {
         'lg': '0 0 0 6px #B6B4FD',

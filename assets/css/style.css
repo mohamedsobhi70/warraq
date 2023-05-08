@@ -879,6 +879,15 @@ video {
   color: #000000E5;
 }
 
+.hero-books-info .itm.active {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
 @media (min-width: 1024px) {
   .owl-theme .owl-nav {
     width: 108%;
@@ -951,6 +960,18 @@ video {
 
 .relative {
   position: relative;
+}
+
+.-bottom-64 {
+  bottom: -16rem;
+}
+
+.-right-40 {
+  right: -10rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .bottom-6 {
@@ -1037,28 +1058,12 @@ video {
   top: 56px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
-.top-\[-264px\] {
-  top: -264px;
-}
-
-.right-\[-64px\] {
-  right: -64px;
-}
-
-.right-\[432px\] {
-  right: 432px;
-}
-
-.top-\[248px\] {
-  top: 248px;
-}
-
 .z-10 {
   z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .z-50 {
@@ -1146,18 +1151,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-\[300px\] {
-  margin-top: 300px;
-}
-
-.mb-\[-300px\] {
-  margin-bottom: -300px;
-}
-
-.mr-\[64px\] {
-  margin-right: 64px;
 }
 
 .block {
@@ -1344,6 +1337,10 @@ video {
   width: 190px;
 }
 
+.w-\[233px\] {
+  width: 233px;
+}
+
 .w-\[30\%\] {
   width: 30%;
 }
@@ -1450,10 +1447,6 @@ video {
 
 .translate-y-2 {
   --tw-translate-y: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2142,6 +2135,11 @@ video {
   color: rgb(95 89 247 / var(--tw-text-opacity));
 }
 
+.text-\[\#9E9EAE\] {
+  --tw-text-opacity: 1;
+  color: rgb(158 158 174 / var(--tw-text-opacity));
+}
+
 .text-\[\#EAAA08\] {
   --tw-text-opacity: 1;
   color: rgb(234 170 8 / var(--tw-text-opacity));
@@ -2206,6 +2204,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-shadow {
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2220,6 +2224,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .shadow-inpt {
