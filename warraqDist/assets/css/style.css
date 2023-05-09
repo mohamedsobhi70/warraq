@@ -1440,6 +1440,10 @@ div.itm.active > div {
   width: auto;
 }
 
+.w-\[350\] {
+  width: 350;
+}
+
 .max-w-full {
   max-width: 100%;
 }
