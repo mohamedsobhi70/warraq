@@ -1454,6 +1454,14 @@ div.itm.active > div {
   flex-basis: 100%;
 }
 
+.basis-5\/12 {
+  flex-basis: 41.666667%;
+}
+
+.basis-7\/12 {
+  flex-basis: 58.333333%;
+}
+
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1526,6 +1534,10 @@ div.itm.active > div {
 
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2255,6 +2267,10 @@ div.itm.active > div {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\] {
+  color: ;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2581,6 +2597,10 @@ div.itm.active > div {
     width: 100%;
   }
 
+  .lg\:w-\[676px\] {
+    width: 676px;
+  }
+
   .lg\:basis-1\/2 {
     flex-basis: 50%;
   }
@@ -2688,6 +2708,10 @@ div.itm.active > div {
 
   .lg\:gap-\[30px\] {
     gap: 30px;
+  }
+
+  .lg\:gap-y-12 {
+    row-gap: 3rem;
   }
 
   .lg\:rounded-\[100px\] {
