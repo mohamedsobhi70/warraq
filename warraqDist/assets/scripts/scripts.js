@@ -37,6 +37,26 @@ $('.book-details').owlCarousel({
     }
 })
 
+$('.package-details').owlCarousel({
+    rtl: true,
+    margin: 16,
+    autoplay: true,
+    loop: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1.5,
+            nav: false,
+        },
+        768: {
+            items: 2.5,
+            nav: true,
+        }
+    }
+})
+
 $('.owl-hero-book').owlCarousel({
     items: 2.4,
     rtl: true,

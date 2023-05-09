@@ -906,6 +906,12 @@ video {
   margin: 0;
 }
 
+.swiper-button-next:after,.swiper-button-prev:after{
+  font-size:12px;
+  color:#000;
+  font-weight: 900;
+}
+
 .swiper-pagination .swiper-pagination-bullet:first-child,
   .swiper-pagination .swiper-pagination-bullet:last-child {
   width: 4px;
@@ -1169,6 +1175,10 @@ div.itm.active > div {
   margin-left: auto;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1397,6 +1407,10 @@ div.itm.active > div {
   width: 630px;
 }
 
+.w-\[768px\] {
+  width: 768px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1404,6 +1418,10 @@ div.itm.active > div {
 
 .w-full {
   width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .max-w-full {
@@ -1446,20 +1464,20 @@ div.itm.active > div {
   flex-basis: 33.333333%;
 }
 
-.basis-8\/12 {
-  flex-basis: 66.666667%;
-}
-
-.basis-full {
-  flex-basis: 100%;
-}
-
 .basis-5\/12 {
   flex-basis: 41.666667%;
 }
 
 .basis-7\/12 {
   flex-basis: 58.333333%;
+}
+
+.basis-8\/12 {
+  flex-basis: 66.666667%;
+}
+
+.basis-full {
+  flex-basis: 100%;
 }
 
 .-translate-x-1\/2 {
@@ -1534,10 +1552,6 @@ div.itm.active > div {
 
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1802,6 +1816,11 @@ div.itm.active > div {
   background-color: rgb(61 162 184 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#5A1E3D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(90 30 61 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#5F59F7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(95 89 247 / var(--tw-bg-opacity));
@@ -1875,11 +1894,6 @@ div.itm.active > div {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#5A1E3D\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(90 30 61 / var(--tw-bg-opacity));
 }
 
 .bg-no-repeat {
@@ -2267,10 +2281,6 @@ div.itm.active > div {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\] {
-  color: ;
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -2581,6 +2591,10 @@ div.itm.active > div {
     width: 630px;
   }
 
+  .lg\:w-\[676px\] {
+    width: 676px;
+  }
+
   .lg\:w-\[786px\] {
     width: 786px;
   }
@@ -2597,8 +2611,8 @@ div.itm.active > div {
     width: 100%;
   }
 
-  .lg\:w-\[676px\] {
-    width: 676px;
+  .lg\:w-\[768px\] {
+    width: 768px;
   }
 
   .lg\:basis-1\/2 {
