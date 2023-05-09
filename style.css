@@ -1,12 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .shadow-inpt {
   @apply shadow-lg shadow-[#B6B4FD];
 }
+
 .swiper-slide {
   height: 100% !important;
 }
+
 .ui-slider-handle {
   background: #5f59f7 !important;
   border-radius: 50%;
@@ -14,11 +17,13 @@
   width: 16px !important;
   border: none !important;
 }
+
 .ui-widget.ui-widget-content {
   border: none;
   background: #e2e2e9;
   height: 4px;
 }
+
 .ui-slider-horizontal .ui-slider-range {
   background: #5f59f7;
 }
@@ -26,6 +31,7 @@
   .drop-down-icon.open {
     @apply rotate-180;
   }
+
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -38,13 +44,16 @@
     background: #999;
     border-radius: 20px;
   }
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .section-title {
     @apply text-[20px] lg:text-[32px] text-[#000000E5] leading-6 lg:leading-10 font-semibold;
   }
+
   .secondary-btn {
     @apply py-2 lg:py-2.5 px-4 lg:px-5 rounded-[10px] lg:rounded-xl bg-[#F5F5FF] text-xs lg:text-sm  leading-4 lg:leading-[18px] text-[#403AEE];
   }
@@ -60,24 +69,30 @@
   .page-title-sec {
     @apply p-12 lg:pt-16 lg:pb-[69px];
   }
+
   .page-title-heading {
     @apply text-black text-2xl lg:text-5xl leading-[30px] lg:leading-[60px] font-bold text-center;
   }
+
   .page-title-text {
     @apply text-[#0000008C] text-sm lg:text-lg leading-5 lg:leading-[26px] text-center;
   }
+
   .pagination-item,
   .pagination-item span {
     @apply hover:bg-[#5F59F7] hover:text-white;
   }
+
   .pagination-item:hover path {
     opacity: 1;
     transition: 0.4s ease;
     stroke: white;
   }
+
   .pagination-item.active {
     @apply bg-[#5F59F7] text-white;
   }
+
   .drop-down-list.active,
   .filter-sec.active,
   .mobile-menu.active,
@@ -85,9 +100,11 @@
   .modal.active {
     @apply opacity-100 visible translate-y-0;
   }
+
   .register-event.registered {
     @apply border border-[#D34136] bg-white text-[#D34136];
   }
+
   .mobile-menu .drop-down-icon.open {
     @apply -rotate-90;
   }
@@ -106,38 +123,74 @@
   .filter-sec.active > aside {
     @apply translate-x-0;
   }
+
   .filter-item.active,
   .filter-item:hover {
     @apply bg-[#F3F3F7];
   }
+
   .profile-navigation > li.active a {
     @apply text-[#403AEE] font-medium bg-[#F5F5FF];
   }
+
   .profile-navigation > li:hover a {
     @apply text-[#403AEE] bg-[#F5F5FF];
   }
+
   .profile-navigation > li.active svg,
   .profile-navigation > li:hover svg {
     @apply opacity-100;
   }
+
   .profile-navigation > li.active svg path,
   .profile-navigation > li:hover svg path {
     @apply stroke-[#403AEE] transition-all duration-300;
   }
+
   .select-card-item.active {
     @apply border-[#5F59F7];
   }
+
   .select-card-item.active > label {
     @apply text-[#000000E5];
   }
+
   .owl-hero-book .owl-stage {
     padding-top: 70px;
   }
+
   .owl-hero-book .owl-item.active.center {
     transform: translateY(-72px);
   }
-  .owl-hero-book .owl-item{
-    @apply transition-all duration-500
+
+  .owl-hero-book .owl-item {
+    @apply transition-all duration-500;
+  }
+
+  .swiper-pagination {
+    transform: none !important;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+    margin: 0;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet:first-child,
+  .swiper-pagination .swiper-pagination-bullet:last-child {
+    width: 4px;
+    height: 4px;
+  }
+  .swiper-pagination .swiper-pagination-bullet-active {
+    width: 14px !important;
+    height: 6px !important;
+    background: #5f59f7;
+  }
+
+  div.itm.active {
+    @apply z-40;
   }
 
   div.itm.active > div {
@@ -150,7 +203,7 @@
       position: absolute;
       top: 50%;
       display: flex;
-      transform: translate(-50%);
+      transform: translate(-50%, -50%);
       align-items: center;
       justify-content: space-between;
       left: 50%;
@@ -164,7 +217,6 @@
     }
 
     .owl-theme.owl-header-categories .owl-nav {
-      top: 0%;
       width: 100%;
       margin-top: 0;
       height: 100%;
@@ -196,4 +248,5 @@
       height: 100%;
     }
   }
+
 }
