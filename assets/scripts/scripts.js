@@ -270,17 +270,27 @@ $(".header-cat-toggle").on("click", function () {
 })
 
 if ($("#price-range").length > 0) {
-    $("#price-range").slider({
-        isRTL: true,
-        step: 10,
-        range: true,
-        min: 0,
-        max: 2500,
-        values: [20, 600],
-        slide: function (event, ui) { $("#priceRange").html("السعر:" + ui.values[0] + " ريال - " + ui.values[1] + " ريال  "); }
-    });
-    $("#priceRange").html($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
-
+      // price range slider
+        let rangeInput = document.querySelectorAll(".range-input input"),
+            progress = document.querySelector(".slider .progress");
+            console.log(rangeInput[0]);
+        rangeInput.forEach(input => {
+            input.addEventListener("input", e => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+                console.log(e.target.className);
+                if (maxVal - minVal < 0) {
+                    rangeInput[0].value = maxVal;
+                    rangeInput[1].value = minVal;
+                }
+                else {
+                    progress.style.right = (minVal / rangeInput[0].max * 100) + "%";
+                    progress.style.left = 100 - (maxVal / rangeInput[0].max * 100) + "%";
+                }
+                document.querySelector(".price-input .min").innerHTML = rangeInput[0].value + " ريال"
+                document.querySelector(".price-input .max").innerHTML = rangeInput[1].value + " ريال"
+            })
+        })
 }
 
 
