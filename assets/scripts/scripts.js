@@ -251,7 +251,7 @@ if ($(".drop-down")) {
         }
     })
     $(".drop-down-list li").on("click", function () {
-        $(".drop-down span").text($(this).text().trim());
+      $(this).closest(".relative").find(".drop-down span").text($(this).text().trim());
         $(this).parent().removeClass("active");
     })
 }
