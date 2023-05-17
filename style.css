@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .shadow-inpt {
-  @apply shadow-lg shadow-[#B6B4FD];
+  @apply shadow-lg shadow-[#ECEBFF];
 }
 
 .swiper-slide {

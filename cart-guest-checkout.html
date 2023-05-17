@@ -391,156 +391,255 @@
                 </li>
             </ul>
             <div class="flex flex-col gap-4 px-[30px] lg:px-0">
-                <form action="./cart-guest-payment.html"
-                    class="checkout-frm flex flex-col items-start lg:flex-row gap-[30px]">
+                <form class="checkout-frm flex flex-col items-start lg:flex-row gap-[30px]">
+                    <div class="basis-8/12 check-out">
+                        <div class="">
+                            <div class="flex flex-col gap-6 lg:gap-8 p-8 rounded-3xl border border-[#E8E8ED]">
 
-                    <div class="basis-8/12">
-                        <div class="flex flex-col gap-6 lg:gap-8 p-8 rounded-3xl border border-[#E8E8ED]">
+                                <h3
+                                    class="text-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                    حدد بلد الشحن
+                                </h3>
 
-                            <h3 class="text-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
-                                حدد بلد الشحن
-                            </h3>
-
-                            <div class="relative">
-                                <span
-                                    class="drop-down flex gap-1 h-full items-center justify-between w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD] cursor-pointer">
-                                    <span class="">مصر</span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
-                                            stroke="black" stroke-miterlimit="10" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                </span>
-                                <ul
-                                    class="w-full drop-down-list selct translate-y-2 transition-all duration-300 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
-                                    <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                        مصر
-                                    </li>
-                                    <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                        المملكة العربيه السعوديه
-                                    </li>
-                                    <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                        الإمارات العربيه المتحده
-                                    </li>
-                                    <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                        الكويت
-                                    </li>
-                                    <li class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                        قطر
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <span class="border-t border-[#E2E2E9]"></span>
-                            <h3 class="text-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
-                                عنوان الشحن
-                            </h3>
-
-                            <div class="flex flex-col gap-6">
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="name" class="text-sm leading-[18px] text-[#000000B2] font-medium">
-                                        الاسم بالكامل *
-                                    </label>
-                                    <input required onkeyup="enableSubmit()"
-                                        class="w-full req-btn border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="name" placeholder="أدخل اسمك بالكامل">
+                                <div class="relative">
+                                    <span
+                                        class="drop-down flex gap-1 h-full items-center justify-between w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF] cursor-pointer">
+                                        <span class="">مصر</span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
+                                                stroke="black" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <ul
+                                        class="w-full drop-down-list selct translate-y-2 transition-all duration-300 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
+                                        <li
+                                            class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                            مصر
+                                        </li>
+                                        <li
+                                            class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                            المملكة العربيه السعوديه
+                                        </li>
+                                        <li
+                                            class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                            الإمارات العربيه المتحده
+                                        </li>
+                                        <li
+                                            class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                            الكويت
+                                        </li>
+                                        <li
+                                            class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                            قطر
+                                        </li>
+                                    </ul>
                                 </div>
 
-                                <div class="grid grid-cols-2 gap-4">
+                                <span class="border-t border-[#E2E2E9]"></span>
+                                <h3
+                                    class="text-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                    عنوان الشحن
+                                </h3>
+
+                                <div class="flex flex-col gap-6">
+
                                     <div class="flex flex-col gap-2">
-                                        <label for="email" class="text-sm leading-[18px] text-[#000000B2] font-medium">
-                                            الإيميل *
+                                        <label for="name" class="text-sm leading-[18px] text-[#000000B2] font-medium">
+                                            الاسم بالكامل *
                                         </label>
                                         <input required onkeyup="enableSubmit()"
-                                            class="w-full req-btn border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="email" id="email" placeholder="أدخل الإيميل">
+                                            class="w-full req-inpt border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                            type="text" id="name" placeholder="أدخل اسمك بالكامل">
                                     </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label for="re-email"
-                                            class="text-sm leading-[18px] text-[#000000B2] font-medium">
-                                            تأكيد الإيميل *
-                                        </label>
-                                        <input required onkeyup="enableSubmit()"
-                                            class="w-full req-btn border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                            type="email" id="re-email" placeholder="أدخل الإيميل للتأكيد">
-                                    </div>
-                                </div>
 
-                                <div class="flex flex-col gap-2">
-                                    <label for="tel" class="text-sm leading-[18px] text-[#000000B2] font-medium">
-                                        رقم التليفون *
-                                    </label>
-                                    <input required onkeyup="enableSubmit()"
-                                        class="w-full req-btn border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="tel" id="tel" placeholder="أدخل رقم هاتفك">
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label for="address" class="text-sm leading-[18px] text-[#000000B2] font-medium">
-                                        العنوان *
-                                    </label>
-                                    <input required onkeyup="enableSubmit()"
-                                        class="w-full req-btn border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="address" placeholder="أدخل اسم الشارع و رقم المنزل ">
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-
-                                    <label for="country"
-                                        class="text-sm leading-[18px] text-[#000000B2] font-medium">مدينة</label>
                                     <div class="grid grid-cols-2 gap-4">
                                         <div class="flex flex-col gap-2">
-                                            <input
-                                                class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                                type="text" id="country" placeholder="مدينة">
+                                            <label for="email"
+                                                class="text-sm leading-[18px] text-[#000000B2] font-medium">
+                                                الإيميل *
+                                            </label>
+                                            <input required onkeyup="enableSubmit()"
+                                                class="w-full req-inpt border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                type="email" id="email" placeholder="أدخل الإيميل">
                                         </div>
-                                        <div class="relative">
-                                            <span
-                                                class="drop-down flex gap-1 h-full items-center justify-between w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD] cursor-pointer">
-                                                <span class="">اختر المنطقة</span>
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
-                                                        stroke="black" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </svg>
-                                            </span>
-                                            <ul
-                                                class="w-full drop-down-list selct translate-y-2 transition-all duration-300 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
-                                                <li
-                                                    class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                    الهرم
-                                                </li>
-                                                <li
-                                                    class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                    دكرنس
-                                                </li>
-                                                <li
-                                                    class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                    طلخا
-                                                </li>
-                                                <li
-                                                    class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
-                                                    المنصورة
-                                                </li>
-                                            </ul>
+                                        <div class="flex flex-col gap-2">
+                                            <label for="re-email"
+                                                class="text-sm leading-[18px] text-[#000000B2] font-medium">
+                                                تأكيد الإيميل *
+                                            </label>
+                                            <input required onkeyup="enableSubmit()"
+                                                class="w-full req-inpt border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                type="email" id="re-email" placeholder="أدخل الإيميل للتأكيد">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <label for="tel" class="text-sm leading-[18px] text-[#000000B2] font-medium">
+                                            رقم التليفون *
+                                        </label>
+                                        <input required onkeyup="enableSubmit()"
+                                            class="w-full req-inpt border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                            type="tel" id="tel" placeholder="أدخل رقم هاتفك">
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <label for="address"
+                                            class="text-sm leading-[18px] text-[#000000B2] font-medium">
+                                            العنوان *
+                                        </label>
+                                        <input required onkeyup="enableSubmit()"
+                                            class="w-full req-inpt border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                            type="text" id="address" placeholder="أدخل اسم الشارع و رقم المنزل ">
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+
+                                        <label for="country"
+                                            class="text-sm leading-[18px] text-[#000000B2] font-medium">مدينة</label>
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="flex flex-col gap-2">
+                                                <input
+                                                    class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                    type="text" id="country" placeholder="مدينة">
+                                            </div>
+                                            <div class="relative">
+                                                <span
+                                                    class="drop-down flex gap-1 h-full items-center justify-between w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF] cursor-pointer">
+                                                    <span class="">اختر المنطقة</span>
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
+                                                            stroke="black" stroke-miterlimit="10" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                                <ul
+                                                    class="w-full drop-down-list selct translate-y-2 transition-all duration-300 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
+                                                    <li
+                                                        class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                                        الهرم
+                                                    </li>
+                                                    <li
+                                                        class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                                        دكرنس
+                                                    </li>
+                                                    <li
+                                                        class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                                        طلخا
+                                                    </li>
+                                                    <li
+                                                        class="py-2 px-[18px] text-xs text-[#000000B2] leading-4 block cursor-pointer">
+                                                        المنصورة
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label for="postal-code"
+                                            class="text-sm leading-[18px] text-[#000000B2] font-medium">
+                                            رمز بريدي *
+                                        </label>
+                                        <input required onkeyup="enableSubmit()"
+                                            class="w-full req-inpt border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                            type="text" id="postal-code" placeholder="أدخل رمزك البريدي">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden">
+                            <div class="flex flex-col gap-6 lg:gap-8 p-8 rounded-3xl border border-[#E8E8ED]">
+
+                                <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                    حدد طرق الدفع
+                                </h3>
+
+                                <div class="flex flex-col gap-4 accordion-container">
+                                    <div class="accordion-item border border-[#E2E2E9] rounded-[20px] overflow-hidden">
+                                        <div
+                                            class="accordion-title p-4 border-b border-[#E2E2E9] flex items-center justify-between">
+                                            <div class="flex items-center gap-2.5">
+                                                <input type="radio" checked name="payment" class="form-radio w-6 h-6"
+                                                    id="payment-1">
+                                                <label class="text-base leading-5 text-[#000000E5]"
+                                                    for="payment-1">بطاقة
+                                                    أئتمان</label>
+                                            </div>
+                                            <div class="flex items-center gap-2.5">
+                                                <div class="">
+                                                    <img src="assets/images/visa.svg" width="34" height="24" alt="visa">
+                                                </div>
+                                                <div class="">
+                                                    <img src="assets/images/mastercard.svg" width="34" height="24"
+                                                        alt="master card">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="p-4 flex flex-col gap-3">
+                                                <input
+                                                    class="border border-[#E2E2E9] p-3.5 rounded-2xl  text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                    type="text" id="card-num" placeholder="رقم البطاقة">
+                                                <input
+                                                    class="border border-[#E2E2E9] p-3.5 rounded-2xl text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                    type="text" id="card-name" placeholder="الاسم على البطاقة">
+                                                <div class="grid grid-cols-2 gap-4">
+                                                    <input
+                                                        class="border border-[#E2E2E9] p-3.5 rounded-2xl text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                        type="text" id="ex-date" placeholder="تاريخ انتهاء الصلاحية">
+                                                    <input
+                                                        class="border border-[#E2E2E9] p-3.5 rounded-2xl text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                                        type="text" id="fd" placeholder="رمز التحقق CVV ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border border-[#E2E2E9] rounded-[20px] overflow-hidden">
+                                        <div
+                                            class="accordion-title p-4 border-b border-[#E2E2E9] flex items-center justify-between">
+                                            <div class="flex items-center gap-2.5">
+                                                <input type="radio" name="payment" class="form-radio w-6 h-6"
+                                                    id="payment-2">
+                                                <label class="text-base leading-5 text-[#000000E5]"
+                                                    for="payment-2">تحويل
+                                                    بنكي</label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-content hidden">
+                                            <div class="p-4 flex flex-col gap-4">
+                                                <div class="flex flex-col gap-1">
+                                                    <h4 class="text-base leading-5 font-medium text-black">تعليمات
+                                                        التـحـويـل
+                                                        البـنـكـي</h4>
+                                                    <div class="text-xs leading-5 text-[#0000008C] list-decimal">
+                                                        <p class="">
+                                                            1. للتحويل الداخلي من مصرف الراجحي إلى مصرف الراجحي رقم
+                                                            الحساب
+                                                            (270608010511031). باسم مؤسسة خزانة الكتاب للتجارة
+                                                        </p>
+                                                        <p class="">
+                                                            2. للتحويل من بنك محلي آخر غير البنك الراجحي يكون التحويل
+                                                            إلى
+                                                            حساب
+                                                            مؤسسة
+                                                            خزانة الكتاب للتجارة ببنك الراجحي.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <span
+                                                    class="p-3 bg-[#F3F3F7] rounded-lg text-sm leading-[18px] text-[#000000B2] font-medium">
+                                                    رقم الحساب الدولي "الآيبان "IBAN' SA5480000270608010511031
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-2">
-                                    <label for="postal-code"
-                                        class="text-sm leading-[18px] text-[#000000B2] font-medium">
-                                        رمز بريدي *
-                                    </label>
-                                    <input required onkeyup="enableSubmit()"
-                                        class="w-full req-btn border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD]"
-                                        type="text" id="postal-code" placeholder="أدخل رمزك البريدي">
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -592,7 +691,7 @@
                             </h3>
                             <div class="flex items-center gap-2">
                                 <input type="text"
-                                    class="w-3/4 focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#B6B4FD] text-sm lg:text-base 
+                                    class="w-3/4 focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF] text-sm lg:text-base 
                                                         leading-[18px] lg:leading-5  placeholder:text-[#00000066] p-3 border border-[#E8E8ED] rounded-[14px] "
                                     placeholder="أضف كود الخصم">
                                 <a href="#"
@@ -630,11 +729,16 @@
                             <span class="text-xl leading-[26px] text-[#000000E5] font-semibold">5,000 ريال</span>
                         </div>
 
-                        <input type="submit" disabled
-                            class="transition-all duration-300 flex justify-center disabled:bg-[#F3F3F7] cursor-pointer disabled:cursor-auto disabled:text-[#00000033] bg-[#5F59F7] text-white text-lg font-medium leading-6 py-4 px-8 rounded-[18px]"
-                            value="إلي تفاصيل الدفع">
-
+                        <button type="button" disabled
+                            class="submit-btn to-payment transition-all duration-300 disabled:bg-[#F3F3F7] cursor-pointer disabled:cursor-auto disabled:text-[#00000033] bg-[#5F59F7] text-white text-lg font-medium leading-6 py-4 px-8 rounded-[18px]">
+                            إلي تفاصيل الدفع
+                        </button>
+                        <button type="button" disabled
+                            class="hidden submit-btn transition-all duration-300 disabled:bg-[#F3F3F7] cursor-pointer disabled:cursor-auto disabled:text-[#00000033] bg-[#5F59F7] text-white text-lg font-medium leading-6 py-4 px-8 rounded-[18px]">
+                            دفع الفاتورة
+                        </button>
                     </div>
+
                 </form>
             </div>
 
@@ -827,8 +931,8 @@
     <script src="assets/scripts/scripts.js"></script>
     <script>
         function enableSubmit() {
-            let inputs = document.querySelectorAll('.req-btn'); // Enter your class name for a required field, this should also be reflected within your form fields.
-            let btn = document.querySelector('.checkout-frm input[type="submit"]');
+            let inputs = document.querySelectorAll('.req-inpt'); // Enter your class name for a required field, this should also be reflected within your form fields.
+            let btn = document.querySelectorAll('.checkout-frm .submit-btn');
             let isValid = true;
             for (var i = 0; i < inputs.length; i++) {
                 let changedInput = inputs[i];
@@ -837,8 +941,20 @@
                     break;
                 }
             }
-            btn.disabled = !isValid;
+            btn.forEach(el => {
+                el.disabled = !isValid;
+            })
         }
+
+        $(".submit-btn.to-payment").on("click", function () {
+            $(".check-out >div").toggleClass("hidden");
+            $(".submit-btn").toggleClass("hidden");
+        })
+
+        $('.accordion-item input[type="radio"]').change(function () {
+            $('.accordion-item .accordion-content').slideUp(400);
+            $(this).closest(".accordion-item").find(".accordion-content").slideDown(400);
+        });
 
     </script>
 </body>
