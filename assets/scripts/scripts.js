@@ -192,7 +192,12 @@ if ($(".drop-down")) {
     })
 }
 
-if ($(".filter-sec")) {
+if ($(".filter-sec").length > 0) {
+    $(".filter-sec").on("click", function (e) {
+        if (e.target.className.includes("filter-sec")) {
+            $(".filter-sec").removeClass("active");
+        }
+    })
     $(".filter-open").on("click", function () {
         $(".filter-sec").addClass("active");
     })
@@ -242,7 +247,7 @@ if ($(".focused-input")) {
 
 
 // dropdown lists 
-if ($(".drop-down")) {
+if ($(".drop-down").length > 0) {
 
     $(".drop-down").on("click", function () {
         $(this).parent().find(".drop-down-items").slideToggle(300);
@@ -251,7 +256,7 @@ if ($(".drop-down")) {
         }
     })
     $(".drop-down-list li").on("click", function () {
-      $(this).closest(".relative").find(".drop-down span").text($(this).text().trim());
+        $(this).closest(".relative").find(".drop-down span").text($(this).text().trim());
         $(this).parent().removeClass("active");
     })
 }
@@ -270,41 +275,39 @@ $(".header-cat-toggle").on("click", function () {
 })
 
 if ($("#price-range").length > 0) {
-      // price range slider
-        let rangeInput = document.querySelectorAll(".range-input input"),
-            progress = document.querySelector(".slider .progress");
-            console.log(rangeInput[0]);
-        rangeInput.forEach(input => {
-            input.addEventListener("input", e => {
-                let minVal = parseInt(rangeInput[0].value),
-                    maxVal = parseInt(rangeInput[1].value);
-                console.log(e.target.className);
-                if (maxVal - minVal < 0) {
-                    rangeInput[0].value = maxVal;
-                    rangeInput[1].value = minVal;
-                }
-                else {
-                    progress.style.right = (minVal / rangeInput[0].max * 100) + "%";
-                    progress.style.left = 100 - (maxVal / rangeInput[0].max * 100) + "%";
-                }
-                document.querySelector(".price-input .min").innerHTML = rangeInput[0].value + " ريال"
-                document.querySelector(".price-input .max").innerHTML = rangeInput[1].value + " ريال"
-            })
+    // price range slider
+    let rangeInput = document.querySelectorAll(".range-input input"),
+        progress = document.querySelector(".slider .progress");
+    rangeInput.forEach(input => {
+        input.addEventListener("input", e => {
+            let minVal = parseInt(rangeInput[0].value),
+                maxVal = parseInt(rangeInput[1].value);
+            if (maxVal - minVal < 0) {
+                rangeInput[0].value = maxVal;
+                rangeInput[1].value = minVal;
+            }
+            else {
+                progress.style.right = (minVal / rangeInput[0].max * 100) + "%";
+                progress.style.left = 100 - (maxVal / rangeInput[0].max * 100) + "%";
+            }
+            document.querySelector(".price-input .min").innerHTML = rangeInput[0].value + " ريال"
+            document.querySelector(".price-input .max").innerHTML = rangeInput[1].value + " ريال"
         })
+    })
 }
 
 
-if( $(".warraq-modal").length > 0){
-    
-        // modal popup 
+if ($(".warraq-modal").length > 0) {
+
+    // modal popup 
 
 
-        $(".modal-close").on("click", function () {
-            $(this).closest(".warraq-modal").removeClass("active")
-        })
-    
+    $(".modal-close").on("click", function () {
+        $(this).closest(".warraq-modal").removeClass("active")
+    })
+
     $(".warraq-modal-btn").on("click", function () {
-            let th = $(this);
-            th.siblings(".warraq-modal").addClass("active");
-        })
+        let th = $(this);
+        th.siblings(".warraq-modal").addClass("active");
+    })
 }

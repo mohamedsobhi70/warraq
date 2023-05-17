@@ -1386,6 +1386,10 @@ div.itm.active > div {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-\[108px\] {
   min-height: 108px;
 }
@@ -1633,6 +1637,10 @@ div.itm.active > div {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1752,6 +1760,10 @@ div.itm.active > div {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }
 
 .overflow-x-hidden {
@@ -2019,6 +2031,10 @@ div.itm.active > div {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-\[13px\] {
+  padding: 13px;
 }
 
 .px-16 {
