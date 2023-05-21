@@ -2550,7 +2550,15 @@
     <script src="assets/scripts/scripts.js"></script>
     <script>
         document.onload = function () {
-            setInterval(() => {
+              const colorThief = new ColorThief();
+            let booksImgs = document.querySelectorAll(".boks img");
+            for (let i = 0; i < booksImgs.length; i++) {
+                let img = booksImgs[i];
+                console.log(colorThief.getColor(booksImgs[i]));
+                booksImgs[i].previousElementSibling.style.background =
+                    `rgb( ${colorThief.getColor(booksImgs[i])[0]} ,${colorThief.getColor(booksImgs[i])[1]} , ${colorThief.getColor(booksImgs[i])[2]})`
+            } 
+              setInterval(() => {
                 $(".boks > div:last-child").animate({
                     top: "+=510",
                 }, 500, "easeOutQuad", function () {
@@ -2574,14 +2582,7 @@
 
             }, 5000);
 
-            const colorThief = new ColorThief();
-            let booksImgs = document.querySelectorAll(".boks img");
-            for (let i = 0; i < booksImgs.length; i++) {
-                let img = booksImgs[i];
-                console.log(colorThief.getColor(booksImgs[i]));
-                booksImgs[i].previousElementSibling.style.background =
-                    `rgb( ${colorThief.getColor(booksImgs[i])[0]} ,${colorThief.getColor(booksImgs[i])[1]} , ${colorThief.getColor(booksImgs[i])[2]})`
-            }
+       
         }
 
 
