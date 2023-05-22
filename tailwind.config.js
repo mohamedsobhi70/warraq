@@ -19,6 +19,10 @@ module.exports = {
       fontFamily: {
         'IBM': ['IBM Plex Sans Arabic', 'sans-serif'],
       },
+      transitionDelay: {
+        '800': '800ms',
+      }
+
     },
   },
   plugins: [

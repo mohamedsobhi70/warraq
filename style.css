@@ -71,6 +71,13 @@
     @apply text-[#F5F5FF] rounded-[7px] border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] indeterminate:border-[#5F59F7] indeterminate:bg-[url(../images/indeterminate.svg)] checked:bg-[url(../images/check.svg)] checked:bg-input indeterminate:bg-input outline-none w-5 h-5 focus:ring-transparent;
   }
 
+  .cover-info {
+    @apply -skew-y-3 invisible opacity-0 absolute bottom-20 translate-x-1/2 lg:translate-x-0 -right-32 bg-white rounded-2xl w-[150px] sm:w-[233px] p-3 lg:p-4 flex  transition-all duration-1000  flex-col gap-2 lg:gap-4;
+  }
+  .cover-info.active {
+    @apply opacity-100 visible delay-800 -right-40;
+  }
+
   .form-radio {
     @apply text-[#F5F5FF] cursor-pointer border border-[#E2E2E9] checked:border-[#5F59F7] checked:focus:border-[#5F59F7] checked:bg-radio checked:bg-[url(../images/radio.svg)] outline-none focus:ring-transparent;
   }
