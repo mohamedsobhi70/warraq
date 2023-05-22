@@ -8,13 +8,6 @@ $(".mobile-menu-close").on("click", function () {
     $(".mobile-menu").removeClass("active");
 })
 
-// // page loader 
-// $(document).ready(function () {
-//     setTimeout(() => {
-//         $(".page-loader").fadeOut(400)
-//     }, 700);
-// })
-
 function id(v) { return document.getElementById(v); }
 function loadbar() {
     var ovrl = document.querySelector(".page-loader"),
@@ -90,7 +83,8 @@ $('.owl-hero-book').owlCarousel({
     rtl: true,
     loop: true,
     margin: 30,
-    dots: false, center: true,
+    dots: false,
+    center: true,
     autoplay: true,
     autoplayTimeout: 6000,
     autoplayHoverPause: true,
@@ -114,13 +108,14 @@ $('.owl-filters').owlCarousel({
     autoWidth: true,
     responsive: {
         0: {
-            items: 4.5,
+            items: 24.5,
         },
         676: {
-            items: 6
+            items: 5
         },
         1024: {
-            items: 7,
+            items: 6,
+            mouseDrag: false
         }
     }
 })
