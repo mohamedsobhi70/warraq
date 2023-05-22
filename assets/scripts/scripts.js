@@ -1,4 +1,40 @@
 
+// get bg for section title 
+
+if ($(".det-bg").length > 0) {
+    let bgSection = $(".det-bg"),
+        bgSectioncattr = bgSection.attr("data-color"),
+        book = $(`.book-colored[data-color=${bgSectioncattr}]`),
+        colorThief = new ColorThief(),
+        booksImgs = book[0];
+
+    bgSection[0].style.background =
+        `rgb( ${colorThief.getColor(booksImgs)[0]} ,${colorThief.getColor(booksImgs)[1]} , ${colorThief.getColor(booksImgs)[2]})`
+
+}
+
+
+// determine font color based on background col
+function determineTextColor(r, g, b) {
+    let d = 0;
+    let contrast = (0.299 * parseInt(r) + 0.587 * parseInt(g) + 0.114 * parseInt(b)) / 255;
+    if (contrast > 0.5) {
+        d = 0;
+    }
+    else {
+        d = 255;
+    }
+    return `rgb(${d},${d},${d})`
+}
+
+if ($(".det-bg .det-text").length > 0) {
+    let txt = $(".det-text"),
+        svgs  = $(".det-strok"),
+        secBg = $(".det-bg").css("background-color"),
+        rgb = secBg.substring(4, secBg.length - 1).replace(/ /g, '').split(',');
+    txt.css("color", determineTextColor(rgb[0], rgb[1], rgb[2]));
+    svgs.css("stroke", determineTextColor(rgb[0], rgb[1], rgb[2]));
+}
 // mobile menu 
 $(".mobile-menu-btn").on("click", function () {
     $(".mobile-menu").addClass("active");
@@ -259,7 +295,9 @@ if ($(".filters").length > 0) {
 
 }
 
+
 // shadow on input parent 
+
 if ($(".focused-input")) {
     $(".focused-input").on("focus", function () {
         $(this).parent().addClass("shadow-inpt")
@@ -269,7 +307,8 @@ if ($(".focused-input")) {
 }
 
 
-// dropdown lists 
+// dropdown lists
+
 if ($(".drop-down").length > 0) {
 
     $(".drop-down").on("click", function () {
@@ -293,6 +332,7 @@ $(".mobile-dropdown").on("click", function () {
 
 
 // header categories
+
 $(".header-cat-toggle").on("click", function () {
     $(".header-cat").slideToggle(400);
 })
@@ -334,3 +374,5 @@ if ($(".warraq-modal").length > 0) {
         th.siblings(".warraq-modal").addClass("active");
     })
 }
+
+
