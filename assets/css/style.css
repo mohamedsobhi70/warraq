@@ -2073,6 +2073,50 @@ div.itm.active > div {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[assets\/images\/Ads\.jpg\] {
+  background-color: assets/images/Ads.jpg;
+}
+
+.bg-\[\.\.\/images\/Ads\.jpg\] {
+  background-color: ../images/Ads.jpg;
+}
+
+.bg-\[images\/Ads\.jpg\] {
+  background-color: images/Ads.jpg;
+}
+
+.bg-\[\.\/images\/Ads\.jpg\] {
+  background-color: ./images/Ads.jpg;
+}
+
+.bg-\[url\(\'\.\/images\/Ads\.jpg\'\)\] {
+  background-image: url('./images/Ads.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/Ads\.jpg\'\)\] {
+  background-image: url('assets/images/Ads.jpg');
+}
+
+.bg-\[url\(\'\.\.\/images\/Ads\.jpg\'\)\] {
+  background-image: url('../images/Ads.jpg');
+}
+
+.bg-\[url\(\'\.\.\/images\/Ads2\.jpg\'\)\] {
+  background-image: url('../images/Ads2.jpg');
+}
+
+.bg-\[url\(\'\.\.\/images\/Ads1\.jpg\'\)\] {
+  background-image: url('../images/Ads1.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }

@@ -2,14 +2,13 @@
 // get bg for section title 
 
 if ($(".det-bg").length > 0) {
-    let bgSection = $(".det-bg"),
-        bgSectioncattr = bgSection.attr("data-color"),
-        book = $(`.book-colored[data-color=${bgSectioncattr}]`),
-        colorThief = new ColorThief(),
-        booksImgs = book[0];
-
-    bgSection[0].style.background =
-        `rgb( ${colorThief.getColor(booksImgs)[0]} ,${colorThief.getColor(booksImgs)[1]} , ${colorThief.getColor(booksImgs)[2]})`
+    let bgSection = document.querySelector(".det-bg"),
+        bgSectioncattr = bgSection.getAttribute("data-color"),
+        book = document.querySelector(`.book-colored[data-color=${bgSectioncattr}]`),
+        colorThief = new ColorThief();
+    console.log(colorThief.getColor(book)[0]);
+    bgSection.style.background =
+        `rgb( ${colorThief.getColor(book)[0]} ,${colorThief.getColor(book)[1]} , ${colorThief.getColor(book)[2]})`
 
 }
 
@@ -29,7 +28,7 @@ function determineTextColor(r, g, b) {
 
 if ($(".det-bg .det-text").length > 0) {
     let txt = $(".det-text"),
-        svgs  = $(".det-strok"),
+        svgs = $(".det-strok"),
         secBg = $(".det-bg").css("background-color"),
         rgb = secBg.substring(4, secBg.length - 1).replace(/ /g, '').split(',');
     txt.css("color", determineTextColor(rgb[0], rgb[1], rgb[2]));
