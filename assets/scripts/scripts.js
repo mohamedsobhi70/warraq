@@ -14,14 +14,29 @@ function determineTextColor(r, g, b) {
 // get bg for section title 
 if ($(".det-bg").length > 0) {
     let bgSection = document.querySelector(".det-bg"),
-        bgSectioncattr = bgSection.getAttribute("data-color"),
-        book = document.querySelector(`.book-colored[data-color=${bgSectioncattr}]`),
-        clr = new ColorThief();
-        let arr=clr.getColor(book);
-    let r = arr[0],
-        g = arr[1],
-        b = arr[2];
-    bgSection.style.background = "rgb(" + r + "," + g + "," + b + ")"
+        book = document.querySelector(`.book-colored[data-color=${bgSection.getAttribute("data-color")}]`),
+        colorThief = new ColorThief();
+
+
+    const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+        const hex = x.toString(16)
+        return hex.length === 1 ? '0' + hex : hex
+    }).join('');
+
+    function getDominantColor(img) {
+        const dominantRGB = colorThief.getColor(img)
+        console.log(dominantRGB)
+        console.log(rgbToHex(dominantRGB[0], dominantRGB[1], dominantRGB[2]));
+        bgSection.style.background = rgbToHex(dominantRGB[0], dominantRGB[1], dominantRGB[2])
+    }
+
+    if (book.complete) {
+        getDominantColor(book);
+    } else {
+        book.addEventListener('load', function () {
+            getDominantColor(book)
+        });
+    }
 
 }
 
