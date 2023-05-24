@@ -11,12 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.min.css"
-        integrity="sha512-Mvnc3gzZhD8rZtNMHJkotZpdfvAHunpqankLPnj3hXpphETXpxbfr4+oNMOzF179JYu8B8/EqruGdpsH5fNYww=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+        <link rel="stylesheet" href="assets/css/swiper.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Warraq</title>
 </head>
@@ -600,7 +595,7 @@
         </section>
 
         <!--  recently Added  -->
-        <section class="lg:pb-16 px-[30px] lg:px-0 relative z-10 -mt-7 lg:-mt-9 flex flex-col gap-4 lg:gap-[30px]">
+        <section class="lg:pb-16 px-[30px] lg:px-0 relative z-10 -mt-7 lg:-mt-9 flex flex-col gap-4 lg:gap-[30px] overflow-x-hidden">
             <div
                 class="container lg:w-[850px] flex items-center gap-3 border border-[#E2E2E9] bg-white rounded-[18px] p-3.5 lg:px-4 lg:py-6 transition-shadow duration-300">
                 <a href="#" class="" title="hide">
@@ -622,113 +617,136 @@
             <div class="container flex flex-col gap-8 lg:gap-12">
 
                 <header
-                    class="flex items-center flex-wrap justify-between pt-4 lg:py-4 gap-4 lg:border-b border-[#E2E2E9]">
-                    <button type="button"
-                        class="filter-open border border-[#E8E8ED] rounded-xl py-2.5 px-5 flex items-center gap-2">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.6 1.40039H12.4C13.1333 1.40039 13.7333 2.00039 13.7333 2.73372V4.20039C13.7333 4.73372 13.4 5.40039 13.0667 5.73372L10.2 8.26706C9.8 8.60039 9.53333 9.26706 9.53333 9.80039V12.6671C9.53333 13.0671 9.26667 13.6004 8.93333 13.8004L8 14.4004C7.13333 14.9337 5.93333 14.3337 5.93333 13.2671V9.73372C5.93333 9.26706 5.66667 8.66706 5.4 8.33372L2.86667 5.66706C2.53333 5.33372 2.26667 4.73372 2.26667 4.33372V2.80039C2.26667 2.00039 2.86667 1.40039 3.6 1.40039Z"
-                                stroke="#0C0C13" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px]">فلتر</span>
-                    </button>
-
-                    <div
-                        class="owl-carousel owl-theme owl-filters relative lg:w-[580px] filters order-3 lg:order-none ">
-                        <!-- Recommended Item  -->
-                        <div class="item">
-                            <div data-type="europe" class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                class="flex items-center flex-wrap justify-between pt-4 lg:py-4 gap-4 lg:border-b border-[#E2E2E9]">
+                <button type="button"
+                    class="filter-open border border-[#E8E8ED] rounded-xl py-2.5 px-5 flex items-center gap-2">
+                    <img src="assets/images/filter.svg" width="16" height="16" alt="filter ">
+                    <span class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px]">التصفية</span>
+                </button>
+                <div
+                    class="swiper slider-filter w-full overflow-visible lg:overflow-hidden relative lg:w-fit filters order-3 lg:order-none">
+                    <div class="swiper-wrapper">
+                        <!-- filter Item  -->
+                        <div class="swiper-slide w-auto">
+                            <div data-type="europe"
+                                class="filter-item rounded-xl transition-all duration-300 shrink-0">
                                 <button type="button"
-                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">أوروبي</button>
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">
+                                    أوروبي
+                                </button>
                             </div>
                         </div>
-                        <!-- Recommended Item  -->
-                        <div class="item">
+                        <!-- filter Item  -->
+                        <div class="swiper-slide w-auto">
                             <div data-type="cultural"
                                 class="filter-item rounded-xl transition-all duration-300 shrink-0">
                                 <button type="button"
-                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">
+                                    ثقافي
+                                </button>
                             </div>
                         </div>
-                        <!-- Recommended Item  -->
-                        <div class="item">
+                        <!-- filter Item  -->
+                        <div class="swiper-slide w-auto">
                             <div data-type="cultural"
                                 class="filter-item rounded-xl transition-all duration-300 shrink-0">
                                 <button type="button"
-                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">ثقافي</button>
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">
+                                    ثقافي
+                                </button>
                             </div>
                         </div>
-                        <!-- Recommended Item  -->
-                        <div class="item">
+                        <!-- filter Item  -->
+                        <div class="swiper-slide w-auto">
                             <div data-type="literature"
                                 class="filter-item rounded-xl transition-all duration-300 shrink-0">
                                 <button type="button"
-                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الأدب
-                                    النوعي</button>
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">
+                                    الأدب النوعي
+                                </button>
                             </div>
                         </div>
-                        <!-- Recommended Item  -->
-                        <div class="item">
-                            <div data-type="arts" class="filter-item rounded-xl transition-all duration-300 shrink-0">
+                        <!-- filter Item  -->
+                        <div class="swiper-slide w-auto">
+                            <div data-type="arts"
+                                class="filter-item rounded-xl transition-all duration-300 shrink-0">
                                 <button type="button"
-                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">الفنون
-                                    والأدب</button>
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">
+                                    الفنون والأدب
+                                </button>
                             </div>
                         </div>
-                        <!-- Recommended Item  -->
-                        <div class="item">
+                        <!-- filter Item  -->
+                        <div class="swiper-slide w-auto">
                             <div data-type="historical"
                                 class="filter-item rounded-xl transition-all duration-300 shrink-0">
                                 <button type="button"
-                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">تاريخي</button>
+                                    class="text-xs lg:text-sm text-[#0C0C13] leading-4 lg:leading-[18px] py-2 lg:py-2.5 px-4 lg:px-5">
+                                    تاريخي
+                                </button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="flex items-center gap-2 relative ">
-                        <span class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#00000066]">ترتيب حسب:</span>
-                        <span
-                            class="drop-down flex gap-1 items-center text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#000000E5] cursor-pointer">
-                            الشائع
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
-                                    stroke="black" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                        <ul
-                            class="drop-down-list translate-y-2 transition-all duration-300 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white w-[190px] border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
-                            <li class="py-2 px-[18px]">
-                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
-                                    المقالات الرائجة
-                                </a>
-                            </li>
-                            <li class="py-2 px-[18px]">
-                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
-                                    الإسم من ( أ - ي )
-                                </a>
-                            </li>
-                            <li class="py-2 px-[18px]">
-                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
-                                    الإسم من ( ي - أ )
-                                </a>
-                            </li>
-                            <li class="py-2 px-[18px]">
-                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
-                                    من الاحدث الي الاقدم
-                                </a>
-                            </li>
-                            <li class="py-2 px-[18px]">
-                                <a href="#" class="text-xs text-[#000000B2] leading-4 block">
-                                    من الاقدم الي الاحدث
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </header>
+                <div class="flex items-center gap-2 relative">
+                    <span class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#00000066]">ترتيب حسب:</span>
+                    <span
+                        class="drop-down flex gap-1 items-center text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#000000E5] cursor-pointer">
+                        الشائع
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.28 5.9668L8.9333 10.3135C8.41997 10.8268 7.57997 10.8268 7.06664 10.3135L2.71997 5.9668"
+                                stroke="black" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <ul
+                        class="drop-down-list translate-y-2 transition-all duration-300 invisible opacity-0 z-[1] absolute top-9 left-0 rounded-2xl py-[9px] bg-white w-[190px] border border-[#E2E2E9] shadow-[0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)]">
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                الكتب الرائجة
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                الإسم من ( أ - ي )
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                الإسم من ( ي - أ )
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                من الاحدث الي الاقدم
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                من الاحدث الي الاقدم
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                السعر من الاعلى الى الادنى
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                السعر من الارخص الى الاعلى
+                            </a>
+                        </li>
+                        <li class="py-2 px-[18px]">
+                            <a href="#" class="text-xs text-[#000000B2] leading-4 block">
+                                التقييم من مرتفع إلى منخفض
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
 
                 <div class="flex flex-col gap-8">
                     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-[30px] paginated-list"
@@ -1766,13 +1784,11 @@
         </div>
     </footer>
     <!-- End Warraq Footer  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
-        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/scripts/owl.carousel.js"></script>
+
+    
+    <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/colorthief.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
     <script src="assets/scripts/scripts.js"></script>
 </body>
 

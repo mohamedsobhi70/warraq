@@ -13,8 +13,8 @@ module.exports = {
       container: {
         center: true,
         screens: {
-          xl: '1290px'
-        },
+          xl: '1320px'
+        }
       },
       fontFamily: {
         'IBM': ['IBM Plex Sans Arabic', 'sans-serif'],
