@@ -171,18 +171,6 @@
     @apply text-[#000000E5];
   }
 
-  .owl-hero-book .owl-stage {
-    padding-top: 70px;
-  }
-
-  .owl-hero-book .owl-item.active.center {
-    transform: translateY(-72px);
-  }
-
-  .owl-hero-book .owl-item {
-    @apply transition-all duration-500;
-  }
-
   .swiper-pagination {
     transform: none !important;
   }
@@ -219,55 +207,4 @@
     @apply visible opacity-100 transition-all duration-500  translate-y-0 -bottom-64;
   }
 
-  @media (min-width: 1024px) {
-    .owl-theme .owl-nav {
-      width: 108%;
-      position: absolute;
-      top: 50%;
-      display: flex;
-      transform: translate(-50%, -50%);
-      align-items: center;
-      justify-content: space-between;
-      left: 50%;
-      z-index: -1;
-    }
-    .owl-theme.book-details .owl-nav {
-      width: 100%;
-      transform: translateY(-50%);
-      left: 0;
-      margin-top: 0;
-    }
-
-    .owl-theme.owl-header-categories .owl-nav {
-      width: 100%;
-      margin-top: 0;
-      height: 100%;
-    }
-
-    .owl-theme .owl-nav button span {
-      font-size: 33px;
-      padding: 10px !important;
-      transition: 0.4s ease-in-out;
-      display: flex;
-      border-radius: 8px;
-      align-items: center;
-      height: 100%;
-    }
-
-    .owl-theme .owl-nav button span:hover {
-      background: #b6b4fd;
-    }
-
-    .owl-theme .owl-nav [class*="owl-"]:hover {
-      background: none;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .owl-header-categories .owl-nav button {
-      border: 1px solid #e8e8ed !important;
-      border-radius: 10px !important;
-      height: 100%;
-    }
-  }
 }

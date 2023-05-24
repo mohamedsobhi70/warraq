@@ -16,11 +16,11 @@ if ($(".det-bg").length > 0) {
     let bgSection = document.querySelector(".det-bg"),
         bgSectioncattr = bgSection.getAttribute("data-color"),
         book = document.querySelector(`.book-colored[data-color=${bgSectioncattr}]`),
-        colorThief = new ColorThief();
-
-    let r = colorThief.getColor(book)[0],
-        g = colorThief.getColor(book)[1],
-        b = colorThief.getColor(book)[2];
+        clr = new ColorThief();
+        let arr=clr.getColor(book);
+    let r = arr[0],
+        g = arr[1],
+        b = arr[2];
     bgSection.style.background = "rgb(" + r + "," + g + "," + b + ")"
 
 }

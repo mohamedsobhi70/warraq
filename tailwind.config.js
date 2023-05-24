@@ -9,6 +9,7 @@ module.exports = {
       },
       boxShadow: {
         'lg': '0 0 0 6px #B6B4FD',
+        'focus': '0px 0px 0px 4px #ECEBFF',
       },
       container: {
         center: true,
