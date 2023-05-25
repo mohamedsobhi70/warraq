@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link rel="stylesheet" href="assets/css/swiper.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Warraq</title>
 </head>
@@ -588,8 +588,8 @@
                 <img src="assets/images/account-cover.jpg" class="w-full h-full object-cover" width="1440" height="240"
                     alt="account cover">
             </div>
-            <div class="container flex flex-col lg:flex-row items-start lg:gap-[30px] mt-[-59px]">
-                <div class="w-full lg:w-auto lg:basis-3/12 flex flex-col gap-[22px] px-[30px] lg:px-0 ">
+            <div class="container flex flex-col lg:flex-row items-start lg:gap-[30px] mt-[-59px] pb-12">
+                <div class="w-full lg:w-auto lg:basis-3/12 flex flex-col gap-[22px] px-[30px] lg:px-0">
                     <div class="flex lg:justify-center lg:px-8">
                         <div
                             class="border-[6px] border-white rounded-[60px] lg:rounded-[90px] overflow-hidden w-[150px] lg:w-[236px] h-[150px] lg:h-[236px]">
@@ -699,7 +699,7 @@
                                     مشترياتي
                                 </a>
                             </li>
-                            <li class="">
+                            <li class="active">
                                 <a href="purchases.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -746,7 +746,7 @@
                                 </a>
                             </li>
 
-                            <li class="active">
+                            <li class="">
                                 <a href="bonus.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -850,8 +850,7 @@
                         </a>
                     </div>
                 </div>
-                <div
-                    class=" lg:basis-8/12 py-6 lg:pt-[91px] lg:pb-12 flex flex-col gap-6 lg:gap-8 px-[30px] lg:px-0 grow">
+                <div class="basis-8/12 py-6 lg:pt-[91px] flex flex-col gap-6 lg:gap-8 px-[30px] lg:px-0 grow">
                     <ul class="hidden lg:flex items-center gap-3">
                         <li>
                             <a href="index.html" title="Home">
@@ -891,7 +890,7 @@
                         </li>
                         <li>
                             <a href="#" class="text-sm leading-[18px] text-black font-semibold">
-                                الملف الشخصي
+                                طلباتي
                             </a>
                         </li>
                     </ul>
@@ -905,358 +904,66 @@
                         </p>
                     </div>
 
-                    <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
-                                نقاط مكافأة المتاحة</h3>
-                            <a href="#" class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">شروط
-                                وأحكام النقاط</a>
-                        </div>
-                        <span class="border-t border-[#E2E2E9]"></span>
+                    <div class="w-full flex flex-col gap-6 lg:gap-8">
 
-                        <div class="notifications-sec flex flex-col gap-6">
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#A6F4C5" />
-                                        <path
-                                            d="M44.5201 30.9441L46.4 34.7041C46.6534 35.2241 47.3334 35.7174 47.9067 35.824L51.3067 36.384C53.4801 36.744 53.9867 38.3174 52.4267 39.8907L49.7734 42.5441C49.3334 42.9841 49.0801 43.8507 49.2267 44.4774L49.9867 47.7574C50.5867 50.3441 49.2001 51.3574 46.9201 49.9974L43.7334 48.1041C43.16 47.7574 42.2001 47.7574 41.6267 48.1041L38.44 49.9974C36.16 51.3441 34.7734 50.3441 35.3734 47.7574L36.1334 44.4774C36.2801 43.8641 36.0267 42.9974 35.5867 42.5441L32.9334 39.8907C31.3734 38.3307 31.8801 36.7574 34.0534 36.384L37.4534 35.824C38.0267 35.7307 38.7067 35.2241 38.9601 34.7041L40.8401 30.9441C41.8401 28.9041 43.4934 28.9041 44.5201 30.9441Z"
-                                            stroke="#039855" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6666 30.6641H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6666 49.3359H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M28 40H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
+                        <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
+                            <h3 class="text-xl leading-[26px] text-[#000000E5] font-semibold">
+                                طرق الدفع
+                            </h3>
 
+                            <span class="border-t border-[#E2E2E9]"></span>
+
+                            <div class="">
+                                <div class="grid grid-cols-12 border-b border-[#EDEDF2]">
+                                    <span class="text-sm col-span-5 leading-[18px] grow text-[#05060AE5] p-4">طريقة
+                                        الدفع</span>
+                                    <span class="text-sm col-span-5 leading-[18px] grow text-[#05060AE5] p-4">تاريخ
+                                        الانتهاء </span>
                                 </div>
-                                <div class="flex flex-col gap-2 py-[11px] flex-1">
-                                    <h3
-                                        class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                        1,375 نقطة
-                                    </h3>
-                                    <span class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">كتاب
-                                        موسم صيد الغزلان</span>
+
+                                <div class="grid grid-cols-12 border-b border-[#EDEDF2]">
+                                    <span class="text-base col-span-5 leading-5 grow text-[#05060A8C] p-4">
+                                        الكارت اللي ينتهي بـ 9521
+                                    </span>
+                                    <span class="text-base col-span-5 leading-5 grow text-[#05060A8C] p-4">
+                                        11/25
+                                    </span>
+                                    <span class="p-4">
+                                        <button type="button" aria-label="delete"
+                                            class="py-2 px-4 rounded-[10px] text-xs leading-4 text-[#D92D20] bg-[#FEF3F2]">حذف</button>
+                                    </span>
+                                </div>
+                                <div class="grid grid-cols-12 border-b border-[#EDEDF2]">
+                                    <span class="text-base col-span-5 leading-5 grow text-[#05060A8C] p-4">
+                                        الكارت اللي ينتهي بـ 9521
+                                    </span>
+                                    <span class="text-base col-span-5 leading-5 grow text-[#05060A8C] p-4">
+                                        11/25
+                                    </span>
+                                    <span class="p-4">
+                                        <button type="button" aria-label="delete"
+                                            class="py-2 px-4 rounded-[10px] text-xs leading-4 text-[#D92D20] bg-[#FEF3F2]">حذف</button>
+                                    </span>
+                                </div>
+                                <div class="grid grid-cols-12 border-b border-[#EDEDF2]">
+                                    <span class="text-base col-span-5 leading-5 grow text-[#05060A8C] p-4">
+                                        الكارت اللي ينتهي بـ 9521
+                                    </span>
+                                    <span class="text-base col-span-5 leading-5 grow text-[#05060A8C] p-4">
+                                        11/25
+                                    </span>
+                                    <span class="p-4">
+                                        <button type="button" aria-label="delete"
+                                            class="py-2 px-4 rounded-[10px] text-xs leading-4 text-[#D92D20] bg-[#FEF3F2]">حذف</button>
+                                    </span>
                                 </div>
 
                             </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="flex flex-col gap-6 p-8 rounded-3xl border border-[#E8E8ED]">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
-                                سجل النقاط</h3>
-                            <a href="#" class="text-xs lg:text-sm leading-4 lg:leading-[18px] text-[#0000008C]">شروط
-                                وأحكام النقاط</a>
-                        </div>
-                        <span class="border-t border-[#E2E2E9]"></span>
-
-
-                        <div class="notifications-sec flex flex-col gap-6">
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#FECDCA" />
-                                        <path
-                                            d="M44.52 30.9441L46.3999 34.7041C46.6533 35.2241 47.3333 35.7174 47.9066 35.824L51.3066 36.384C53.4799 36.744 53.9866 38.3174 52.4266 39.8907L49.7732 42.5441C49.3332 42.9841 49.08 43.8507 49.2266 44.4774L49.9866 47.7574C50.5866 50.3441 49.1999 51.3574 46.9199 49.9974L43.7333 48.1041C43.1599 47.7574 42.1999 47.7574 41.6266 48.1041L38.4399 49.9974C36.1599 51.3441 34.7733 50.3441 35.3733 47.7574L36.1333 44.4774C36.2799 43.8641 36.0266 42.9974 35.5866 42.5441L32.9333 39.8907C31.3733 38.3307 31.8799 36.7574 34.0533 36.384L37.4533 35.824C38.0266 35.7307 38.7066 35.2241 38.9599 34.7041L40.8399 30.9441C41.8399 28.9041 43.4933 28.9041 44.52 30.9441Z"
-                                            stroke="#D92D20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6665 30.6641H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6665 49.3359H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M27.9998 40H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                قمت بشراء كتاب | الحياة الثانية
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-                                        <span class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">
-                                            -220 نقاط مكافأة
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#A6F4C5" />
-                                        <path
-                                            d="M44.5201 30.9441L46.4 34.7041C46.6534 35.2241 47.3334 35.7174 47.9067 35.824L51.3067 36.384C53.4801 36.744 53.9867 38.3174 52.4267 39.8907L49.7734 42.5441C49.3334 42.9841 49.0801 43.8507 49.2267 44.4774L49.9867 47.7574C50.5867 50.3441 49.2001 51.3574 46.9201 49.9974L43.7334 48.1041C43.16 47.7574 42.2001 47.7574 41.6267 48.1041L38.44 49.9974C36.16 51.3441 34.7734 50.3441 35.3734 47.7574L36.1334 44.4774C36.2801 43.8641 36.0267 42.9974 35.5867 42.5441L32.9334 39.8907C31.3734 38.3307 31.8801 36.7574 34.0534 36.384L37.4534 35.824C38.0267 35.7307 38.7067 35.2241 38.9601 34.7041L40.8401 30.9441C41.8401 28.9041 43.4934 28.9041 44.5201 30.9441Z"
-                                            stroke="#039855" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6666 30.6641H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6666 49.3359H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M28 40H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                خبر رائع!! لقد حصلت علي +200 نقاط مكافأة
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-                                        <span
-                                            class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">كوبون
-                                            بقيمة 200 ريال سعودي
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#FECDCA" />
-                                        <path
-                                            d="M44.52 30.9441L46.3999 34.7041C46.6533 35.2241 47.3333 35.7174 47.9066 35.824L51.3066 36.384C53.4799 36.744 53.9866 38.3174 52.4266 39.8907L49.7732 42.5441C49.3332 42.9841 49.08 43.8507 49.2266 44.4774L49.9866 47.7574C50.5866 50.3441 49.1999 51.3574 46.9199 49.9974L43.7333 48.1041C43.1599 47.7574 42.1999 47.7574 41.6266 48.1041L38.4399 49.9974C36.1599 51.3441 34.7733 50.3441 35.3733 47.7574L36.1333 44.4774C36.2799 43.8641 36.0266 42.9974 35.5866 42.5441L32.9333 39.8907C31.3733 38.3307 31.8799 36.7574 34.0533 36.384L37.4533 35.824C38.0266 35.7307 38.7066 35.2241 38.9599 34.7041L40.8399 30.9441C41.8399 28.9041 43.4933 28.9041 44.52 30.9441Z"
-                                            stroke="#D92D20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6665 30.6641H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6665 49.3359H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M27.9998 40H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                قمت بشراء كتاب | حديث الصباح والمساء
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-
-                                        <span class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">
-                                            -220 نقاط مكافأة
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#FECDCA" />
-                                        <path
-                                            d="M44.52 30.9441L46.3999 34.7041C46.6533 35.2241 47.3333 35.7174 47.9066 35.824L51.3066 36.384C53.4799 36.744 53.9866 38.3174 52.4266 39.8907L49.7732 42.5441C49.3332 42.9841 49.08 43.8507 49.2266 44.4774L49.9866 47.7574C50.5866 50.3441 49.1999 51.3574 46.9199 49.9974L43.7333 48.1041C43.1599 47.7574 42.1999 47.7574 41.6266 48.1041L38.4399 49.9974C36.1599 51.3441 34.7733 50.3441 35.3733 47.7574L36.1333 44.4774C36.2799 43.8641 36.0266 42.9974 35.5866 42.5441L32.9333 39.8907C31.3733 38.3307 31.8799 36.7574 34.0533 36.384L37.4533 35.824C38.0266 35.7307 38.7066 35.2241 38.9599 34.7041L40.8399 30.9441C41.8399 28.9041 43.4933 28.9041 44.52 30.9441Z"
-                                            stroke="#D92D20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6665 30.6641H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6665 49.3359H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M27.9998 40H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                قمت بشراء كتاب | أصداء السيرة الذاتية
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-
-                                        <span class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">
-                                            -220 نقاط مكافأة
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#FECDCA" />
-                                        <path
-                                            d="M44.52 30.9441L46.3999 34.7041C46.6533 35.2241 47.3333 35.7174 47.9066 35.824L51.3066 36.384C53.4799 36.744 53.9866 38.3174 52.4266 39.8907L49.7732 42.5441C49.3332 42.9841 49.08 43.8507 49.2266 44.4774L49.9866 47.7574C50.5866 50.3441 49.1999 51.3574 46.9199 49.9974L43.7333 48.1041C43.1599 47.7574 42.1999 47.7574 41.6266 48.1041L38.4399 49.9974C36.1599 51.3441 34.7733 50.3441 35.3733 47.7574L36.1333 44.4774C36.2799 43.8641 36.0266 42.9974 35.5866 42.5441L32.9333 39.8907C31.3733 38.3307 31.8799 36.7574 34.0533 36.384L37.4533 35.824C38.0266 35.7307 38.7066 35.2241 38.9599 34.7041L40.8399 30.9441C41.8399 28.9041 43.4933 28.9041 44.52 30.9441Z"
-                                            stroke="#D92D20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6665 30.6641H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6665 49.3359H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M27.9998 40H26.6665" stroke="#D92D20" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                قمت بشراء كتاب | الحياة الثانية
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-
-                                        <span class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">
-                                            -220 نقاط مكافأة
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#A6F4C5" />
-                                        <path
-                                            d="M44.5201 30.9441L46.4 34.7041C46.6534 35.2241 47.3334 35.7174 47.9067 35.824L51.3067 36.384C53.4801 36.744 53.9867 38.3174 52.4267 39.8907L49.7734 42.5441C49.3334 42.9841 49.0801 43.8507 49.2267 44.4774L49.9867 47.7574C50.5867 50.3441 49.2001 51.3574 46.9201 49.9974L43.7334 48.1041C43.16 47.7574 42.2001 47.7574 41.6267 48.1041L38.44 49.9974C36.16 51.3441 34.7734 50.3441 35.3734 47.7574L36.1334 44.4774C36.2801 43.8641 36.0267 42.9974 35.5867 42.5441L32.9334 39.8907C31.3734 38.3307 31.8801 36.7574 34.0534 36.384L37.4534 35.824C38.0267 35.7307 38.7067 35.2241 38.9601 34.7041L40.8401 30.9441C41.8401 28.9041 43.4934 28.9041 44.5201 30.9441Z"
-                                            stroke="#039855" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6666 30.6641H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6666 49.3359H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M28 40H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                خبر رائع!! لقد حصلت علي +200 نقاط مكافأة
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-
-                                        <span
-                                            class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">كوبون
-                                            بقيمة 200 ريال سعودي
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- item  -->
-                            <div class="notification-item flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-                                <div class="w-20 h-20 rounded-[36px] overflow-hidden ">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.52134 24.0631C3.4477 12.5049 12.5049 3.4477 24.0631 1.52135L26.475 1.11937C35.4299 -0.373122 44.5701 -0.373123 53.525 1.11937L55.9369 1.52134C67.495 3.4477 76.5523 12.5049 78.4787 24.0631L78.8806 26.475C80.3731 35.4299 80.3731 44.5701 78.8806 53.525L78.4787 55.9369C76.5523 67.495 67.4951 76.5523 55.9369 78.4787L53.525 78.8806C44.5701 80.3731 35.4299 80.3731 26.475 78.8806L24.0631 78.4787C12.5049 76.5523 3.4477 67.4951 1.52135 55.9369L1.11937 53.525C-0.373122 44.5701 -0.373123 35.4299 1.11937 26.475L1.52134 24.0631Z"
-                                            fill="#A6F4C5" />
-                                        <path
-                                            d="M44.5201 30.9441L46.4 34.7041C46.6534 35.2241 47.3334 35.7174 47.9067 35.824L51.3067 36.384C53.4801 36.744 53.9867 38.3174 52.4267 39.8907L49.7734 42.5441C49.3334 42.9841 49.0801 43.8507 49.2267 44.4774L49.9867 47.7574C50.5867 50.3441 49.2001 51.3574 46.9201 49.9974L43.7334 48.1041C43.16 47.7574 42.2001 47.7574 41.6267 48.1041L38.44 49.9974C36.16 51.3441 34.7734 50.3441 35.3734 47.7574L36.1334 44.4774C36.2801 43.8641 36.0267 42.9974 35.5867 42.5441L32.9334 39.8907C31.3734 38.3307 31.8801 36.7574 34.0534 36.384L37.4534 35.824C38.0267 35.7307 38.7067 35.2241 38.9601 34.7041L40.8401 30.9441C41.8401 28.9041 43.4934 28.9041 44.5201 30.9441Z"
-                                            stroke="#039855" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M34.6666 30.6641H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M30.6666 49.3359H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M28 40H26.6666" stroke="#039855" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </div>
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex flex-col gap-2 lg:py-[11px]">
-                                        <div class="flex justify-between items-baseline">
-                                            <h3
-                                                class="text-base lg:text-2xl leading-5 lg:leading-[30px] text-[#000000E5] font-semibold">
-                                                خبر رائع!! لقد حصلت علي +200 نقاط مكافأة
-                                            </h3>
-                                            <span class="text-base leading-5 text-[#0000008C]">الأن</span>
-                                        </div>
-
-                                        <span
-                                            class="text-sm lg:text-base text-[#0000008C] leading-[18px] lg:leading-5">كوبون
-                                            بقيمة 200 ريال سعودي
-                                        </span>
-                                    </div>
-                                    <p class="text-sm  lg:text-base text-[#0000008C] leading-5 lg:leading-6">
-                                        هذا الكوبون ساري حتي يوم 23 مارس 2023 أستخدمه داخل سلة مشترياتك بأسم ( اليوم
-                                        الوطني 2023 )
-                                    </p>
-                                </div>
-                            </div>
+                            <a href="add-payment-method.html" class="bg-[#5F59F7] w-fit py-3 px-6 rounded-[14px] text-white text-base leading-5 ">
+                                أضف طريقة دفع جديدة
+                            </a>
 
                         </div>
-
 
                     </div>
                 </div>
@@ -1405,7 +1112,6 @@
         </div>
     </footer>
     <!-- End Warraq Footer  -->
-
     <script src="assets/scripts/jquiry.js"></script>
     <script src="assets/scripts/colorthief.js"></script>
     <script src="assets/scripts/swiper.js"></script>
