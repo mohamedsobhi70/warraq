@@ -86,7 +86,7 @@ function loadbar() {
 }
 document.addEventListener('DOMContentLoaded', loadbar, false);
 
-if ($(".slider-categories").length > 0) {
+if ($(".slider-books").length > 0) {
     let swiper = new Swiper(".slider-categories", {
         spaceBetween: 30,
         breakpoints: {
@@ -100,6 +100,22 @@ if ($(".slider-categories").length > 0) {
                 slidesPerView: 6,
             }
         }
+    });
+}
+if ($(".slider-books").length > 0) {
+    let swiper = new Swiper(".slider-books", {
+        spaceBetween: 40,
+        centeredSlides: true,
+        loop: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 1.8,
+            },
+            680: {
+                slidesPerView: 3,
+            }
+        }
+
     });
 }
 
@@ -130,7 +146,6 @@ if ($(".slider-usedbooks").length > 0) {
     let swiper1 = new Swiper(".slider-usedbooks", {
         spaceBetween: 30,
         loop: true,
-
         slidesPerView: 6, pagination: {
             el: ".usedbooks-pagination",
         },
@@ -171,6 +186,7 @@ if ($(".slider-recomended").length > 0) {
         }
     });
 }
+
 if ($(".slider-filter").length > 0) {
     let swiper = new Swiper(".slider-filter", {
         spaceBetween: 12,
@@ -204,8 +220,6 @@ if ($(".reviews-slider").length > 0) {
     });
 
 }
-
-
 
 if ($(".rating input").length > 0) {
 

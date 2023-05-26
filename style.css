@@ -58,6 +58,9 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  .slider-books .swiper-slide-active .info {
+    @apply translate-y-0;
+  }
 
   .section-title {
     @apply text-[20px] lg:text-[32px] text-[#000000E5] leading-6 lg:leading-10 font-semibold;
@@ -206,5 +209,4 @@
   div.itm.active > div {
     @apply visible opacity-100 transition-all duration-500  translate-y-0 -bottom-64;
   }
-
 }
