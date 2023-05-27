@@ -704,7 +704,7 @@
                                 </a>
                             </li>
                             <li class="">
-                                <a href="purchases.html"
+                                <a href="payment-method.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -729,7 +729,7 @@
                                 </a>
                             </li>
                             <li class="">
-                                <a href="purchases.html"
+                                <a href="myorders.html"
                                     class="text-sm leading-[18px] text-[#0000008C] p-3 transition-all duration-300 rounded-[14px] flex items-center gap-3">
                                     <svg class="opacity-[.55]" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -962,12 +962,12 @@
                                             type="tel" id="phone" value="+201098190871">
                                     </div>
                                     <div class="flex flex-col gap-2 relative">
-                                        <label for="birth-date"
+                                        <label for="birthdate"
                                             class="text-sm leading-[18px] text-[#000000B2] font-medium">تاريخ
                                             الميلاد</label>
-                                        <input onfocus="(this.type = 'date')" onblur="(this.type = 'text')"
-                                            class="w-full border border-[#E2E2E9] focus:relative focus:z-[3] bg-white p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
-                                            type="text" id="birth-date" value="25/9/1998">
+                                        <input  id="birthdate"  name="birthdate"
+                                            class="w-full border border-[#E2E2E9] bg-white p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]"
+                                            type="text" value="25/9/1998">
                                         <svg class="absolute left-4 bottom-4 opacity-40" width="20" height="20"
                                             viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.66663 1.66406V4.16406" stroke="black" stroke-width="1.25"
@@ -1270,8 +1270,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.17.8/tagify.min.js"
         integrity="sha512-7vyDVrzHbIl2MbbDj2lgeXUVSe4NSbY5jn030+QN321CTl8XEc3J5Qlq976YY5gs+Ifwff9Q2SrDXLPWxAp2oQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script src="assets/scripts/scripts.js"></script>
     <script>
+        
+        const picker = new Litepicker({
+            element: document.getElementById('birthdate')
+        });
+
+    
         let input = document.querySelector('.interests'),
             tagify = new Tagify(input, {
                 whitelist: ['تصميم', 'برمجه', 'لغات شرقية', "علم النفس", "اللغه العربية", "الاحصاء"],
