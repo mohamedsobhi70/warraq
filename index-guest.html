@@ -270,7 +270,7 @@
                     <div
                         class="login-modal active modal z-50 fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300 flex justify-center items-center">
                         <div
-                            class="flex flex-col items-center gap-8 bg-white rounded-[32px] border border-[#E2E2E9] p-8 lg:w-[410px]">
+                            class="flex flex-col items-center gap-8 bg-white rounded-[32px] border border-[#E2E2E9] p-8 w-[90% sm:w-[410px]">
 
                             <div class="flex flex-col gap-3 w-full">
                                 <button type="button" title="close" class="modal-close w-full flex justify-end">
@@ -284,7 +284,7 @@
                                     </h3>
                                     <p class="text-sm leading-[18px] text-[#0000008C]">
                                         ليس لديك حساب؟
-                                        <button type="button" class="text-[#5F59F7]">
+                                        <button type="button" class="register-modal-btn text-[#5F59F7]">
                                             سجل الآن
                                         </button>
                                     </p>
@@ -294,7 +294,7 @@
                             <a href="#"
                                 class="flex justify-center items-center gap-2.5 py-3.5 px-6 rounded-2xl border border-[#E8E8ED] w-full ">
                                 <img src="assets/images/gicon.svg" width="20" height="20" alt="google icon">
-                                <span class="text-xl leading-6 text-[#0C0C13]">التسجيل بواسطة جوجل</span>
+                                <span class="text-lg leading-6 text-[#0C0C13]">التسجيل بواسطة جوجل</span>
                             </a>
 
                             <div class="border-t border-[#E2E2E9]  w-full relative">
@@ -312,8 +312,9 @@
                                 </div>
                                 <div class="flex flex-col gap-3">
                                     <div class="flex flex-col gap-2">
-                                        <label for="password" class="text-sm leading-[18px] text-[#05060AB2]">كلمة
-                                            السر</label>
+                                        <label for="password" class="text-sm leading-[18px] text-[#05060AB2]">
+                                            كلمة السر
+                                        </label>
                                         <input type="password" name="password" id="password"
                                             class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
                                     </div>
@@ -325,7 +326,8 @@
                                                 class="text-sm leading-[18px] text-[#05060A8C] cursor-pointer">تذكر لمدة
                                                 30 يومًا</label>
                                         </div>
-                                        <button type="button" class="text-sm leading-[18px] text-[#5F59F7]">نسيت كلمة
+                                        <button type="button"
+                                            class="frgtpass-modal-btn text-sm leading-[18px] text-[#5F59F7]">نسيت كلمة
                                             السر؟</button>
                                     </div>
                                 </div>
@@ -336,6 +338,132 @@
                                 <a href="#"
                                     class="text-center py-3.5 px-6 rounded-2xl bg-[#5F59F7] text-white text-lg leading-6">
                                     تسجيل الدخول
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="register-modal modal z-50 fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300 flex justify-center items-center">
+                        <div
+                            class="flex flex-col items-center gap-8 bg-white rounded-[32px] border border-[#E2E2E9] p-8 w-[90% sm:w-[410px]">
+
+                            <div class="flex flex-col gap-3 w-full">
+                                <button type="button" title="close" class="modal-close w-full flex justify-end">
+                                    <img src="assets/images/x-close.svg" width="24" height="24" alt="close">
+                                </button>
+                                <div class="flex flex-col gap-4 items-center">
+                                    <h3
+                                        class="text-2xl leading-[30px] font-bold text-black flex flex-col text-center gap-1 items-center">
+                                        إنشاء حساب
+                                    </h3>
+                                    <p class="text-sm leading-[18px] text-[#0000008C]">
+                                        هل لديك حساب بالفعل؟
+                                        <button type="button" class="login-modal-btn text-[#5F59F7]">
+                                            تسجيل الدخول
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <a href="#"
+                                class="flex justify-center items-center gap-2.5 py-3.5 px-6 rounded-2xl border border-[#E8E8ED] w-full ">
+                                <img src="assets/images/gicon.svg" width="20" height="20" alt="google icon">
+                                <span class="text-lg leading-6 text-[#0C0C13]">التسجيل بواسطة جوجل</span>
+                            </a>
+
+                            <div class="border-t border-[#E2E2E9]  w-full relative">
+                                <div
+                                    class="absolute flex px-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-sm leading-5 text-[#05060AB2]">
+                                    او
+                                </div>
+                            </div>
+
+                            <div class="flex w-full flex-col gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <label for="name" class="text-sm leading-[18px] text-[#05060AB2] font-medium">الاسم
+                                        بالكامل</label>
+                                    <input type="text" name="name" id="name"
+                                        class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="email-reg"
+                                        class="text-sm leading-[18px] text-[#05060AB2] font-medium">الإيميل</label>
+                                    <input type="email" name="email-reg" id="email-reg"
+                                        class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="password-reg"
+                                        class="text-sm leading-[18px] text-[#05060AB2] font-medium">
+                                        كلمة السر
+                                    </label>
+                                    <input type="password" name="password-reg" id="password-reg"
+                                        class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
+                                    <p class="text-sm leading-[18px] text-[#05060A8C]">يجب أن تتكون كلمات المرور من 6
+                                        أحرف على الأقل.</p>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="repassword-reg"
+                                        class="text-sm leading-[18px] text-[#05060AB2] font-medium">
+                                        إعادة إدخال كلمة السر
+                                    </label>
+                                    <input type="password" name="repassword-reg" id="repassword-reg"
+                                        class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-4  w-full">
+                                <a href="#"
+                                    class="text-center py-3.5 px-6 rounded-2xl bg-[#5F59F7] text-white text-lg leading-6">
+                                    إنشاء حساب
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="frgtpass-modal  modal z-50 fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300 flex justify-center items-center">
+                        <div
+                            class="flex flex-col items-center gap-8 bg-white rounded-[32px] border border-[#E2E2E9] p-8 w-[90% sm:w-[410px]">
+
+                            <div class="flex flex-col gap-3 w-full">
+                                <div class="flex items-center justify-between">
+                                    <button type="button" title="back"
+                                        class="backto-login-btn flex items-center gap-1 text-xs leading-4 text-[#05060AE5]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.93994 13.2787L10.2866 8.93208C10.7999 8.41875 10.7999 7.57875 10.2866 7.06542L5.93994 2.71875"
+                                                stroke="#05060A" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        رجوع
+                                    </button>
+                                    <button type="button" title="close" class="modal-close w-full flex justify-end">
+                                        <img src="assets/images/x-close.svg" width="24" height="24" alt="close">
+                                    </button>
+                                </div>
+                                <div class="flex flex-col gap-4 items-center">
+                                    <h3
+                                        class="text-2xl leading-[30px] font-bold text-black flex flex-col text-center gap-1 items-center">
+                                        هل نسيت كلمة السر؟
+                                    </h3>
+                                    <p class="text-sm  leading-[18px] text-[#05060A8C] text-center">
+                                        ادخل إيميلك وسوف يصلك رابط لإعادة تعيين كلمة السر الخاصة بك
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2 w-full">
+                                <label for="email-1" class="text-sm leading-[18px] text-[#05060AB2]">الإيميل</label>
+                                <input type="email" name="email-1" id="email-1"
+                                    class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
+                            </div>
+
+                            <div class="flex flex-col gap-4 w-full">
+                                <a href="#"
+                                    class="text-center py-3.5 px-6 rounded-2xl bg-[#5F59F7] text-white text-lg leading-6">
+                                    ادخل الإيميل
                                 </a>
                             </div>
 
@@ -3037,11 +3165,25 @@
 
         const colorThief = new ColorThief();
         let booksImgs = document.querySelectorAll(".colored-img");
+        const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+            const hex = x.toString(16)
+            return hex.length === 1 ? '0' + hex : hex
+        }).join('');
+
+        function getDominantColor(img) {
+            const dominantRGB = colorThief.getColor(img)
+            img.previousElementSibling.style.background = rgbToHex(dominantRGB[0], dominantRGB[1], dominantRGB[2])
+        }
+
         for (let i = 0; i < booksImgs.length; i++) {
-            let img = booksImgs[i];
-            booksImgs[i].previousElementSibling.style.background = `rgb( ${colorThief.getColor(booksImgs[i])[0]
-                } ,${colorThief.getColor(booksImgs[i])[1]} , ${colorThief.getColor(booksImgs[i])[2]
-                })`;
+            if (booksImgs[i].complete) {
+                getDominantColor(booksImgs[i]);
+            } else {
+                booksImgs[i].addEventListener('load', function () {
+                    getDominantColor(booksImgs[i])
+                });
+            }
+
         }
         if ($(window).width() > 1023) {
 
@@ -3070,20 +3212,32 @@
 
         }
 
-        
+
         // modal popup 
 
         $(".login-modal-btn").on("click", function () {
-            let th = $(this);
-            th.siblings(".login-modal").addClass("active");
+            $(".modal:not('.login-modal')").removeClass("active");
+            $(".login-modal").addClass("active");
+        })
+        $(".register-modal-btn").on("click", function () {
+            $(".modal:not('.register-modal')").removeClass("active");
+            $(".register-modal").addClass("active");
+        })
+        $(".frgtpass-modal-btn").on("click", function () {
+            $(".modal:not('.frgtpass-modal')").removeClass("active");
+            $(".frgtpass-modal").addClass("active");
+        })
+        $(".backto-login-btn").on("click", function () {
+            $(".modal:not('.login-modal')").removeClass("active");
+            $(".login-modal").addClass("active");
         })
 
         $(".modal-close").on("click", function () {
-            $(this).closest(".modal").removeClass("active")
+            $(".modal").removeClass("active")
         })
 
 
-    
+
 
     </script>
 </body>
