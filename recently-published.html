@@ -2390,7 +2390,18 @@
                         </svg>
                     </div>
                     <div class="drop-down-items">
-                        <div id="price-range" class="flex flex-col gap-4 relative">
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-4">
+                                <label for="from" class="text-sm leading-[18px] text-[#05060AE5]">من</label>
+                                <input class="w-full p-3 rounded-[14px] border border-[#E2E2E9] text-[#05060A66] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]" type="number" name="from" id="from">
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <label for="to" class="text-sm leading-[18px] text-[#05060AE5]">الى</label>
+                                <input class="w-full p-3 rounded-[14px] border border-[#E2E2E9] text-[#05060A66] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]" type="number" name="to" id="to">
+                            </div>
+                        </div>
+
+                        <!-- <div id="price-range" class="flex flex-col gap-4 relative">
                             <div class="slider h-1 bg-[#E2E2E9] relative">
                                 <div class="progress absolute h-full top-0 left-[80%] right-0 bg-[#5F59F7]"></div>
                                 <div class="range-input">
@@ -2414,7 +2425,7 @@
                                     <span class="input-max"></span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -2995,6 +3006,7 @@
             $(".paginated-list li").addClass("hidden")
             $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
             $(".pagination-numbers").html("");
+            
             pagenat();
             if ($(".pagination-numbers").html() == "") {
 

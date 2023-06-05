@@ -194,6 +194,7 @@ if ($(".slider-filter").length > 0) {
 
     });
 }
+
 if ($(".reviews-slider").length > 0) {
 
     var swiper = new Swiper(".reviews-slider", {
