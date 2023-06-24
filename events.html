@@ -1403,7 +1403,7 @@
                 <div class="flex flex-col gap-6">
                     <div class="swiper slider-bestseller w-full overflow-visible lg:overflow-hidden">
                         <div class="swiper-wrapper">
-                          
+
                             <!-- best seller item  -->
                             <div class="swiper-slide group">
                                 <a href="book-page.html" class="rounded-2xl overflow-hidden block">
@@ -1484,8 +1484,8 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div> 
-                             <!-- best seller item  -->
+                            </div>
+                            <!-- best seller item  -->
                             <div class="swiper-slide group">
                                 <a href="book-page.html" class="rounded-2xl overflow-hidden block">
                                     <img src="assets/images/best-1.png"
@@ -2183,9 +2183,10 @@
                 $(this).addClass("active");
                 let cat = $(this).attr("data-type");
                 $(".paginated-list li").addClass("hidden")
-                $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
+                $(".paginated-list").find(`[data-cat*='${cat}']`).removeClass("hidden");
+
                 $(".pagination-numbers").html("");
-                pagenat();
+                // pagenat();
                 if ($(".pagination-numbers").html() == "") {
 
                     $(".pagination").addClass("hidden")
