@@ -6,22 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Description" />
-    <script src="assets/scripts/colorthief.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.min.css"
+        integrity="sha512-Mvnc3gzZhD8rZtNMHJkotZpdfvAHunpqankLPnj3hXpphETXpxbfr4+oNMOzF179JYu8B8/EqruGdpsH5fNYww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/swiper.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Warraq</title>
 </head>
 
-<body class="font-IBM">
-
+<body class="font-IBM overflow-x-hidden">
+    <!-- page loader -->
+    <div
+        class="flex-col gap-32 page-loader fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-50">
+        <img src="assets/images/loader.gif" width="96" height="96" alt="warraq" />
+        <div id="progstat" class="absolute bottom-24 left-24 text-[#3DA2B8] text-6xl"></div>
+    </div>
 
     <!-- Start Warraq Header  -->
-    <header>
+    <header class="sticky bg-white z-20 top-0">
         <div class="container flex justify-between items-center py-4 px-[30px] lg:px-0 lg:py-[18px]">
             <button class="lg:hidden mobile-menu-btn" title="menu button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +72,7 @@
 
                     <nav class="grow">
                         <ul class="flex flex-col gap-1">
-                            <li class="">
+                            <li>
                                 <div class="flex items-center justify-between gap-3 py-3 mobile-dropdown">
                                     <span class="text-base leading-5 text-[#0000008C]">التصنيفات</span>
                                     <svg class="drop-down-icon transition-transform duration-300" width="20" height="20"
@@ -183,7 +191,7 @@
             </div>
 
             <div class="flex items-center gap-8">
-                <a href="index.html" class="" title="Warraq Logo">
+                <a href="index.html" title="Warraq Logo">
                     <img src="assets/images/Logo.svg" width="93" height="40" alt="Warraq Logo" />
                 </a>
                 <nav class="hidden lg:block">
@@ -200,23 +208,33 @@
                             </span>
                         </li>
                         <li>
-                            <a href="bestsell.html" class="">
+                            <a href="bestsell.html">
                                 <span class="text-[#0000008C] text-base leading-5">الأكثر مبيعاً</span>
                             </a>
                         </li>
                         <li>
-                            <a href="publishing-house.html" class="">
-                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                            <a href="#">
+                                <span class="text-[#0000008C] text-base leading-5">جميع الكتب </span>
                             </a>
                         </li>
                         <li>
-                            <a href="blog.html" class="">
+                            <a href="blog.html">
                                 <span class="text-[#0000008C] text-base leading-5">المقالات</span>
                             </a>
                         </li>
                         <li>
-                            <a href="events.html" class="">
+                            <a href="events.html">
                                 <span class="text-[#0000008C] text-base leading-5">الفعاليات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="publishing-house.html">
+                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="authors.html">
+                                <span class="text-[#0000008C] text-base leading-5">المؤلفون</span>
                             </a>
                         </li>
                     </ul>
@@ -225,7 +243,7 @@
             <div class="flex gap-8 items-center">
                 <div
                     class="hidden lg:flex items-center gap-2.5 border border-[#BFBECA] rounded-2xl p-3.5 w-[350px] transition-all duration-300">
-                    <a title="search" href="#" class="">
+                    <a title="search" href="#">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.4">
                                 <path
@@ -240,7 +258,7 @@
                         placeholder="أبحث عن كتاب, مؤلف, دار نشر" />
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="cart.html" title="delete" class="">
+                    <a href="cart.html" title="delete">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.5 14.25C8.5 16.17 10.08 17.75 12 17.75C13.92 17.75 15.5 16.17 15.5 14.25"
                                 stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -257,57 +275,11 @@
                                 stroke="black" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </a>
-
-                    <button type="button" title="account"
-                        class=" login-modal-btn w-8 h-8 rounded-xl overflow-hidden hidden lg:block">
-                        <img src="assets/images/profile.svg" class="w-full h-full object-cover" width="24" height="24"
+                    <a href="profile-edit.html" title="account"
+                        class="w-8 h-8 rounded-xl overflow-hidden hidden lg:block">
+                        <img src="assets/images/account.png" class="w-full h-full object-cover" width="32" height="32"
                             alt="Account Mena" />
-                    </button>
-
-                    <div
-                        class="resset active modal z-50 fixed top-0 left-0 w-full h-[100vh] bg-[#00000040] backdrop-blur-[8px] opacity-0 invisible transition-all duration-300 flex justify-center items-center">
-                        <div
-                            class="flex flex-col items-center gap-8 bg-white rounded-[32px] border border-[#E2E2E9] p-8 w-[90% sm:w-[410px]">
-
-                            <div class="flex flex-col gap-3 w-full">
-                                <div class="flex items-center w-full justify-end">
-                                    <button type="button" title="close" class="modal-close">
-                                        <img src="assets/images/x-close.svg" width="24" height="24" alt="close">
-                                    </button>
-                                </div>
-                                <h3
-                                    class="text-2xl leading-[30px] font-bold text-black flex flex-col text-center gap-1 items-center">
-                                    إعادة تعيين كلمة المرور
-                                </h3>
-                            </div>
-
-                            <div class="flex flex-col gap-4 w-full">
-                                <div class="flex flex-col gap-2 w-full">
-                                    <label for="password" class="text-sm leading-[18px] text-[#05060AB2]">كلمة
-                                        السر</label>
-                                    <input type="password" name="password" id="password"
-                                        class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
-                                    <p class="text-[#05060A8C] text-sm leading-[18px]">يجب أن تتكون كلمات المرور من 6
-                                        أحرف على الأقل.</p>
-                                </div>
-                                <div class="flex flex-col gap-2 w-full">
-                                    <label for="repassword" class="text-sm leading-[18px] text-[#05060AB2]">إعادة إدخال
-                                        كلمة السر</label>
-                                    <input type="email" name="repassword" id="repassword"
-                                        class="w-full border border-[#E2E2E9] p-3.5 rounded-[14px] text-base leading-5 text-[#000000] focus:outline-none transition-all duration-300 focus:shadow-lg focus:shadow-[#ECEBFF]">
-                                </div>
-
-                                <div class="flex flex-col gap-4 w-full">
-                                    <a href="#"
-                                        class="text-center py-3.5 px-6 rounded-2xl bg-[#5F59F7] text-white text-lg leading-6">
-                                        إعادة التعيين
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    </a>
                 </div>
             </div>
         </div>
@@ -618,7 +590,257 @@
 
     <!-- Start Warraq Main Page Content  -->
     <main>
+        <!-- hero section  -->
+        <section class="page-title-sec bg-[#E7E7FE] px-[30px] lg:px-0">
+            <div class="flex flex-col gap-6 lg:gap-8">
+                <div class="container w-[630px] max-w-full flex items-center flex-col gap-4 lg:gap-6">
+                    <h1 class="page-title-heading">
+                        المؤلفين
+                    </h1>
+                    <p class="page-title-text">
+                        يمكنك أستكشاف المؤلفين وكل ما يتعلق بهم والكتب التي تم أصدراها من خلالهم.
+                    </p>
+                </div>
+            </div>
+        </section>
 
+        <!--  recently Added  -->
+        <section
+            class="lg:pb-16 px-[30px] lg:px-0 relative z-10 -mt-7 lg:-mt-9 flex flex-col gap-4 lg:gap-[30px] overflow-x-hidden">
+            <div
+                class="container lg:w-[850px] flex items-center gap-3 border border-[#E2E2E9] bg-white rounded-[18px] p-3.5 lg:px-4 lg:py-6 transition-shadow duration-300">
+                <a href="#" class="" title="hide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.4">
+                            <path
+                                d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 22L20 20" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </a>
+                <input type="text" name="book-search" id="book-search"
+                    class="focus:outline-none placeholder:text-[#00000066] text-sm lg:text-lg w-full leading-6 grow focused-input"
+                    placeholder="أبحث عن كتاب, مؤلف, دار نشر" />
+            </div>
+            <div class="container flex flex-col gap-8 lg:gap-12">
+              
+
+                <div class="flex flex-col gap-8">
+                    <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-[30px] paginated-list"
+                        id="paginated-list" aria-live="polite">
+                        <!-- item  -->
+                        <li class="item transition-all duration-300" data-cat="historical">
+                            <a href="auther-page.html"
+                                class="rounded-2xl border border-[#E2E2E9] overflow-hidden block">
+                                <img src="assets/images/best-1.png"
+                                    class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-300"
+                                    width="300" height="300" alt="auther" />
+                            </a>
+                            <div class="pt-4 lg:py-4 flex flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-col gap-1 lg:gap-2">
+                                        <h3
+                                            class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                            <a href="auther-page.html" class="">
+                                                طة حسين
+                                            </a>
+                                        </h3>
+                                        <p
+                                            class="text-sm lg:text-base leading-normal lg:leading-5 font-bold text-[#5F59F7]">
+                                            ٤٣ كتاب
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.04673 14.6544C7.10673 14.6544 6.16006 14.2944 5.44673 13.5811L2.42673 10.5611C1.69339 9.82776 1.30673 8.81443 1.35339 7.78109L1.51339 4.44776C1.58673 2.85443 2.84673 1.59443 4.44673 1.51443L7.78006 1.35443C8.81339 1.31443 9.82673 1.69443 10.5601 2.42776L13.5801 5.44776C15.0134 6.88109 15.0134 9.22109 13.5801 10.6544L10.6534 13.5811C9.93339 14.2944 8.99339 14.6544 8.04673 14.6544ZM3.13339 9.84776L6.15339 12.8678C6.66006 13.3744 7.33339 13.6544 8.04673 13.6544C8.76006 13.6544 9.43339 13.3744 9.94006 12.8678L12.8667 9.94109C13.3734 9.43443 13.6534 8.76109 13.6534 8.04776C13.6534 7.33443 13.3734 6.66109 12.8667 6.15443L9.84673 3.13443C9.31339 2.60109 8.57339 2.31443 7.82673 2.35443L4.49339 2.51443C3.40673 2.56109 2.56006 3.40776 2.50673 4.48776L2.34673 7.82109C2.31339 8.57443 2.60006 9.31443 3.13339 9.84776Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M4.47061 2.01494C4.41725 2.01726 4.36435 2.02115 4.31195 2.02655C4.36455 2.02077 4.41765 2.01651 4.47122 2.01383C4.47138 2.01382 4.47154 2.01381 4.47169 2.0138L7.80164 1.85397C7.82753 1.85298 7.8534 1.8523 7.87925 1.85192C7.85332 1.85264 7.82738 1.85369 7.80143 1.85507L4.47194 2.01489C4.4715 2.01491 4.47105 2.01493 4.47061 2.01494ZM13.2265 10.3009L10.3015 13.2259C10.3012 13.2262 10.301 13.2264 10.3007 13.2267C9.67763 13.8436 8.86582 14.1544 8.04673 14.1544C8.89351 14.1544 9.69378 13.8212 10.2936 13.2213L13.2203 10.2946C13.8201 9.69481 14.1534 8.89454 14.1534 8.04776C14.1534 7.20098 13.8201 6.40071 13.2203 5.80087L10.2003 2.78087C9.97527 2.55586 9.71917 2.36771 9.44246 2.22083C9.72191 2.36699 9.98002 2.55483 10.2065 2.78131L13.2265 5.80131C14.4646 7.03939 14.4646 9.0628 13.2265 10.3009ZM5.79984 13.2213C6.23786 13.6593 6.78275 13.9552 7.37459 14.083C6.79599 13.9586 6.24521 13.6725 5.80028 13.2275L2.78028 10.2075C2.48097 9.90823 2.24824 9.55439 2.09037 9.16983C2.24928 9.55184 2.48207 9.90355 2.77984 10.2013L3.13339 9.84776L2.77984 10.2013L5.79984 13.2213Z"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.5013C5.14033 8.5013 4.16699 7.52797 4.16699 6.33464C4.16699 5.1413 5.14033 4.16797 6.33366 4.16797C7.52699 4.16797 8.50033 5.1413 8.50033 6.33464C8.50033 7.52797 7.52699 8.5013 6.33366 8.5013ZM6.33366 5.16797C5.69366 5.16797 5.16699 5.69464 5.16699 6.33464C5.16699 6.97464 5.69366 7.5013 6.33366 7.5013C6.97366 7.5013 7.50033 6.97464 7.50033 6.33464C7.50033 5.69464 6.97366 5.16797 6.33366 5.16797Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.0013C5.41647 8.0013 4.66699 7.25183 4.66699 6.33464M6.33366 8.0013C7.25085 8.0013 8.00033 7.25183 8.00033 6.33464M6.33366 8.0013C7.2498 8.0013 8.00033 7.25078 8.00033 6.33464M6.33366 8.0013C5.41752 8.0013 4.66699 7.25078 4.66699 6.33464M4.66699 6.33464C4.66699 5.41744 5.41647 4.66797 6.33366 4.66797M4.66699 6.33464C4.66699 5.41849 5.41752 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41744 7.25085 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41849 7.2498 4.66797 6.33366 4.66797"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                            </svg>
+                                            <span class="text-[#05060A] text-sm leading-[18px]">
+                                                ادب، فن، اجتماعي
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- item  -->
+                        <li class="item transition-all duration-300" data-cat="historical">
+                            <a href="auther-page.html"
+                                class="rounded-2xl border border-[#E2E2E9] overflow-hidden block">
+                                <img src="assets/images/best-1.png"
+                                    class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-300"
+                                    width="300" height="300" alt="auther" />
+                            </a>
+                            <div class="pt-4 lg:py-4 flex flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-col gap-1 lg:gap-2">
+                                        <h3
+                                            class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                            <a href="auther-page.html" class="">
+                                                طة حسين
+                                            </a>
+                                        </h3>
+                                        <p
+                                            class="text-sm lg:text-base leading-normal lg:leading-5 font-bold text-[#5F59F7]">
+                                            ٤٣ كتاب
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.04673 14.6544C7.10673 14.6544 6.16006 14.2944 5.44673 13.5811L2.42673 10.5611C1.69339 9.82776 1.30673 8.81443 1.35339 7.78109L1.51339 4.44776C1.58673 2.85443 2.84673 1.59443 4.44673 1.51443L7.78006 1.35443C8.81339 1.31443 9.82673 1.69443 10.5601 2.42776L13.5801 5.44776C15.0134 6.88109 15.0134 9.22109 13.5801 10.6544L10.6534 13.5811C9.93339 14.2944 8.99339 14.6544 8.04673 14.6544ZM3.13339 9.84776L6.15339 12.8678C6.66006 13.3744 7.33339 13.6544 8.04673 13.6544C8.76006 13.6544 9.43339 13.3744 9.94006 12.8678L12.8667 9.94109C13.3734 9.43443 13.6534 8.76109 13.6534 8.04776C13.6534 7.33443 13.3734 6.66109 12.8667 6.15443L9.84673 3.13443C9.31339 2.60109 8.57339 2.31443 7.82673 2.35443L4.49339 2.51443C3.40673 2.56109 2.56006 3.40776 2.50673 4.48776L2.34673 7.82109C2.31339 8.57443 2.60006 9.31443 3.13339 9.84776Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M4.47061 2.01494C4.41725 2.01726 4.36435 2.02115 4.31195 2.02655C4.36455 2.02077 4.41765 2.01651 4.47122 2.01383C4.47138 2.01382 4.47154 2.01381 4.47169 2.0138L7.80164 1.85397C7.82753 1.85298 7.8534 1.8523 7.87925 1.85192C7.85332 1.85264 7.82738 1.85369 7.80143 1.85507L4.47194 2.01489C4.4715 2.01491 4.47105 2.01493 4.47061 2.01494ZM13.2265 10.3009L10.3015 13.2259C10.3012 13.2262 10.301 13.2264 10.3007 13.2267C9.67763 13.8436 8.86582 14.1544 8.04673 14.1544C8.89351 14.1544 9.69378 13.8212 10.2936 13.2213L13.2203 10.2946C13.8201 9.69481 14.1534 8.89454 14.1534 8.04776C14.1534 7.20098 13.8201 6.40071 13.2203 5.80087L10.2003 2.78087C9.97527 2.55586 9.71917 2.36771 9.44246 2.22083C9.72191 2.36699 9.98002 2.55483 10.2065 2.78131L13.2265 5.80131C14.4646 7.03939 14.4646 9.0628 13.2265 10.3009ZM5.79984 13.2213C6.23786 13.6593 6.78275 13.9552 7.37459 14.083C6.79599 13.9586 6.24521 13.6725 5.80028 13.2275L2.78028 10.2075C2.48097 9.90823 2.24824 9.55439 2.09037 9.16983C2.24928 9.55184 2.48207 9.90355 2.77984 10.2013L3.13339 9.84776L2.77984 10.2013L5.79984 13.2213Z"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.5013C5.14033 8.5013 4.16699 7.52797 4.16699 6.33464C4.16699 5.1413 5.14033 4.16797 6.33366 4.16797C7.52699 4.16797 8.50033 5.1413 8.50033 6.33464C8.50033 7.52797 7.52699 8.5013 6.33366 8.5013ZM6.33366 5.16797C5.69366 5.16797 5.16699 5.69464 5.16699 6.33464C5.16699 6.97464 5.69366 7.5013 6.33366 7.5013C6.97366 7.5013 7.50033 6.97464 7.50033 6.33464C7.50033 5.69464 6.97366 5.16797 6.33366 5.16797Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.0013C5.41647 8.0013 4.66699 7.25183 4.66699 6.33464M6.33366 8.0013C7.25085 8.0013 8.00033 7.25183 8.00033 6.33464M6.33366 8.0013C7.2498 8.0013 8.00033 7.25078 8.00033 6.33464M6.33366 8.0013C5.41752 8.0013 4.66699 7.25078 4.66699 6.33464M4.66699 6.33464C4.66699 5.41744 5.41647 4.66797 6.33366 4.66797M4.66699 6.33464C4.66699 5.41849 5.41752 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41744 7.25085 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41849 7.2498 4.66797 6.33366 4.66797"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                            </svg>
+                                            <span class="text-[#05060A] text-sm leading-[18px]">
+                                                ادب، فن، اجتماعي
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- item  -->
+                        <li class="item transition-all duration-300" data-cat="historical">
+                            <a href="auther-page.html"
+                                class="rounded-2xl border border-[#E2E2E9] overflow-hidden block">
+                                <img src="assets/images/best-1.png"
+                                    class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-300"
+                                    width="300" height="300" alt="auther" />
+                            </a>
+                            <div class="pt-4 lg:py-4 flex flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-col gap-1 lg:gap-2">
+                                        <h3
+                                            class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                            <a href="auther-page.html" class="">
+                                                طة حسين
+                                            </a>
+                                        </h3>
+                                        <p
+                                            class="text-sm lg:text-base leading-normal lg:leading-5 font-bold text-[#5F59F7]">
+                                            ٤٣ كتاب
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.04673 14.6544C7.10673 14.6544 6.16006 14.2944 5.44673 13.5811L2.42673 10.5611C1.69339 9.82776 1.30673 8.81443 1.35339 7.78109L1.51339 4.44776C1.58673 2.85443 2.84673 1.59443 4.44673 1.51443L7.78006 1.35443C8.81339 1.31443 9.82673 1.69443 10.5601 2.42776L13.5801 5.44776C15.0134 6.88109 15.0134 9.22109 13.5801 10.6544L10.6534 13.5811C9.93339 14.2944 8.99339 14.6544 8.04673 14.6544ZM3.13339 9.84776L6.15339 12.8678C6.66006 13.3744 7.33339 13.6544 8.04673 13.6544C8.76006 13.6544 9.43339 13.3744 9.94006 12.8678L12.8667 9.94109C13.3734 9.43443 13.6534 8.76109 13.6534 8.04776C13.6534 7.33443 13.3734 6.66109 12.8667 6.15443L9.84673 3.13443C9.31339 2.60109 8.57339 2.31443 7.82673 2.35443L4.49339 2.51443C3.40673 2.56109 2.56006 3.40776 2.50673 4.48776L2.34673 7.82109C2.31339 8.57443 2.60006 9.31443 3.13339 9.84776Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M4.47061 2.01494C4.41725 2.01726 4.36435 2.02115 4.31195 2.02655C4.36455 2.02077 4.41765 2.01651 4.47122 2.01383C4.47138 2.01382 4.47154 2.01381 4.47169 2.0138L7.80164 1.85397C7.82753 1.85298 7.8534 1.8523 7.87925 1.85192C7.85332 1.85264 7.82738 1.85369 7.80143 1.85507L4.47194 2.01489C4.4715 2.01491 4.47105 2.01493 4.47061 2.01494ZM13.2265 10.3009L10.3015 13.2259C10.3012 13.2262 10.301 13.2264 10.3007 13.2267C9.67763 13.8436 8.86582 14.1544 8.04673 14.1544C8.89351 14.1544 9.69378 13.8212 10.2936 13.2213L13.2203 10.2946C13.8201 9.69481 14.1534 8.89454 14.1534 8.04776C14.1534 7.20098 13.8201 6.40071 13.2203 5.80087L10.2003 2.78087C9.97527 2.55586 9.71917 2.36771 9.44246 2.22083C9.72191 2.36699 9.98002 2.55483 10.2065 2.78131L13.2265 5.80131C14.4646 7.03939 14.4646 9.0628 13.2265 10.3009ZM5.79984 13.2213C6.23786 13.6593 6.78275 13.9552 7.37459 14.083C6.79599 13.9586 6.24521 13.6725 5.80028 13.2275L2.78028 10.2075C2.48097 9.90823 2.24824 9.55439 2.09037 9.16983C2.24928 9.55184 2.48207 9.90355 2.77984 10.2013L3.13339 9.84776L2.77984 10.2013L5.79984 13.2213Z"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.5013C5.14033 8.5013 4.16699 7.52797 4.16699 6.33464C4.16699 5.1413 5.14033 4.16797 6.33366 4.16797C7.52699 4.16797 8.50033 5.1413 8.50033 6.33464C8.50033 7.52797 7.52699 8.5013 6.33366 8.5013ZM6.33366 5.16797C5.69366 5.16797 5.16699 5.69464 5.16699 6.33464C5.16699 6.97464 5.69366 7.5013 6.33366 7.5013C6.97366 7.5013 7.50033 6.97464 7.50033 6.33464C7.50033 5.69464 6.97366 5.16797 6.33366 5.16797Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.0013C5.41647 8.0013 4.66699 7.25183 4.66699 6.33464M6.33366 8.0013C7.25085 8.0013 8.00033 7.25183 8.00033 6.33464M6.33366 8.0013C7.2498 8.0013 8.00033 7.25078 8.00033 6.33464M6.33366 8.0013C5.41752 8.0013 4.66699 7.25078 4.66699 6.33464M4.66699 6.33464C4.66699 5.41744 5.41647 4.66797 6.33366 4.66797M4.66699 6.33464C4.66699 5.41849 5.41752 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41744 7.25085 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41849 7.2498 4.66797 6.33366 4.66797"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                            </svg>
+                                            <span class="text-[#05060A] text-sm leading-[18px]">
+                                                ادب، فن، اجتماعي
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- item  -->
+                        <li class="item transition-all duration-300" data-cat="historical">
+                            <a href="auther-page.html"
+                                class="rounded-2xl border border-[#E2E2E9] overflow-hidden block">
+                                <img src="assets/images/best-1.png"
+                                    class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-300"
+                                    width="300" height="300" alt="auther" />
+                            </a>
+                            <div class="pt-4 lg:py-4 flex flex-col gap-2 lg:gap-4">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-col gap-1 lg:gap-2">
+                                        <h3
+                                            class="rtext-base lg:text-xl leading-5 lg:leading-[26px] text-[#000000E5] font-semibold">
+                                            <a href="auther-page.html" class="">
+                                                طة حسين
+                                            </a>
+                                        </h3>
+                                        <p
+                                            class="text-sm lg:text-base leading-normal lg:leading-5 font-bold text-[#5F59F7]">
+                                            ٤٣ كتاب
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.04673 14.6544C7.10673 14.6544 6.16006 14.2944 5.44673 13.5811L2.42673 10.5611C1.69339 9.82776 1.30673 8.81443 1.35339 7.78109L1.51339 4.44776C1.58673 2.85443 2.84673 1.59443 4.44673 1.51443L7.78006 1.35443C8.81339 1.31443 9.82673 1.69443 10.5601 2.42776L13.5801 5.44776C15.0134 6.88109 15.0134 9.22109 13.5801 10.6544L10.6534 13.5811C9.93339 14.2944 8.99339 14.6544 8.04673 14.6544ZM3.13339 9.84776L6.15339 12.8678C6.66006 13.3744 7.33339 13.6544 8.04673 13.6544C8.76006 13.6544 9.43339 13.3744 9.94006 12.8678L12.8667 9.94109C13.3734 9.43443 13.6534 8.76109 13.6534 8.04776C13.6534 7.33443 13.3734 6.66109 12.8667 6.15443L9.84673 3.13443C9.31339 2.60109 8.57339 2.31443 7.82673 2.35443L4.49339 2.51443C3.40673 2.56109 2.56006 3.40776 2.50673 4.48776L2.34673 7.82109C2.31339 8.57443 2.60006 9.31443 3.13339 9.84776Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M4.47061 2.01494C4.41725 2.01726 4.36435 2.02115 4.31195 2.02655C4.36455 2.02077 4.41765 2.01651 4.47122 2.01383C4.47138 2.01382 4.47154 2.01381 4.47169 2.0138L7.80164 1.85397C7.82753 1.85298 7.8534 1.8523 7.87925 1.85192C7.85332 1.85264 7.82738 1.85369 7.80143 1.85507L4.47194 2.01489C4.4715 2.01491 4.47105 2.01493 4.47061 2.01494ZM13.2265 10.3009L10.3015 13.2259C10.3012 13.2262 10.301 13.2264 10.3007 13.2267C9.67763 13.8436 8.86582 14.1544 8.04673 14.1544C8.89351 14.1544 9.69378 13.8212 10.2936 13.2213L13.2203 10.2946C13.8201 9.69481 14.1534 8.89454 14.1534 8.04776C14.1534 7.20098 13.8201 6.40071 13.2203 5.80087L10.2003 2.78087C9.97527 2.55586 9.71917 2.36771 9.44246 2.22083C9.72191 2.36699 9.98002 2.55483 10.2065 2.78131L13.2265 5.80131C14.4646 7.03939 14.4646 9.0628 13.2265 10.3009ZM5.79984 13.2213C6.23786 13.6593 6.78275 13.9552 7.37459 14.083C6.79599 13.9586 6.24521 13.6725 5.80028 13.2275L2.78028 10.2075C2.48097 9.90823 2.24824 9.55439 2.09037 9.16983C2.24928 9.55184 2.48207 9.90355 2.77984 10.2013L3.13339 9.84776L2.77984 10.2013L5.79984 13.2213Z"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.5013C5.14033 8.5013 4.16699 7.52797 4.16699 6.33464C4.16699 5.1413 5.14033 4.16797 6.33366 4.16797C7.52699 4.16797 8.50033 5.1413 8.50033 6.33464C8.50033 7.52797 7.52699 8.5013 6.33366 8.5013ZM6.33366 5.16797C5.69366 5.16797 5.16699 5.69464 5.16699 6.33464C5.16699 6.97464 5.69366 7.5013 6.33366 7.5013C6.97366 7.5013 7.50033 6.97464 7.50033 6.33464C7.50033 5.69464 6.97366 5.16797 6.33366 5.16797Z"
+                                                    fill="#05060A" fill-opacity="0.7" />
+                                                <path
+                                                    d="M6.33366 8.0013C5.41647 8.0013 4.66699 7.25183 4.66699 6.33464M6.33366 8.0013C7.25085 8.0013 8.00033 7.25183 8.00033 6.33464M6.33366 8.0013C7.2498 8.0013 8.00033 7.25078 8.00033 6.33464M6.33366 8.0013C5.41752 8.0013 4.66699 7.25078 4.66699 6.33464M4.66699 6.33464C4.66699 5.41744 5.41647 4.66797 6.33366 4.66797M4.66699 6.33464C4.66699 5.41849 5.41752 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41744 7.25085 4.66797 6.33366 4.66797M8.00033 6.33464C8.00033 5.41849 7.2498 4.66797 6.33366 4.66797"
+                                                    stroke="#05060A" stroke-opacity="0.7" />
+                                            </svg>
+                                            <span class="text-[#05060A] text-sm leading-[18px]">
+                                                ادب، فن، اجتماعي
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="flex justify-center items-center gap-3 py-4 pagination">
+                        <button type="button"
+                            class="pagination-item transition-all duration-300 py-2 px-4 rounded-[20px] bg-[#F3F3F7] flex items-center prev-button">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.44 13.2787L10.7867 8.93208C11.3 8.41875 11.3 7.57875 10.7867 7.06542L6.44 2.71875"
+                                    stroke="black" stroke-opacity="0.7" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="text-sm text-[#000000B2] leading-[18px]">السابق</span>
+                        </button>
+                        <div class="flex justify-center items-center gap-3 pagination-numbers"></div>
+                        <button type="button"
+                            class="pagination-item transition-all duration-300 py-2 px-4 rounded-[20px] bg-[#F3F3F7] flex items-center next-button">
+                            <span class="text-sm text-[#000000B2] leading-[18px]">التالي
+                            </span>
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.5 13.2787L6.15331 8.93208C5.63998 8.41875 5.63998 7.57875 6.15331 7.06542L10.5 2.71875"
+                                    stroke="black" stroke-opacity="0.7" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- End Warraq Main Page Content  -->
@@ -649,8 +871,7 @@
                     </h2>
                     <ul class="flex flex-col gap-2">
                         <li>
-                            <a href="discount-packages.html" class="text-sm text-[#0000008C] leading-[18px]">الخصومات و
-                                الحزم</a>
+                            <a href="#" class="text-sm text-[#0000008C] leading-[18px]">الخصومات و الحزم</a>
                         </li>
                         <li>
                             <a href="#" class="text-sm text-[#0000008C] leading-[18px]">التصنيفات</a>
@@ -669,18 +890,17 @@
                     </h2>
                     <ul class="flex flex-col gap-2">
                         <li>
-                            <a href="events.html" class="text-sm text-[#0000008C] leading-[18px]">مجتمع القراء
+                            <a href="#" class="text-sm text-[#0000008C] leading-[18px]">مجتمع القراء
                             </a>
                         </li>
                         <li>
-                            <a href="used-books.html" class="text-sm text-[#0000008C] leading-[18px]">الكتب
-                                المستعملة</a>
+                            <a href="#" class="text-sm text-[#0000008C] leading-[18px]">الكتب المستعملة</a>
                         </li>
                         <li>
-                            <a href="gifts.html" class="text-sm text-[#0000008C] leading-[18px]">قسائم الهدايا</a>
+                            <a href="#" class="text-sm text-[#0000008C] leading-[18px]">قسائم الهدايا</a>
                         </li>
                         <li>
-                            <a href="blog.html" class="text-sm text-[#0000008C] leading-[18px]">المقالات</a>
+                            <a href="#" class="text-sm text-[#0000008C] leading-[18px]">المقالات</a>
                         </li>
                     </ul>
                 </div>
@@ -699,7 +919,7 @@
                             <a href="#" class="text-sm text-[#0000008C] leading-[18px]">شروط الأستخدام</a>
                         </li>
                         <li>
-                            <a href="contactus.html" class="text-sm text-[#0000008C] leading-[18px]">تواصل معنا</a>
+                            <a href="#" class="text-sm text-[#0000008C] leading-[18px]">تواصل معنا</a>
                         </li>
                     </ul>
                 </div>
@@ -802,12 +1022,131 @@
             </div>
         </div>
     </footer>
-
     <!-- End Warraq Footer  -->
     <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/colorthief.js"></script>
     <script src="assets/scripts/swiper.js"></script>
     <script src="assets/scripts/scripts.js"></script>
+    <script>
+        function pagenat() {
+            const paginationNumbers = document.querySelector(".pagination-numbers");
+            const paginatedList = document.querySelector(".paginated-list");
+            const listItems = paginatedList.querySelectorAll(
+                ".paginated-list > li:not(.hidden)"
+            );
+            const nextButton = document.querySelector(".next-button");
+            const prevButton = document.querySelector(".prev-button");
+            const paginationLimit = 8;
+            const pageCount = Math.ceil(listItems.length / paginationLimit);
+            let currentPage = 1;
 
+            const disableButton = (button) => {
+                button.setAttribute("disabled", true);
+            };
+
+            const enableButton = (button) => {
+                button.removeAttribute("disabled");
+            };
+
+            const handlePageButtonsStatus = () => {
+                if (currentPage === 1) {
+                    disableButton(prevButton);
+                } else {
+                    enableButton(prevButton);
+                }
+
+                if (pageCount === currentPage) {
+                    disableButton(nextButton);
+                } else {
+                    enableButton(nextButton);
+                }
+            };
+
+            const handleActivePageNumber = () => {
+                document.querySelectorAll(".pagination-item").forEach((button) => {
+                    button.classList.remove("active");
+                    const pageIndex = Number(button.getAttribute("page-index"));
+                    if (pageIndex == currentPage) {
+                        button.classList.add("active");
+                    }
+                });
+            };
+
+            const appendPageNumber = (index) => {
+                const pageNumber = document.createElement("button");
+                pageNumber.className =
+                    "pagination-item transition-all duration-300 p-2 rounded-[20px] text-sm text-[#000000B2] leading-[18px] flex items-center justify-center w-[34px] h-[34px]";
+                pageNumber.innerHTML = index;
+                pageNumber.setAttribute("page-index", index);
+                pageNumber.setAttribute("aria-label", "Page " + index);
+                paginationNumbers.appendChild(pageNumber);
+            };
+
+            const getPaginationNumbers = () => {
+                for (let i = 1; i <= pageCount; i++) {
+                    appendPageNumber(i);
+                }
+            };
+
+            const setCurrentPage = (pageNum) => {
+                currentPage = pageNum;
+                handleActivePageNumber();
+                handlePageButtonsStatus();
+
+                const prevRange = (pageNum - 1) * paginationLimit;
+                const currRange = pageNum * paginationLimit;
+
+                listItems.forEach((item, index) => {
+                    item.classList.add("hidden");
+                    if (index >= prevRange && index < currRange) {
+                        item.classList.remove("hidden");
+                    }
+                });
+            };
+
+            function pag() {
+                getPaginationNumbers();
+                setCurrentPage(1);
+
+                prevButton.addEventListener("click", () => {
+                    setCurrentPage(currentPage - 1);
+                });
+
+                nextButton.addEventListener("click", () => {
+                    setCurrentPage(currentPage + 1);
+                });
+
+                document.querySelectorAll(".pagination-item").forEach((button) => {
+                    const pageIndex = Number(button.getAttribute("page-index"));
+
+                    if (pageIndex) {
+                        button.addEventListener("click", () => {
+                            setCurrentPage(pageIndex);
+                        });
+                    }
+                });
+            }
+            window.addEventListener("load", () => {
+                pag();
+            });
+        }
+        pagenat();
+
+        $(".filter-item").on("click", function () {
+            $(".filter-item").removeClass("active");
+            $(this).addClass("active");
+            let cat = $(this).attr("data-type");
+            $(".paginated-list li").addClass("hidden");
+            $(".paginated-list").find(`[data-cat='${cat}']`).removeClass("hidden");
+            $(".pagination-numbers").html("");
+            pagenat();
+            if ($(".pagination-numbers").html() == "") {
+                $(".pagination").addClass("hidden");
+            } else {
+                $(".pagination").removeClass("hidden");
+            }
+        });
+    </script>
 </body>
 
 </html>

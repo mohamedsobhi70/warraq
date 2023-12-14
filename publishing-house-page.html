@@ -25,7 +25,7 @@
     </div>
 
     <!-- Start Warraq Header  -->
-    <header>
+    <header class="sticky bg-white z-20 top-0">
         <div class="container flex justify-between items-center py-4 px-[30px] lg:px-0 lg:py-[18px]">
             <button class="lg:hidden mobile-menu-btn" title="menu button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@
 
                     <nav class="grow">
                         <ul class="flex flex-col gap-1">
-                            <li class="">
+                            <li>
                                 <div class="flex items-center justify-between gap-3 py-3 mobile-dropdown">
                                     <span class="text-base leading-5 text-[#0000008C]">التصنيفات</span>
                                     <svg class="drop-down-icon transition-transform duration-300" width="20" height="20"
@@ -187,7 +187,7 @@
             </div>
 
             <div class="flex items-center gap-8">
-                <a href="index.html" class="" title="Warraq Logo">
+                <a href="index.html" title="Warraq Logo">
                     <img src="assets/images/Logo.svg" width="93" height="40" alt="Warraq Logo" />
                 </a>
                 <nav class="hidden lg:block">
@@ -204,23 +204,33 @@
                             </span>
                         </li>
                         <li>
-                            <a href="bestsell.html" class="">
+                            <a href="bestsell.html">
                                 <span class="text-[#0000008C] text-base leading-5">الأكثر مبيعاً</span>
                             </a>
                         </li>
                         <li>
-                            <a href="publishing-house.html" class="">
-                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                            <a href="#">
+                                <span class="text-[#0000008C] text-base leading-5">جميع الكتب </span>
                             </a>
                         </li>
                         <li>
-                            <a href="blog.html" class="">
+                            <a href="blog.html">
                                 <span class="text-[#0000008C] text-base leading-5">المقالات</span>
                             </a>
                         </li>
                         <li>
-                            <a href="events.html" class="">
+                            <a href="events.html">
                                 <span class="text-[#0000008C] text-base leading-5">الفعاليات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="publishing-house.html">
+                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="authors.html">
+                                <span class="text-[#0000008C] text-base leading-5">المؤلفون</span>
                             </a>
                         </li>
                     </ul>
@@ -229,7 +239,7 @@
             <div class="flex gap-8 items-center">
                 <div
                     class="hidden lg:flex items-center gap-2.5 border border-[#BFBECA] rounded-2xl p-3.5 w-[350px] transition-all duration-300">
-                    <a title="search" href="#" class="">
+                    <a title="search" href="#">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.4">
                                 <path
@@ -244,7 +254,7 @@
                         placeholder="أبحث عن كتاب, مؤلف, دار نشر" />
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="cart.html" title="delete" class="">
+                    <a href="cart.html" title="delete">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.5 14.25C8.5 16.17 10.08 17.75 12 17.75C13.92 17.75 15.5 16.17 15.5 14.25"
                                 stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -271,7 +281,6 @@
         </div>
         <div class="container py-8 header-cat hidden">
             <div class="grid grid-cols-5 gap-4">
-
                 <!-- Category Item -->
                 <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
                     <div class="rounded-[4px]">
@@ -570,9 +579,6 @@
                         </p>
                     </div>
                 </a>
-
-
-
             </div>
         </div>
     </header>

@@ -25,8 +25,6 @@ if ($(".det-bg").length > 0) {
 
     function getDominantColor(img) {
         const dominantRGB = colorThief.getColor(img)
-        console.log(dominantRGB)
-        console.log(rgbToHex(dominantRGB[0], dominantRGB[1], dominantRGB[2]));
         bgSection.style.background = rgbToHex(dominantRGB[0], dominantRGB[1], dominantRGB[2])
     }
 
@@ -57,7 +55,7 @@ $(".mobile-menu-btn").on("click", function () {
 $(".mobile-menu-close").on("click", function () {
     $(".mobile-menu").removeClass("active");
 })
-
+if ($(".page-loader").length > 0) {
 function id(v) { return document.getElementById(v); }
 function loadbar() {
     var ovrl = document.querySelector(".page-loader"),
@@ -85,7 +83,7 @@ function loadbar() {
     }
 }
 document.addEventListener('DOMContentLoaded', loadbar, false);
-
+}
 if ($(".slider-books").length > 0) {
     let swiper = new Swiper(".slider-categories", {
         spaceBetween: 30,
@@ -130,7 +128,7 @@ if ($(".slider-bestseller").length > 0) {
 
         breakpoints: {
             0: {
-                slidesPerView: 1.3,
+                slidesPerView: 2,
             },
             676: {
                 slidesPerView: 3,
@@ -152,7 +150,7 @@ if ($(".slider-usedbooks").length > 0) {
 
         breakpoints: {
             0: {
-                slidesPerView: 1.3,
+                slidesPerView: 2,
             },
             676: {
                 slidesPerView: 3,
@@ -175,7 +173,7 @@ if ($(".slider-recomended").length > 0) {
 
         breakpoints: {
             0: {
-                slidesPerView: 1.3,
+                slidesPerView: 2,
             },
             676: {
                 slidesPerView: 3,
@@ -194,7 +192,6 @@ if ($(".slider-filter").length > 0) {
 
     });
 }
-
 if ($(".reviews-slider").length > 0) {
 
     var swiper = new Swiper(".reviews-slider", {
@@ -235,6 +232,130 @@ if ($(".rating input").length > 0) {
     });
 
 }
+
+
+
+// carousels slideshow
+
+// $('.book-details').owlCarousel({
+//     rtl: true,
+//     margin: 16,
+//     autoplay: true,
+//     loop: true,
+//     autoplayTimeout: 4000,
+//     autoplayHoverPause: true,
+//     dots: false,
+//     responsive: {
+//         0: {
+//             nav: false,
+//             items: 2,
+//         },
+//         768: {
+//             items: 3,
+//             nav: true,
+//         }
+//     }
+// })
+
+// $('.package-details').owlCarousel({
+//     rtl: true,
+//     margin: 16,
+//     autoplay: true,
+//     loop: true,
+//     autoplayTimeout: 4000,
+//     autoplayHoverPause: true,
+//     dots: false,
+//     responsive: {
+//         0: {
+//             items: 1.5,
+//             nav: false,
+//         },
+//         768: {
+//             items: 2.5,
+//             nav: true,
+//         }
+//     }
+// })
+
+// $('.owl-hero-book').owlCarousel({
+//     items: 2.4,
+//     rtl: true,
+//     loop: true,
+//     margin: 30,
+//     dots: false,
+//     center: true,
+//     autoplay: true,
+//     autoplayTimeout: 6000,
+//     autoplayHoverPause: true,
+//     touchDrag: false,
+// })
+
+
+// $('.owl-filters').owlCarousel({
+//     rtl: true,
+//     margin: 12,
+//     dots: false,
+//     nav: false,
+//     autoWidth: true,
+//     responsive: {
+//         0: {
+//             items: 24.5,
+//         },
+//         676: {
+//             items: 5
+//         },
+//         1024: {
+//             items: 6,
+//             mouseDrag: false
+//         }
+//     }
+// })
+
+// $('.slider-categories').owlCarousel({
+//     rtl: true,
+//     loop: true,
+//     autoplay: true,
+//     autoplayTimeout: 4000,
+//     autoplayHoverPause: true,
+//     margin: 30,
+//     dots: false,
+//     responsive: {
+//         0: {
+//             items: 2,
+//             nav: false,
+//         },
+//         676: {
+//             items: 3
+//         },
+//         1024: {
+//             items: 6,
+//             nav: true,
+//         }
+//     }
+// })
+
+// $('.owl-bestseller').owlCarousel({
+//     rtl: true,
+//     autoplay: true,
+//     loop: true,
+//     autoplayTimeout: 4000,
+//     autoplayHoverPause: true,
+//     margin: 30,
+//     nav: false,
+//     responsive: {
+//         0: {
+//             items: 1.3,
+//             dots: true,
+//         },
+//         768: {
+//             items: 3,
+//             dots: false,
+//         },
+//         1024: {
+//             items: 4
+//         }
+//     }
+// })
 
 
 // show more texr 
@@ -367,8 +488,8 @@ $(".mobile-dropdown").on("click", function () {
 
 // header categories
 
-$(".header-cat-toggle").on("click", function () {
-    $(".header-cat").slideToggle(400);
+$(".war-header-cat-toggle").on("click", function () {
+    $(".war-header-cat").slideToggle(400);
 })
 
 if ($("#price-range").length > 0) {
@@ -409,4 +530,81 @@ if ($(".warraq-modal").length > 0) {
     })
 }
 
+
+$(document).on( 'click', 'button.plus, button.minus', function() {
+  
+    var qty = $( this ).parent( '.quantity' ).find( '.qty' );
+     var val = parseFloat(qty.val());
+    var max = parseFloat(qty.attr( 'max' ));
+    var min = parseFloat(qty.attr( 'min' ));
+    var step = parseFloat(qty.attr( 'step' ));
+
+    if ( $( this ).is( '.plus' ) ) {
+       if ( max && ( max <= val ) ) {
+          qty.val( max ).change();
+       } else {
+          qty.val( val + step ).change();
+       }
+    } else {
+       if ( min && ( min >= val ) ) {
+          qty.val( min ).change();
+       } else if ( val > 1 ) {
+          qty.val( val - step ).change();
+       }
+    }
+
+ });
+
+ $(".filter-item").on("click", function () {
+    $(".filter-item").removeClass("active")
+    $(this).addClass("active");
+    let cat = $(this).attr("data-type");
+    $(".paginated-list li").addClass("hidden")
+    $(".paginated-list").find(`[data-cat*='${cat}']`).removeClass("hidden");
+    $(".pagination-numbers").html("");
+//    pagenat();
+    if ($(".pagination-numbers").html() == "") {
+
+        $(".pagination").addClass("hidden")
+    }
+    else {
+        $(".pagination").removeClass("hidden")
+    }
+})
+
+$(document).ready(function(){
+    $('.wpfMainWrapper').css('overflow-x','hidden');
+    $('aside .wpfFilterWrapper').addClass('p-8 flex flex-col gap-8 border-b border-[#E2E2E9]');
+    $('.wpfFilterTitle').addClass('flex items-center justify-between cursor-pointer drop-down').css("display", "flex");
+    $('.wpfFilterTitle .wfpTitle').addClass('text-base text-[#000000E5] leading-5 font-semibold');
+    $('.wpfFilterContent').addClass('w-full text-base leading-5 text-[#00000066]');
+    $('.wpfFilterVerScroll').addClass('wpfFilterVerScroll').css("display", "flex");
+})
+
+
+$(".header-cat-toggle").on("click", function () {
+    $(".header-cat").slideToggle(400);
+})
+
+if ($("#price-range").length > 0) {
+    // price range slider
+    let rangeInput = document.querySelectorAll(".range-input input"),
+        progress = document.querySelector(".slider .progress");
+    rangeInput.forEach(input => {
+        input.addEventListener("input", e => {
+            let minVal = parseInt(rangeInput[0].value),
+                maxVal = parseInt(rangeInput[1].value);
+            if (maxVal - minVal < 0) {
+                rangeInput[0].value = maxVal;
+                rangeInput[1].value = minVal;
+            }
+            else {
+                progress.style.right = (minVal / rangeInput[0].max * 100) + "%";
+                progress.style.left = 100 - (maxVal / rangeInput[0].max * 100) + "%";
+            }
+            document.querySelector(".price-input .min").innerHTML = rangeInput[0].value + " ريال"
+            document.querySelector(".price-input .max").innerHTML = rangeInput[1].value + " ريال"
+        })
+    })
+}
 

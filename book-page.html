@@ -26,7 +26,7 @@
     </div>
 
     <!-- Start Warraq Header  -->
-    <header>
+    <header class="sticky bg-white z-20 top-0">
         <div class="container flex justify-between items-center py-4 px-[30px] lg:px-0 lg:py-[18px]">
             <button class="lg:hidden mobile-menu-btn" title="menu button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -210,8 +210,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="publishing-house.html">
-                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                            <a href="#">
+                                <span class="text-[#0000008C] text-base leading-5">جميع الكتب </span>
                             </a>
                         </li>
                         <li>
@@ -222,6 +222,16 @@
                         <li>
                             <a href="events.html">
                                 <span class="text-[#0000008C] text-base leading-5">الفعاليات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="publishing-house.html">
+                                <span class="text-[#0000008C] text-base leading-5">دور النشر</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="authors.html">
+                                <span class="text-[#0000008C] text-base leading-5">المؤلفون</span>
                             </a>
                         </li>
                     </ul>
@@ -272,7 +282,6 @@
         </div>
         <div class="container py-8 header-cat hidden">
             <div class="grid grid-cols-5 gap-4">
-
                 <!-- Category Item -->
                 <a href="#" class="item flex items-center gap-4 p-4 rounded-2xl border border-[#E2E2E9]">
                     <div class="rounded-[4px]">
@@ -571,9 +580,6 @@
                         </p>
                     </div>
                 </a>
-
-
-
             </div>
         </div>
     </header>
@@ -2280,8 +2286,8 @@
                                 <div class="flex flex-col gap-2">
                                     <h3 class="text-sm leading-[18px] text-[#000000E5] font-medium">تقييمك للكتاب</h3>
                                     <div class="flex gap-2.5 items-center rating">
-                                        <input title="rating" type="radio" data-num="1" name="rating"
-                                            class="hidden" id="rate-1">
+                                        <input title="rating" type="radio" data-num="1" name="rating" class="hidden"
+                                            id="rate-1">
                                         <label for="rate-1">
                                             <svg class="cursor-pointer" width="18" height="18" viewBox="0 0 18 18"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2290,8 +2296,8 @@
                                                     fill="#E2E2E9" />
                                             </svg>
                                         </label>
-                                        <input title="rating" type="radio" data-num="2" name="rating"
-                                            class="hidden" id="rate-2">
+                                        <input title="rating" type="radio" data-num="2" name="rating" class="hidden"
+                                            id="rate-2">
                                         <label for="rate-2">
                                             <svg class="cursor-pointer" width="18" height="18" viewBox="0 0 18 18"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2300,8 +2306,8 @@
                                                     fill="#E2E2E9" />
                                             </svg>
                                         </label>
-                                        <input title="rating" type="radio" data-num="3" name="rating"
-                                            class="hidden" id="rate-3">
+                                        <input title="rating" type="radio" data-num="3" name="rating" class="hidden"
+                                            id="rate-3">
                                         <label for="rate-3">
                                             <svg class="cursor-pointer" width="18" height="18" viewBox="0 0 18 18"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2310,8 +2316,8 @@
                                                     fill="#E2E2E9" />
                                             </svg>
                                         </label>
-                                        <input title="rating" type="radio" data-num="4" name="rating"
-                                            class="hidden" id="rate-4">
+                                        <input title="rating" type="radio" data-num="4" name="rating" class="hidden"
+                                            id="rate-4">
                                         <label for="rate-4">
                                             <svg width="18" class="cursor-pointer" height="18" viewBox="0 0 18 18"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2320,8 +2326,8 @@
                                                     fill="#E2E2E9" />
                                             </svg>
                                         </label>
-                                        <input title="rating" type="radio" data-num="5" name="rating"
-                                            class=" hidden" id="rate-5">
+                                        <input title="rating" type="radio" data-num="5" name="rating" class=" hidden"
+                                            id="rate-5">
                                         <label for="rate-5">
                                             <svg class="cursor-pointer" width="18" height="18" viewBox="0 0 18 18"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2343,7 +2349,7 @@
             </div>
         </section>
 
-        <!--  nagib   Section  -->
+        <!--  more books  Section  -->
         <section class="py-8 lg:py-16 px-[30px] lg:px-0 relative z-10 overflow-x-hidden">
             <div class="container flex flex-col gap-6 lg:gap-12">
                 <header class="flex items-baseline justify-between">
@@ -2586,68 +2592,6 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!--   Readers community   -->
-        <section class="py-8 lg:py-16 px-[30px] lg:px-0">
-            <div class="container flex flex-col gap-8 lg:gap-12">
-                <header class="flex items-baseline justify-between">
-                    <h2 class="section-title">مجتمع القراء</h2>
-                    <a href="events.html" class="secondary-btn flex items-center gap-2">
-                        <span class="text-xs lg:text-sm leading-4 lg:leading-[18px]">مشاهدة الجميع</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.99998 13.28L5.65331 8.93333C5.13998 8.42 5.13998 7.58 5.65331 7.06667L9.99998 2.72"
-                                stroke="#403AEE" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                </header>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
-                    <!--  community item  -->
-                    <div class="basis-1/3 flex flex-col">
-                        <a href="event.html" class="h-[286px] rounded-2xl w-full overflow-hidden block">
-                            <img src="assets/images/com-1.png" class="w-full h-full object-cover" width="410"
-                                height="286" alt="Book Img" />
-                        </a>
-                        <div class="py-4 flex flex-col items-start gap-3">
-                            <span class="text-sm text-[#000000B2] leading-[18px]">الجمعة ، 14 أبريل عند 9 مساءً</span>
-                            <h3 class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
-                                <a href="event.html"> مراجعة تراب الماث. </a>
-                            </h3>
-                        </div>
-                    </div>
-
-                    <!--  community item  -->
-                    <div class="basis-1/3 flex flex-col">
-                        <a href="event.html" class="h-[286px] rounded-2xl w-full overflow-hidden block">
-                            <img src="assets/images/com-2.png" class="w-full h-full object-cover" width="410"
-                                height="286" alt="Book Img" />
-                        </a>
-                        <div class="py-4 flex flex-col items-start gap-3">
-                            <span class="text-sm text-[#000000B2] leading-[18px]">الجمعة ، 14 أبريل عند 9 مساءً</span>
-                            <h3 class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
-                                <a href="event.html"> مراجعة أن تكون عباس العبد. </a>
-                            </h3>
-                        </div>
-                    </div>
-
-                    <!--  community item  -->
-                    <div class="basis-1/3 flex flex-col">
-                        <a href="event.html" class="h-[286px] rounded-2xl w-full overflow-hidden">
-                            <img src="assets/images/com-3.png" class="w-full h-full object-cover" width="410"
-                                height="286" alt="Book Img" />
-                        </a>
-                        <div class="py-4 flex flex-col items-start gap-3">
-                            <span class="text-sm text-[#000000B2] leading-[18px]">الجمعة ، 14 أبريل عند 9 مساءً</span>
-                            <h3 class="text-base lg:text-xl text-[#000000E5] leading-5 lg:leading-[26px] font-semibold">
-                                <a href="event.html"> مراجعة أمواج في ليلة مظلمة. </a>
-                            </h3>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -2895,297 +2839,6 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!--  Best Selling Authors  -->
-        <section class="py-8 lg:py-16 px-[30px] lg:px-0">
-            <div class="container flex flex-col gap-8 lg:gap-12">
-                <header class="flex items-baseline justify-between">
-                    <h2 class="section-title">المؤلفين الأكثر مبيعا</h2>
-                    <a href="#" class="secondary-btn flex items-center gap-2">
-                        <span class="text-xs lg:text-sm leading-4 lg:leading-[18px]">مشاهدة الجميع</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.99998 13.28L5.65331 8.93333C5.13998 8.42 5.13998 7.58 5.65331 7.06667L9.99998 2.72"
-                                stroke="#403AEE" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                </header>
-
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                    <!-- best seller Auther item  -->
-                    <div class="basis-1/4">
-                        <div class="flex gap-3">
-                            <a href="book-page.html" class="basis-2/3 overflow-hidden rounded-2xl block">
-                                <img src="assets/images/best-2.png" class="w-full h-full object-cover" width="300"
-                                    height="440" alt="Best Seller" />
-                            </a>
-                            <div class="flex flex-col gap-4 lg:gap-3 basis-1/3">
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-5.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-6.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="py-4">
-                            <div class="flex gap-4 items-center">
-                                <a href="auther-page.html" class="w-116 h-16 rounded-2xl overflow-hidden block">
-                                    <img src="assets/images/aut-1.png" class="w-full h-full object-cover" width="64"
-                                        height="64" alt="auther" />
-                                </a>
-                                <div class="flex flex-col gap-3 w-full flex-1">
-                                    <div class="flex justify-between items-center gap-1">
-                                        <h3 class="text-black text-base left-5 font-semibold">
-                                            <a href="auther-page.html">طــه حسين</a>
-                                        </h3>
-                                        <span class="text-xs text-[#00000066] leading-4">6 كتب</span>
-                                    </div>
-                                    <div class="flex gap-0.5">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.26524 1.75458L8.14524 3.51458C8.26524 3.75958 8.58524 3.99458 8.85524 4.03958L10.4502 4.30458C11.4702 4.47458 11.7102 5.21458 10.9752 5.94458L9.73524 7.18458C9.52524 7.39458 9.41024 7.79958 9.47524 8.08958L9.83024 9.62458C10.1102 10.8396 9.46524 11.3096 8.39024 10.6746L6.89524 9.78958C6.62524 9.62958 6.18024 9.62958 5.90524 9.78958L4.41024 10.6746C3.34024 11.3096 2.69024 10.8346 2.97024 9.62458L3.32524 8.08958C3.39024 7.79958 3.27524 7.39458 3.06524 7.18458L1.82524 5.94458C1.09524 5.21458 1.33024 4.47458 2.35024 4.30458L3.94524 4.03958C4.21024 3.99458 4.53024 3.75958 4.65024 3.51458L5.53024 1.75458C6.01024 0.79958 6.79024 0.79958 7.26524 1.75458Z"
-                                                fill="#E2E2E9" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- best seller Auther item  -->
-                    <div class="basis-1/4">
-                        <div class="flex gap-3">
-                            <a href="book-page.html" class="basis-2/3 overflow-hidden rounded-2xl block">
-                                <img src="assets/images/best-7.png" class="w-full h-full object-cover" width="300"
-                                    height="440" alt="Best Seller" />
-                            </a>
-                            <div class="flex flex-col gap-4 lg:gap-3 basis-1/3">
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-7.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-8.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="py-4">
-                            <div class="flex gap-4 items-center">
-                                <a href="auther-page.html" class="w-116 h-16 rounded-2xl overflow-hidden block">
-                                    <img src="assets/images/aut-2.png" class="w-full h-full object-cover" width="64"
-                                        height="64" alt="auther" />
-                                </a>
-                                <div class="flex flex-col gap-3 w-full flex-1">
-                                    <div class="flex justify-between items-center gap-1">
-                                        <h3 class="text-black text-base left-5 font-semibold">
-                                            <a href="auther-page.html">طــه حسين</a>
-                                        </h3>
-                                        <span class="text-xs text-[#00000066] leading-4">6 كتب</span>
-                                    </div>
-                                    <div class="flex gap-0.5">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.26524 1.75458L8.14524 3.51458C8.26524 3.75958 8.58524 3.99458 8.85524 4.03958L10.4502 4.30458C11.4702 4.47458 11.7102 5.21458 10.9752 5.94458L9.73524 7.18458C9.52524 7.39458 9.41024 7.79958 9.47524 8.08958L9.83024 9.62458C10.1102 10.8396 9.46524 11.3096 8.39024 10.6746L6.89524 9.78958C6.62524 9.62958 6.18024 9.62958 5.90524 9.78958L4.41024 10.6746C3.34024 11.3096 2.69024 10.8346 2.97024 9.62458L3.32524 8.08958C3.39024 7.79958 3.27524 7.39458 3.06524 7.18458L1.82524 5.94458C1.09524 5.21458 1.33024 4.47458 2.35024 4.30458L3.94524 4.03958C4.21024 3.99458 4.53024 3.75958 4.65024 3.51458L5.53024 1.75458C6.01024 0.79958 6.79024 0.79958 7.26524 1.75458Z"
-                                                fill="#E2E2E9" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- best seller Auther item  -->
-                    <div class="basis-1/4">
-                        <div class="flex gap-3">
-                            <a href="book-page.html" class="basis-2/3 overflow-hidden rounded-2xl block">
-                                <img src="assets/images/best-9.png" class="w-full h-full object-cover" width="300"
-                                    height="440" alt="Best Seller" />
-                            </a>
-                            <div class="flex flex-col gap-4 lg:gap-3 basis-1/3">
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-10.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-11.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="py-4">
-                            <div class="flex gap-4 items-center">
-                                <a href="auther-page.html" class="w-116 h-16 rounded-2xl overflow-hidden block">
-                                    <img src="assets/images/aut-3.png" class="w-full h-full object-cover" width="64"
-                                        height="64" alt="auther" />
-                                </a>
-                                <div class="flex flex-col gap-3 w-full flex-1">
-                                    <div class="flex justify-between items-center gap-1">
-                                        <h3 class="text-black text-base left-5 font-semibold">
-                                            <a href="auther-page.html">طــه حسين</a>
-                                        </h3>
-                                        <span class="text-xs text-[#00000066] leading-4">6 كتب</span>
-                                    </div>
-                                    <div class="flex gap-0.5">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.26524 1.75458L8.14524 3.51458C8.26524 3.75958 8.58524 3.99458 8.85524 4.03958L10.4502 4.30458C11.4702 4.47458 11.7102 5.21458 10.9752 5.94458L9.73524 7.18458C9.52524 7.39458 9.41024 7.79958 9.47524 8.08958L9.83024 9.62458C10.1102 10.8396 9.46524 11.3096 8.39024 10.6746L6.89524 9.78958C6.62524 9.62958 6.18024 9.62958 5.90524 9.78958L4.41024 10.6746C3.34024 11.3096 2.69024 10.8346 2.97024 9.62458L3.32524 8.08958C3.39024 7.79958 3.27524 7.39458 3.06524 7.18458L1.82524 5.94458C1.09524 5.21458 1.33024 4.47458 2.35024 4.30458L3.94524 4.03958C4.21024 3.99458 4.53024 3.75958 4.65024 3.51458L5.53024 1.75458C6.01024 0.79958 6.79024 0.79958 7.26524 1.75458Z"
-                                                fill="#E2E2E9" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- best seller Auther item  -->
-                    <div class="basis-1/4">
-                        <div class="flex gap-3">
-                            <a href="book-page.html" class="basis-2/3 overflow-hidden rounded-2xl block">
-                                <img src="assets/images/best-12.png" class="w-full h-full object-cover" width="300"
-                                    height="440" alt="Best Seller" />
-                            </a>
-                            <div class="flex flex-col gap-4 lg:gap-3 basis-1/3">
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-13.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                                <a href="book-page.html" class="overflow-hidden rounded-2xl basis-1/2 block">
-                                    <img src="assets/images/best-14.png" class="w-full h-full object-cover" width="300"
-                                        height="440" alt="Best Seller" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="py-4">
-                            <div class="flex gap-4 items-center">
-                                <a href="auther-page.html" class="w-116 h-16 rounded-2xl overflow-hidden block">
-                                    <img src="assets/images/aut-4.png" class="w-full h-full object-cover" width="64"
-                                        height="64" alt="auther" />
-                                </a>
-                                <div class="flex flex-col gap-3 w-full flex-1">
-                                    <div class="flex justify-between items-center gap-1">
-                                        <h3 class="text-black text-base left-5 font-semibold">
-                                            <a href="auther-page.html">طــه حسين</a>
-                                        </h3>
-                                        <span class="text-xs text-[#00000066] leading-4">6 كتب</span>
-                                    </div>
-                                    <div class="flex gap-0.5">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.86524 1.75458L7.74524 3.51458C7.86524 3.75958 8.18524 3.99458 8.45524 4.03958L10.0502 4.30458C11.0702 4.47458 11.3102 5.21458 10.5752 5.94458L9.33524 7.18458C9.12524 7.39458 9.01024 7.79958 9.07524 8.08958L9.43024 9.62458C9.71024 10.8396 9.06524 11.3096 7.99024 10.6746L6.49524 9.78958C6.22524 9.62958 5.78024 9.62958 5.50524 9.78958L4.01024 10.6746C2.94024 11.3096 2.29024 10.8346 2.57024 9.62458L2.92524 8.08958C2.99024 7.79958 2.87524 7.39458 2.66524 7.18458L1.42524 5.94458C0.695244 5.21458 0.930245 4.47458 1.95024 4.30458L3.54524 4.03958C3.81024 3.99458 4.13024 3.75958 4.25024 3.51458L5.13024 1.75458C5.61024 0.79958 6.39024 0.79958 6.86524 1.75458Z"
-                                                fill="#EAAA08" />
-                                        </svg>
-                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.26524 1.75458L8.14524 3.51458C8.26524 3.75958 8.58524 3.99458 8.85524 4.03958L10.4502 4.30458C11.4702 4.47458 11.7102 5.21458 10.9752 5.94458L9.73524 7.18458C9.52524 7.39458 9.41024 7.79958 9.47524 8.08958L9.83024 9.62458C10.1102 10.8396 9.46524 11.3096 8.39024 10.6746L6.89524 9.78958C6.62524 9.62958 6.18024 9.62958 5.90524 9.78958L4.41024 10.6746C3.34024 11.3096 2.69024 10.8346 2.97024 9.62458L3.32524 8.08958C3.39024 7.79958 3.27524 7.39458 3.06524 7.18458L1.82524 5.94458C1.09524 5.21458 1.33024 4.47458 2.35024 4.30458L3.94524 4.03958C4.21024 3.99458 4.53024 3.75958 4.65024 3.51458L5.53024 1.75458C6.01024 0.79958 6.79024 0.79958 7.26524 1.75458Z"
-                                                fill="#E2E2E9" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
