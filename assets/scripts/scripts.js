@@ -97,7 +97,11 @@ if ($(".slider-books").length > 0) {
             1024: {
                 slidesPerView: 6,
             }
-        }
+        },
+        navigation: {
+            prevEl: ".swiper-button-next",
+            nextEl: ".swiper-button-prev",
+        },
     });
 }
 
@@ -106,17 +110,17 @@ if ($(".slider-books").length > 0) {
 
 if ($(".slider-blog").length > 0) {
 
-        let swiper = new Swiper(".slider-blog", {
-            spaceBetween: 30,
-            breakpoints: {
-                0: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                }
+    let swiper = new Swiper(".slider-blog", {
+        spaceBetween: 30,
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
             }
-        });
+        }
+    });
 
 }
 
@@ -127,6 +131,10 @@ if ($(".slider-books").length > 0) {
         spaceBetween: 40,
         centeredSlides: true,
         loop: true,
+        navigation: {
+            prevEl: ".swiper-button-next",
+            nextEl: ".swiper-button-prev",
+        },
         breakpoints: {
             0: {
                 slidesPerView: 1.8,
@@ -254,130 +262,6 @@ if ($(".rating input").length > 0) {
     });
 
 }
-
-
-
-// carousels slideshow
-
-// $('.book-details').owlCarousel({
-//     rtl: true,
-//     margin: 16,
-//     autoplay: true,
-//     loop: true,
-//     autoplayTimeout: 4000,
-//     autoplayHoverPause: true,
-//     dots: false,
-//     responsive: {
-//         0: {
-//             nav: false,
-//             items: 2,
-//         },
-//         768: {
-//             items: 3,
-//             nav: true,
-//         }
-//     }
-// })
-
-// $('.package-details').owlCarousel({
-//     rtl: true,
-//     margin: 16,
-//     autoplay: true,
-//     loop: true,
-//     autoplayTimeout: 4000,
-//     autoplayHoverPause: true,
-//     dots: false,
-//     responsive: {
-//         0: {
-//             items: 1.5,
-//             nav: false,
-//         },
-//         768: {
-//             items: 2.5,
-//             nav: true,
-//         }
-//     }
-// })
-
-// $('.owl-hero-book').owlCarousel({
-//     items: 2.4,
-//     rtl: true,
-//     loop: true,
-//     margin: 30,
-//     dots: false,
-//     center: true,
-//     autoplay: true,
-//     autoplayTimeout: 6000,
-//     autoplayHoverPause: true,
-//     touchDrag: false,
-// })
-
-
-// $('.owl-filters').owlCarousel({
-//     rtl: true,
-//     margin: 12,
-//     dots: false,
-//     nav: false,
-//     autoWidth: true,
-//     responsive: {
-//         0: {
-//             items: 24.5,
-//         },
-//         676: {
-//             items: 5
-//         },
-//         1024: {
-//             items: 6,
-//             mouseDrag: false
-//         }
-//     }
-// })
-
-// $('.slider-categories').owlCarousel({
-//     rtl: true,
-//     loop: true,
-//     autoplay: true,
-//     autoplayTimeout: 4000,
-//     autoplayHoverPause: true,
-//     margin: 30,
-//     dots: false,
-//     responsive: {
-//         0: {
-//             items: 2,
-//             nav: false,
-//         },
-//         676: {
-//             items: 3
-//         },
-//         1024: {
-//             items: 6,
-//             nav: true,
-//         }
-//     }
-// })
-
-// $('.owl-bestseller').owlCarousel({
-//     rtl: true,
-//     autoplay: true,
-//     loop: true,
-//     autoplayTimeout: 4000,
-//     autoplayHoverPause: true,
-//     margin: 30,
-//     nav: false,
-//     responsive: {
-//         0: {
-//             items: 1.3,
-//             dots: true,
-//         },
-//         768: {
-//             items: 3,
-//             dots: false,
-//         },
-//         1024: {
-//             items: 4
-//         }
-//     }
-// })
 
 
 // show more texr 
